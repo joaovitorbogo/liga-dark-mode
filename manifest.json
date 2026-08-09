@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LigaMagic Dark Mode",
+  "version": "1.0.0",
+  "description": "Modo escuro para o ligamagic.com.br: marketplace, cards, decks, edicoes, artigos e forum.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "LigaMagic Dark Mode",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ligamagic.com.br/*",
+        "*://ligamagic.com.br/*"
+      ],
+      "css": ["content/theme.generated.css", "content/theme-core.css"],
+      "js": ["content/apply.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}

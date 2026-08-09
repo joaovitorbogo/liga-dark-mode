@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — LigaMagic Dark Mode</title>
+<link rel="icon" href="icon48.png">
+<style>
+  :root{
+    --bg:#131316; --surface:#1c1c20; --line:#33333b;
+    --text:#e2e3e6; --dim:#9a9ca3; --brand:#ff6a1c;
+    color-scheme: dark;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#fbfbfc; --surface:#fff; --line:#e3e6ea;
+           --text:#1a1c1f; --dim:#5f6570; --brand:#d94800; color-scheme: light; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font:16px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif;
+    padding:48px 20px 80px;
+  }
+  main{max-width:680px;margin:0 auto}
+
+  header{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  header img{width:40px;height:40px}
+  h1{font-size:26px;line-height:1.2;font-weight:600;letter-spacing:-.01em}
+  .sub{color:var(--dim);font-size:14px;margin-top:2px}
+
+  .lede{
+    margin:28px 0;padding:18px 20px;background:var(--surface);
+    border:1px solid var(--line);border-left:3px solid var(--brand);
+    border-radius:6px;font-size:16.5px;
+  }
+
+  h2{font-size:18px;font-weight:600;margin:36px 0 10px;letter-spacing:-.01em}
+  p{margin:12px 0}
+  ul{margin:12px 0 12px 20px}
+  li{margin:7px 0}
+  code{
+    font-family:Consolas,"Cascadia Mono",monospace;font-size:14px;
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:4px;padding:1px 5px;
+  }
+  a{color:var(--brand)}
+  strong{font-weight:600}
+
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;
+        display:block;overflow-x:auto}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--surface);font-weight:600}
+
+  footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:13.5px}
+  .en{margin-top:56px;padding-top:28px;border-top:1px solid var(--line)}
+  .en h2:first-of-type{margin-top:20px}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <img src="icon128.png" alt="">
+  <div>
+    <h1>Política de Privacidade</h1>
+    <div class="sub">Extensão LigaMagic Dark Mode para Chrome</div>
+  </div>
+</header>
+
+<p class="sub" style="margin-top:18px">Última atualização: 9 de agosto de 2026</p>
+
+<div class="lede">
+  Esta extensão <strong>não coleta dados pessoais</strong>. Ela não tem servidor,
+  não faz requisições de rede, não usa analytics e não contém código remoto.
+</div>
+
+<h2>O que a extensão guarda</h2>
+
+<p>
+  Apenas as três preferências que você escolhe no popup. Cada uma é um
+  liga/desliga:
+</p>
+
+<ul>
+  <li>Modo escuro</li>
+  <li>Seguir o tema do sistema</li>
+  <li>Suavizar banners</li>
+</ul>
+
+<p>
+  Elas ficam em <code>chrome.storage.sync</code>, o armazenamento de extensões do
+  próprio Chrome. Não há nome, e-mail, identificador, histórico de navegação,
+  endereço de página visitada, nem qualquer conteúdo da LigaMagic ou de outro
+  site.
+</p>
+
+<p>
+  Vale ser explícito sobre uma consequência do <code>chrome.storage.sync</code>:
+  se você tiver a sincronização do Chrome ativada, essas três preferências são
+  sincronizadas entre os seus dispositivos <strong>pelo próprio Chrome</strong>,
+  o que envolve os servidores do Google. Isso é comportamento do navegador, não
+  da extensão, e nesse tráfego não vai nada além dos três liga/desliga. Se
+  preferir evitar até isso, desative a sincronização de extensões em
+  <code>chrome://settings/syncSetup</code> — a extensão continua funcionando
+  normalmente, só deixa de levar suas preferências para outras máquinas.
+</p>
+
+<h2>O que a extensão faz nas páginas</h2>
+
+<p>
+  A extensão atua exclusivamente em <code>ligamagic.com.br</code>. Nesse domínio
+  ela injeta duas folhas de estilo e um script pequeno, cuja única função é ligar
+  e desligar uma classe CSS no elemento <code>&lt;html&gt;</code> — é isso que
+  permite alternar o tema sem recarregar a página.
+</p>
+
+<p>
+  O script <strong>não lê o conteúdo da página</strong>: não acessa cards,
+  decks, preços, pedidos, dados de conta nem qualquer texto do site. Também não
+  altera nada além da aparência. Em nenhum outro site a extensão é executada.
+</p>
+
+<h2>Permissões e por quê</h2>
+
+<table>
+  <tr><th>Permissão</th><th>Para que serve</th></tr>
+  <tr>
+    <td><code>storage</code></td>
+    <td>Lembrar as três preferências do popup.</td>
+  </tr>
+  <tr>
+    <td><code>activeTab</code></td>
+    <td>
+      Quando você abre o popup, ler o endereço da aba ativa só para comparar o
+      nome do host e avisar caso ela não seja da LigaMagic. O endereço não é
+      guardado nem enviado a lugar nenhum: existe enquanto o popup está aberto.
+    </td>
+  </tr>
+  <tr>
+    <td>Acesso a <code>ligamagic.com.br</code></td>
+    <td>Aplicar o tema escuro. É a função da extensão.</td>
+  </tr>
+</table>
+
+<h2>Compartilhamento com terceiros</h2>
+
+<p>
+  Nenhum. Não há venda, transferência ou compartilhamento de dados, porque não
+  há dados coletados. A extensão não se comunica com nenhum servidor — nem com
+  um servidor nosso, que não existe.
+</p>
+
+<h2>Relação com a LigaMagic</h2>
+
+<p>
+  Este é um projeto independente, sem qualquer vínculo com a LigaMagic. A
+  extensão apenas altera a aparência do site no seu navegador. O que a própria
+  LigaMagic coleta quando você a usa é regido pela política de privacidade dela,
+  sobre a qual esta extensão não tem influência. <em>Magic: The Gathering</em> é
+  marca registrada da Wizards of the Coast, que também não tem relação com este
+  projeto.
+</p>
+
+<h2>Alterações</h2>
+
+<p>
+  Se esta política mudar, a data no topo será atualizada e a alteração ficará
+  registrada no histórico público do repositório.
+</p>
+
+<h2>Contato</h2>
+
+<p>
+  Dúvidas ou problemas:
+  <a href="https://github.com/joaovitorbogo/ligamagic-dark-mode/issues">abra uma issue no repositório</a>.
+</p>
+
+<footer>
+  Código-fonte aberto sob licença MIT:
+  <a href="https://github.com/joaovitorbogo/ligamagic-dark-mode">github.com/joaovitorbogo/ligamagic-dark-mode</a>.
+  Tudo descrito aqui pode ser conferido lendo o código.
+</footer>
+
+<!-- Versão em inglês: a revisão da Chrome Web Store é feita em inglês. -->
+<section class="en">
+  <h1 style="font-size:22px">Privacy Policy (English)</h1>
+  <p class="sub" style="margin-top:6px">LigaMagic Dark Mode Chrome extension — last updated August 9, 2026</p>
+
+  <div class="lede">
+    This extension <strong>collects no personal data</strong>. It has no server,
+    makes no network requests, uses no analytics, and contains no remote code.
+  </div>
+
+  <h2>What is stored</h2>
+  <p>
+    Only the three on/off preferences you set in the popup: dark mode, follow the
+    system theme, and soften banners. They are kept in
+    <code>chrome.storage.sync</code>, Chrome's own extension storage. No names,
+    emails, identifiers, browsing history, visited URLs, or page content of any
+    kind.
+  </p>
+  <p>
+    To be explicit about one consequence of <code>chrome.storage.sync</code>: if
+    you have Chrome Sync enabled, those three preferences are synced across your
+    devices <strong>by Chrome itself</strong>, which involves Google's servers.
+    That is browser behaviour rather than extension behaviour, and nothing beyond
+    the three toggles travels with it. You can disable extension sync at
+    <code>chrome://settings/syncSetup</code> and the extension keeps working.
+  </p>
+
+  <h2>What it does on pages</h2>
+  <p>
+    The extension runs only on <code>ligamagic.com.br</code>. There it injects two
+    stylesheets and a small script whose only job is to toggle a CSS class on the
+    <code>&lt;html&gt;</code> element, which is what allows switching the theme
+    without reloading.
+  </p>
+  <p>
+    The script <strong>does not read page content</strong> — no cards, decks,
+    prices, orders, or account data — and changes nothing but appearance. It does
+    not run on any other site.
+  </p>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li><code>storage</code> — remember the three popup preferences.</li>
+    <li><code>activeTab</code> — when the popup opens, read the active tab's URL
+      solely to compare its hostname and warn if the tab is not a LigaMagic page.
+      The URL is never stored or transmitted.</li>
+    <li>Host access to <code>ligamagic.com.br</code> — apply the dark theme. This
+      is the extension's purpose.</li>
+  </ul>
+
+  <h2>Third parties</h2>
+  <p>
+    None. No data is sold, transferred, or shared, because none is collected. The
+    extension communicates with no server.
+  </p>
+
+  <h2>Relationship to LigaMagic</h2>
+  <p>
+    This is an independent project with no affiliation to LigaMagic. Whatever
+    LigaMagic itself collects is governed by its own privacy policy.
+    <em>Magic: The Gathering</em> is a trademark of Wizards of the Coast, which is
+    likewise unaffiliated with this project.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    <a href="https://github.com/joaovitorbogo/ligamagic-dark-mode/issues">Open an issue</a>
+    on the repository. Source is MIT-licensed and everything above can be verified
+    by reading it.
+  </p>
+</section>
+
+</main>
+</body>
+</html>

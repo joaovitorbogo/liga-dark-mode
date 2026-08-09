@@ -1,0 +1,139 @@
+:root {
+  --bg: #16171a;
+  --surface: #1e2024;
+  --line: #2c2f34;
+  --text: #e7e9ec;
+  --dim: #969ba3;
+  --brand: #ff5a00;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 296px;
+  margin: 0;
+  padding: 14px;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* ---------- cabecalho ---------- */
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* Mesmo icone da barra de ferramentas, para o popup nao parecer outra coisa. */
+.mark {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  display: block;
+}
+
+.titles h1 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.status {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--dim);
+}
+.status[data-on="true"] { color: #6fcf82; }
+
+/* ---------- linhas ---------- */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.row--main {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  margin-bottom: 10px;
+}
+.row--main .row-label { font-weight: 600; }
+
+.group {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.group .row + .row { border-top: 1px solid var(--line); border-radius: 0; }
+
+.row-text { display: flex; flex-direction: column; gap: 2px; }
+.row-label { flex: 1; }
+.row-hint { font-size: 11px; color: var(--dim); line-height: 1.35; }
+.row-text { flex: 1; }
+
+.row:hover { background: #23252a; }
+.row--main:hover { background: #24262b; }
+
+/* ---------- switch ---------- */
+
+.switch {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-ui {
+  flex: none;
+  width: 34px;
+  height: 19px;
+  border-radius: 999px;
+  background: #3a3d43;
+  position: relative;
+  transition: background 0.16s ease;
+}
+.switch-ui::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d9dcdf;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+
+.switch:checked + .switch-ui { background: var(--brand); }
+.switch:checked + .switch-ui::after { transform: translateX(15px); background: #fff; }
+
+.switch:focus-visible + .switch-ui {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Sub-opcoes so fazem sentido com o tema ligado. */
+.group[data-disabled="true"] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ---------- rodape ---------- */
+
+.foot {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--dim);
+  text-align: center;
+}

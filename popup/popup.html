@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>LigaMagic Dark Mode</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <img class="mark" src="../icons/icon128.png" alt="" aria-hidden="true">
+    <div class="titles">
+      <h1>LigaMagic Dark Mode</h1>
+      <p id="status" class="status">carregando…</p>
+    </div>
+  </header>
+
+  <label class="row row--main" for="enabled">
+    <span class="row-label">Modo escuro</span>
+    <input type="checkbox" id="enabled" class="switch">
+    <span class="switch-ui" aria-hidden="true"></span>
+  </label>
+
+  <div class="group">
+    <label class="row" for="followSystem">
+      <span class="row-text">
+        <span class="row-label">Seguir o tema do sistema</span>
+        <span class="row-hint">Claro quando o Windows estiver no modo claro</span>
+      </span>
+      <input type="checkbox" id="followSystem" class="switch">
+      <span class="switch-ui" aria-hidden="true"></span>
+    </label>
+
+    <label class="row" for="dimMedia">
+      <span class="row-text">
+        <span class="row-label">Suavizar banners</span>
+        <span class="row-hint">Reduz o brilho de banners e capas; as artes de carta ficam intactas</span>
+      </span>
+      <input type="checkbox" id="dimMedia" class="switch">
+      <span class="switch-ui" aria-hidden="true"></span>
+    </label>
+  </div>
+
+  <footer class="foot">
+    <span id="scope">Ativo em ligamagic.com.br</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

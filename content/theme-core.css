@@ -1,0 +1,440 @@
+/* LigaMagic Dark Mode - camada base (escrita a mao)
+ *
+ * Carrega DEPOIS de theme.generated.css, entao vence os empates de
+ * especificidade e serve para ajuste fino. Tudo aqui e escopado em
+ * `html.lmd-dark`, que o content script liga/desliga no <html>.
+ */
+
+/* ------------------------------------------------------------------ *
+ * 1. Base da pagina
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark {
+  color-scheme: dark;
+  background-color: #131316 !important;
+
+  /* Paleta da extensao, reutilizada nas regras abaixo. */
+  --lmd-bg: #131316;        /* fundo da pagina                 */
+  --lmd-surface: #1c1c20;   /* caixas, tabelas, cards          */
+  --lmd-surface-2: #24242a; /* camada elevada / linha alternada */
+  --lmd-surface-3: #2c2c33; /* hover, cabecalho de tabela      */
+  --lmd-line: #33333b;      /* divisorias                      */
+  --lmd-text: #e2e3e6;      /* texto principal                 */
+  --lmd-text-dim: #9a9ca3;  /* texto secundario                */
+  --lmd-brand: #ff6a1c;     /* laranja da marca                */
+}
+
+html.lmd-dark body {
+  background-color: var(--lmd-bg) !important;
+  background-image: none !important;
+  color: var(--lmd-text) !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 2. Cromo do navegador (scrollbar, selecao, autofill)
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark ::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+html.lmd-dark ::-webkit-scrollbar-track {
+  background: #17171a;
+}
+html.lmd-dark ::-webkit-scrollbar-thumb {
+  background: #3b3b44;
+  border-radius: 6px;
+  border: 2px solid #17171a;
+}
+html.lmd-dark ::-webkit-scrollbar-thumb:hover {
+  background: #4e4e59;
+}
+html.lmd-dark ::-webkit-scrollbar-corner {
+  background: #17171a;
+}
+
+html.lmd-dark ::selection {
+  background: rgba(255, 106, 28, 0.32);
+  color: #fff;
+}
+
+html.lmd-dark ::placeholder {
+  color: #7c7e85 !important;
+  opacity: 1;
+}
+
+/* O Chrome pinta o autofill de amarelo claro e ignora background-color. */
+html.lmd-dark input:-webkit-autofill,
+html.lmd-dark input:-webkit-autofill:hover,
+html.lmd-dark input:-webkit-autofill:focus,
+html.lmd-dark textarea:-webkit-autofill,
+html.lmd-dark select:-webkit-autofill {
+  -webkit-text-fill-color: var(--lmd-text) !important;
+  -webkit-box-shadow: 0 0 0 1000px #1f1f24 inset !important;
+  caret-color: var(--lmd-text) !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 3. Formularios
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark input,
+html.lmd-dark select,
+html.lmd-dark textarea,
+html.lmd-dark button {
+  color: var(--lmd-text);
+}
+
+html.lmd-dark input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='color']),
+html.lmd-dark select,
+html.lmd-dark textarea {
+  background-color: #1f1f24 !important;
+  border-color: var(--lmd-line) !important;
+  color: var(--lmd-text) !important;
+}
+
+html.lmd-dark input:focus,
+html.lmd-dark select:focus,
+html.lmd-dark textarea:focus {
+  border-color: var(--lmd-brand) !important;
+  outline-color: var(--lmd-brand);
+}
+
+/* Checkbox e radio nativos: com `color-scheme: dark` o Chrome ja os desenha
+   escuros sozinho. Pintar background neles nao troca a cor do widget -- so
+   atrapalha o desenho nativo. A camada gerada acerta alguns por engano (eles
+   caem em seletores genericos de input), entao desfazemos aqui. */
+html.lmd-dark input[type='checkbox'],
+html.lmd-dark input[type='radio'] {
+  background-color: initial !important;
+  background-image: none !important;
+  border-color: initial !important;
+}
+
+/* O <option> herda a cor do popup nativo do sistema, nao do <select>. */
+html.lmd-dark option,
+html.lmd-dark optgroup {
+  background-color: #1f1f24;
+  color: var(--lmd-text);
+}
+
+/* ------------------------------------------------------------------ *
+ * 4. Rede de seguranca para estilos inline
+ *
+ * O ligamagic e renderizado no servidor e escreve cor direto no atributo
+ * style em muitos pontos (barras de estoque, faixas de destaque, blocos de
+ * anuncio montados em PHP). Regra de stylesheet com !important vence style
+ * inline sem !important, entao da para interceptar os casos comuns por
+ * seletor de atributo.
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark [style*="background:#fff" i],
+html.lmd-dark [style*="background: #fff" i],
+html.lmd-dark [style*="background-color:#fff" i],
+html.lmd-dark [style*="background-color: #fff" i],
+html.lmd-dark [style*="background:white" i],
+html.lmd-dark [style*="background: white" i],
+html.lmd-dark [style*="background-color:white" i],
+html.lmd-dark [style*="background-color: white" i],
+html.lmd-dark [style*="background:#f5f5f5" i],
+html.lmd-dark [style*="background-color:#f5f5f5" i],
+html.lmd-dark [style*="rgb(255, 255, 255)" i],
+html.lmd-dark [style*="rgb(255,255,255)" i] {
+  background-color: var(--lmd-surface) !important;
+}
+
+html.lmd-dark [style*="color:#000" i],
+html.lmd-dark [style*="color: #000" i],
+html.lmd-dark [style*="color:#333" i],
+html.lmd-dark [style*="color: #333" i],
+html.lmd-dark [style*="color:#222" i],
+html.lmd-dark [style*="color:rgb(0, 0, 0)" i],
+html.lmd-dark [style*="color:rgb(0,0,0)" i] {
+  color: var(--lmd-text) !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 4b. HTML de apresentacao (forum, leiloes, mensagens)
+ *
+ * As areas mais antigas do site ainda usam markup da epoca do HTML 4:
+ * `bgcolor` no <tr> e <font color=red>. Isso nao esta em stylesheet nenhum,
+ * entao o gerador nunca alcanca -- foi o audit que apontou, com 50 superficies
+ * claras nas paginas de topico e mensagem do forum.
+ *
+ * Atributo de apresentacao tem especificidade zero, entao qualquer regra de
+ * CSS ja ganha dele; o !important esta aqui so para vencer a camada gerada.
+ * ------------------------------------------------------------------ */
+
+/* Cinza medio: no tema claro separa blocos de mensagem. Vira divisoria. */
+html.lmd-dark [bgcolor="#b4b4b4" i] {
+  background-color: var(--lmd-line) !important;
+}
+
+/* Cinzas claros e branco: superficie. */
+html.lmd-dark [bgcolor="#f8f8f8" i],
+html.lmd-dark [bgcolor="#f7f7f7" i],
+html.lmd-dark [bgcolor="#f0f0f0" i],
+html.lmd-dark [bgcolor="#e7e7e7" i],
+html.lmd-dark [bgcolor="#eeeeee" i],
+html.lmd-dark [bgcolor="#ffffff" i],
+html.lmd-dark [bgcolor="#fff" i],
+html.lmd-dark [bgcolor="white" i],
+html.lmd-dark [style*="background:#e7e7e7" i],
+html.lmd-dark [style*="background:#f0f0f0" i],
+html.lmd-dark [style*="background: #f0f0f0" i],
+html.lmd-dark [style*="background-color:#e7e7e7" i],
+html.lmd-dark [style*="background-color:#f0f0f0" i] {
+  background-color: var(--lmd-surface-2) !important;
+}
+
+/* <font color=red> nas paginas de leilao: vermelho puro sobre fundo escuro
+   rende contraste 4,0:1. Sobe para o mesmo vermelho que o gerador usa. */
+html.lmd-dark font[color="red" i],
+html.lmd-dark font[color="#ff0000" i],
+html.lmd-dark font[color="#f00" i],
+html.lmd-dark [style*="color:red" i],
+html.lmd-dark [style*="color: red" i] {
+  color: #ff6b6b !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 5. Tabelas
+ *
+ * O ligamagic e um site de tabelas: preco por loja, lista de decks, cartas
+ * do deck, historico. Zebrado e cabecalho precisam continuar distinguiveis
+ * sem virar faixas berrantes.
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark table {
+  background-color: transparent !important;
+  color: var(--lmd-text);
+  border-color: var(--lmd-line) !important;
+}
+
+html.lmd-dark th {
+  background-color: var(--lmd-surface-2) !important;
+  color: var(--lmd-text) !important;
+  border-color: var(--lmd-line) !important;
+}
+
+html.lmd-dark td {
+  border-color: var(--lmd-line) !important;
+}
+
+html.lmd-dark tbody tr:nth-child(even) > td {
+  background-color: rgba(255, 255, 255, 0.022);
+}
+
+html.lmd-dark tbody tr:hover > td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ------------------------------------------------------------------ *
+ * 6. Bootstrap e jQuery UI
+ *
+ * A camada gerada cobre o que estava nos bundles; estes sao os pedacos que
+ * dependem de variaveis do componente ou aparecem so em runtime.
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark .dropdown-menu,
+html.lmd-dark .modal-content,
+html.lmd-dark .popover,
+html.lmd-dark .card,
+html.lmd-dark .list-group-item {
+  background-color: var(--lmd-surface) !important;
+  border-color: var(--lmd-line) !important;
+  color: var(--lmd-text) !important;
+}
+
+html.lmd-dark .dropdown-item {
+  color: var(--lmd-text) !important;
+}
+html.lmd-dark .dropdown-item:hover,
+html.lmd-dark .dropdown-item:focus {
+  background-color: var(--lmd-surface-3) !important;
+  color: var(--lmd-brand) !important;
+}
+html.lmd-dark .dropdown-divider {
+  border-top-color: var(--lmd-line) !important;
+}
+
+html.lmd-dark .modal-header,
+html.lmd-dark .modal-footer {
+  border-color: var(--lmd-line) !important;
+}
+html.lmd-dark .modal-backdrop {
+  background-color: #000 !important;
+}
+/* O botao de fechar do Bootstrap 5 e um SVG preto embutido no CSS. */
+html.lmd-dark .btn-close {
+  filter: invert(1) grayscale(1) brightness(1.6);
+}
+
+html.lmd-dark .tooltip-inner {
+  background-color: #2b2b33 !important;
+  color: var(--lmd-text) !important;
+}
+
+/* Datepicker e autocomplete do jQuery UI: as texturas de fundo sao PNGs
+   brancos (ui-bg_glass_65_ffffff), que nenhum remapeamento de cor alcanca. */
+html.lmd-dark .ui-widget-content,
+html.lmd-dark .ui-widget-header,
+html.lmd-dark .ui-datepicker,
+html.lmd-dark .ui-autocomplete,
+html.lmd-dark .ui-menu {
+  background-image: none !important;
+  background-color: var(--lmd-surface) !important;
+  border-color: var(--lmd-line) !important;
+  color: var(--lmd-text) !important;
+}
+html.lmd-dark .ui-state-default,
+html.lmd-dark .ui-widget-content .ui-state-default,
+html.lmd-dark .ui-widget-header .ui-state-default {
+  background-image: none !important;
+  background-color: var(--lmd-surface-2) !important;
+  border-color: var(--lmd-line) !important;
+  color: var(--lmd-text) !important;
+}
+html.lmd-dark .ui-state-hover,
+html.lmd-dark .ui-state-active,
+html.lmd-dark .ui-state-focus {
+  background-image: none !important;
+  background-color: var(--lmd-surface-3) !important;
+  color: var(--lmd-brand) !important;
+}
+/* Os icones do jQuery UI sao sprites escuros num PNG unico. */
+html.lmd-dark .ui-icon {
+  filter: invert(1) brightness(1.4);
+}
+
+/* ------------------------------------------------------------------ *
+ * 7. Highcharts (analise de cores e curva de mana da pagina de deck)
+ *
+ * Os graficos sao SVG: a cor esta em `fill`/`stroke`, nao em background, e o
+ * gerador nem chega neles -- ele pula qualquer seletor que toque svg, para
+ * nao estragar os simbolos de mana. Sem estas regras os tres paineis do deck
+ * ficam sendo tres retangulos brancos no meio da pagina escura.
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark .highcharts-background {
+  fill: transparent !important;
+}
+html.lmd-dark .highcharts-plot-background,
+html.lmd-dark .highcharts-plot-border {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
+html.lmd-dark .highcharts-container text,
+html.lmd-dark .highcharts-container tspan,
+html.lmd-dark .highcharts-axis-labels text,
+html.lmd-dark .highcharts-legend-item text,
+html.lmd-dark .highcharts-title,
+html.lmd-dark .highcharts-subtitle,
+html.lmd-dark .highcharts-axis-title {
+  fill: var(--lmd-text) !important;
+  color: var(--lmd-text) !important;
+  text-shadow: none !important;
+  stroke-width: 0 !important;
+}
+/* Rotulo dentro da barra: fica sobre a cor da serie, entao continua claro,
+   mas sem o contorno branco que o Highcharts usa por padrao. */
+html.lmd-dark .highcharts-data-label text,
+html.lmd-dark .highcharts-data-label tspan {
+  fill: #fff !important;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.9) !important;
+}
+html.lmd-dark .highcharts-grid-line,
+html.lmd-dark .highcharts-axis-line,
+html.lmd-dark .highcharts-tick {
+  stroke: #3a3a43 !important;
+}
+html.lmd-dark .highcharts-tooltip-box,
+html.lmd-dark .highcharts-tooltip > path:first-child {
+  fill: #24242a !important;
+  stroke: var(--lmd-line) !important;
+}
+html.lmd-dark .highcharts-tooltip text,
+html.lmd-dark .highcharts-tooltip tspan {
+  fill: var(--lmd-text) !important;
+}
+/* O Highcharts escreve a cor do label direto no atributo style do <text>;
+   regra com !important vence style inline sem !important. */
+html.lmd-dark .highcharts-container [style*="color:#333" i],
+html.lmd-dark .highcharts-container [style*="color: #333" i],
+html.lmd-dark .highcharts-container [style*="fill:#333" i],
+html.lmd-dark .highcharts-container [style*="color:#000" i],
+html.lmd-dark .highcharts-container [style*="fill:#000" i] {
+  fill: var(--lmd-text) !important;
+  color: var(--lmd-text) !important;
+}
+/* A marca d'agua "Highcharts.com" fica ilegivel e nao ajuda ninguem. */
+html.lmd-dark .highcharts-credits {
+  fill: #4a4a52 !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 8. Especificos do ligamagic
+ * ------------------------------------------------------------------ */
+
+/* O header e o menu continuam laranja (e a marca), mas o topbar escuro
+   precisa de um limite claro contra o conteudo. */
+html.lmd-dark .l-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Campo de busca do topo: fica sobre o laranja e nao pode ficar branco. */
+html.lmd-dark .l-header-search-form,
+html.lmd-dark .l-header-search-input,
+html.lmd-dark .l-header-search-categories {
+  background-color: #1f1f24 !important;
+  color: var(--lmd-text) !important;
+}
+
+/* A caixa de sugestoes da busca e montada em runtime. */
+html.lmd-dark #ms-results,
+html.lmd-dark .ms-results,
+html.lmd-dark .search-suggestions,
+html.lmd-dark .autocomplete-suggestions {
+  background-color: var(--lmd-surface) !important;
+  border-color: var(--lmd-line) !important;
+  color: var(--lmd-text) !important;
+}
+
+/* Rodape: ja era escuro no tema claro. Mantido, mas separado do corpo. */
+html.lmd-dark .l-footer,
+html.lmd-dark footer {
+  background-color: #0f0f12 !important;
+  border-top: 1px solid var(--lmd-line) !important;
+}
+
+/* Simbolos de mana, cores de carta e miniaturas de carta sao a linguagem
+ * visual do jogo, nao decoracao de interface: o "W" branco tem que continuar
+ * branco e o "B" preto tem que continuar preto, senao o custo de mana fica
+ * impossivel de ler. O gerador ja os deixa de fora; aqui garantimos que
+ * nenhuma regra ampla os alcance depois. */
+html.lmd-dark .mana,
+html.lmd-dark [class*='mana-'],
+html.lmd-dark [class^='card-color-'],
+html.lmd-dark .symb,
+html.lmd-dark .symb img {
+  filter: none !important;
+  background-color: transparent !important;
+}
+
+/* ------------------------------------------------------------------ *
+ * 9. Suavizacao de imagens (opcional, classe lmd-dim)
+ *
+ * Banners e capas de artigo continuam ofuscando com a interface escura.
+ * As imagens de carta ficam DE FORA: e o produto que o usuario esta
+ * avaliando, e escurecer a arte atrapalha a leitura da condicao.
+ * ------------------------------------------------------------------ */
+
+html.lmd-dark.lmd-dim img:not([src*='logo' i]):not([src*='/cards/' i]):not([src*='mana' i]):not([src*='symb' i]),
+html.lmd-dark.lmd-dim video {
+  filter: brightness(0.84) contrast(1.03);
+  transition: filter 0.18s ease;
+}
+
+html.lmd-dark.lmd-dim img:hover {
+  filter: none;
+}

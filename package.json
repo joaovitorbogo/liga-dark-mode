@@ -1,0 +1,23 @@
+{
+  "name": "ligamagic-dark-mode",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extensao do Chrome que aplica modo escuro no ligamagic.com.br",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-css.mjs",
+    "measure": "node scripts/measure-bg-images.mjs",
+    "build": "node scripts/gen.mjs",
+    "theme": "npm run fetch && npm run measure && npm run build && npm run check",
+    "check": "node scripts/check.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "audit": "node scripts/audit-live.mjs",
+    "store": "node scripts/store-assets.mjs"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.47",
+    "puppeteer-core": "^23.11.1"
+  },
+  "license": "MIT"
+}
+
