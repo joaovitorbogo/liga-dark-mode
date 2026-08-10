@@ -407,6 +407,35 @@ html.lmd-dark footer {
   border-top: 1px solid var(--lmd-line) !important;
 }
 
+/* Precos do marketplace: cada digito e uma IMAGEM, nao texto.
+ *
+ * Para dificultar scraping, o ligamagic monta o preco (e a quantidade) com um
+ * <div> de 7x15 por algarismo, recortando um sprite por background-position. O
+ * sprite e um JPEG -- sem canal alfa -- com o digito laranja sobre BRANCO. No
+ * tema escuro sobra um retangulo branco em volta de cada algarismo: e a "borda
+ * branca" que aparece na lista de lojas.
+ *
+ * Nao da para recolorir uma imagem por CSS, mas da para inverte-la e depois
+ * descartar o que virou preto:
+ *
+ *   invert(1)          branco -> preto, laranja -> azul
+ *   hue-rotate(180deg) devolve a matiz: o azul volta a ser laranja
+ *   mix-blend-mode     screen com preto = o fundo da pagina, intacto; o digito
+ *                      laranja continua visivel por cima
+ *
+ * O par invert+hue-rotate mantem a matiz e inverte so a luminosidade, entao o
+ * laranja da marca (249,108,31) sai em (239,98,21) -- o mesmo tom do "R$" ao
+ * lado, que e texto de verdade. E como o screen usa o fundo real, o preco
+ * acompanha o zebrado e o hover da linha sem precisar saber a cor deles.
+ *
+ * `.imgnum-monet` (o "R$") e `.imgnum-unid` (a unidade) ficam de fora: sao
+ * texto, ja tematizados pela camada gerada. */
+html.lmd-dark .price-with-image > div:not(.imgnum-monet):not(.imgnum-unid),
+html.lmd-dark .quantity-with-image > div:not(.imgnum-monet):not(.imgnum-unid) {
+  filter: invert(1) hue-rotate(180deg);
+  mix-blend-mode: screen;
+}
+
 /* Simbolos de mana, cores de carta e miniaturas de carta sao a linguagem
  * visual do jogo, nao decoracao de interface: o "W" branco tem que continuar
  * branco e o "B" preto tem que continuar preto, senao o custo de mana fica
