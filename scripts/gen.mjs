@@ -304,11 +304,22 @@ function absolutizeUrl(u, base) {
 function rewriteValue(value, role, base) {
   let touched = false;
   // Protege url(...) para nao destruir data-URIs com "#" ou "rgb".
+  //
+  // Absolutizar a url NAO conta como alteracao. A url so precisa ser absoluta
+  // nas declaracoes que a gente de fato emite; se nada mais mudou, o certo e
+  // nao emitir nada e deixar a regra original do site valer -- ela ja resolve a
+  // url contra o proprio bundle.
+  //
+  // Emitir por causa da url sozinha quebra o cascade do site: a declaracao sai
+  // com !important e sem as irmas que vinham junto na regra de origem. Foi o que
+  // aconteceu com a lupa do autocomplete -- `#mainsugg .autocomplete div` traz
+  // background-image + background-repeat:no-repeat + background-position, mas so
+  // a imagem era copiada. O `background:#1c1c1c !important` gerado para
+  // `.selected` (atalho, portanto reseta as longhands) devolvia repeat/position
+  // ao valor inicial, e a lupa virava ladrilho na linha sob o mouse.
   const urls = [];
   let guarded = value.replace(/url\([^)]*\)/gi, (m) => {
-    const fixed = absolutizeUrl(m, base);
-    if (fixed !== m) touched = true;
-    urls.push(fixed);
+    urls.push(absolutizeUrl(m, base));
     return `__U${urls.length - 1}__`;
   });
 

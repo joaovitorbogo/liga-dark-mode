@@ -37,7 +37,7 @@ Cada etapa isolada:
 |---|---|
 | `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 18 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
 | `npm run measure` | decodifica cada imagem de fundo num canvas e mede a luminância média |
-| `npm run build` | gera `content/theme.generated.css` (~242 KB, 2.296 regras) |
+| `npm run build` | gera `content/theme.generated.css` (~226 KB, 2.172 regras) |
 | `npm run check` | verificações estáticas: parse, escopo dos seletores, URLs, regras-chave |
 | `npm run audit` | mede o tema aplicado nas páginas reais e lista o que sobrou claro |
 | `npm run icons` | regenera os PNGs do ícone |

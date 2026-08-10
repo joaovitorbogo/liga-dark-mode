@@ -10,7 +10,6 @@ html.lmd-dark .container-main-menu .main-menu .menu-option:hover{background-colo
 html.lmd-dark .container-main-menu .main-menu .menu-option a:hover,html.lmd-dark .container-main-menu .main-menu .menu-option:hover a{color:#fa6330 !important}
 @media screen and (max-width:875px){
 html.lmd-dark .container-main-menu .main-menu .menu-option{border-bottom:1px solid #df560c !important}
-html.lmd-dark .container-main-menu::before{background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon-menu.svg) no-repeat !important}
 }
 html.lmd-dark select,html.lmd-dark textarea,html.lmd-dark input[type='text'],html.lmd-dark input[type='email'],html.lmd-dark input[type='password'],html.lmd-dark input[type='number'],html.lmd-dark input[type='file']{background-color:#242424 !important;border:1px solid #403f3f !important}
 html.lmd-dark input[type='file']{color:#ededed !important}
@@ -143,7 +142,6 @@ html.lmd-dark .reportForm textarea.form-comment{color:#d7d7d7 !important;border-
 html.lmd-dark mark{background:#dfdf07 !important;color:#ededed !important}
 html.lmd-dark fieldset{border:1px solid #393939 !important}
 html.lmd-dark .owl-carousel .owl-video-wrapper{background:#0d0d0d !important}
-html.lmd-dark .owl-carousel .owl-video-play-icon{background:url(https://www.lmcorp.com.br/arquivos/css/owl.video.play.png) no-repeat !important}
 html.lmd-dark a{color:#ededed !important}
 html.lmd-dark a:hover{color:#ededed !important}
 html.lmd-dark body{background-color:#141313 !important;background:#242424 !important;color:#c5c5c5 !important}
@@ -156,7 +154,7 @@ html.lmd-dark .l-header-topbar .l-header-cart .new-items-here,html.lmd-dark .l-h
 html.lmd-dark .l-header-topbar .l-header-login .user-photo,html.lmd-dark .cd-dropdown-wrapper .user-photo{border:1px solid #303030 !important}
 html.lmd-dark .cd-dropdown-wrapper2 .user-photo{border:1px solid #303030 !important}
 html.lmd-dark .l-header-search-form{background-color:#242424 !important;-webkit-box-shadow:0 2px 2px 0 rgba(0,0,0,0.365) !important;box-shadow:0 2px 2px 0 rgba(0,0,0,0.365) !important}
-html.lmd-dark select.l-header-search-categories{color:#ededed !important;background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
+html.lmd-dark select.l-header-search-categories{color:#ededed !important}
 html.lmd-dark input[type="text"].l-header-search-input,html.lmd-dark input[type="search"].l-header-search-input{color:#ededed !important}
 html.lmd-dark .l-header-search-submit:hover{background-color:#261d18 !important}
 html.lmd-dark .l-dropdown-content-account hr{border-color:#333333 !important}
@@ -223,98 +221,16 @@ html.lmd-dark #notif-data li{border-bottom:1px dotted #373737 !important}
 html.lmd-dark #notif-data li.naoLida{background:#181818 !important}
 html.lmd-dark #notif-data li.naoLida .notif{color:#ededed !important}
 html.lmd-dark #notif-data li:hover{background:#282828 !important}
-html.lmd-dark #notif-data .tempo:before{background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/schedule.png) no-repeat 0 0 !important}
 html.lmd-dark .ui-multiselect-filter input{border:1px solid #4e4e4e !important}
 html.lmd-dark #header-filters{background-color:#c94b06 !important}
 html.lmd-dark #ms-body hr{background:#1c1c1c !important}
 html.lmd-dark #ms-body .submit input{background-color:#242424 !important;color:#f96c1f !important;border:1px solid #303030 !important}
 html.lmd-dark #ms-body .submit input:hover{background-color:#c74a06 !important;border:1px solid #303030 !important}
-html.lmd-dark .input-style input[type=radio]+label,html.lmd-dark .input-style input[type=checkbox]+label{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/checkradio3.png) !important}
 @media screen and (max-width:500px){
 html.lmd-dark .boxshadow{box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
 }
 html.lmd-dark .card{background-color:#242424 !important;border:1px solid rgba(84,84,84,0.125) !important}
-html.lmd-dark .btn-control .next{background:url(https://www.lmcorp.com.br/arquivos/img/icon-card-next.svg) !important}
-html.lmd-dark .btn-control .prev{background:url(https://www.lmcorp.com.br/arquivos/img/icon-card-next.svg) !important}
 html.lmd-dark .card-dark-gray .card-header{background-color:#393a3c !important}
-html.lmd-dark .mtg-symbol-zero{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/0.svg) !important}
-html.lmd-dark .mtg-symbol-um{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/1.svg) !important}
-html.lmd-dark .mtg-symbol-dez{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/10.svg) !important}
-html.lmd-dark .mtg-symbol-cem{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/100.svg) !important}
-html.lmd-dark .mtg-symbol-milhao{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/1000000.svg) !important}
-html.lmd-dark .mtg-symbol-onze{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/11.svg) !important}
-html.lmd-dark .mtg-symbol-doze{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/12.svg) !important}
-html.lmd-dark .mtg-symbol-treze{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/13.svg) !important}
-html.lmd-dark .mtg-symbol-quatorze{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/14.svg) !important}
-html.lmd-dark .mtg-symbol-quinze{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/15.svg) !important}
-html.lmd-dark .mtg-symbol-dezesseis{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/16.svg) !important}
-html.lmd-dark .mtg-symbol-dezessete{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/17.svg) !important}
-html.lmd-dark .mtg-symbol-dezoito{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/18.svg) !important}
-html.lmd-dark .mtg-symbol-dezenove{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/19.svg) !important}
-html.lmd-dark .mtg-symbol-dois{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2.svg) !important}
-html.lmd-dark .mtg-symbol-vinte{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/20.svg) !important}
-html.lmd-dark .mtg-symbol-doisb{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2B.svg) !important}
-html.lmd-dark .mtg-symbol-doisg{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2G.svg) !important}
-html.lmd-dark .mtg-symbol-doisr{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2R.svg) !important}
-html.lmd-dark .mtg-symbol-doisu{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2U.svg) !important}
-html.lmd-dark .mtg-symbol-doisw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/2W.svg) !important}
-html.lmd-dark .mtg-symbol-tres{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/3.svg) !important}
-html.lmd-dark .mtg-symbol-quatro{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/4.svg) !important}
-html.lmd-dark .mtg-symbol-cinco{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/5.svg) !important}
-html.lmd-dark .mtg-symbol-seis{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/6.svg) !important}
-html.lmd-dark .mtg-symbol-sete{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/7.svg) !important}
-html.lmd-dark .mtg-symbol-oito{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/8.svg) !important}
-html.lmd-dark .mtg-symbol-nove{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/9.svg) !important}
-html.lmd-dark .mtg-symbol-b{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/B.svg) !important}
-html.lmd-dark .mtg-symbol-bg{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/BG.svg) !important}
-html.lmd-dark .mtg-symbol-bp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/BP.svg) !important}
-html.lmd-dark .mtg-symbol-br{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/BR.svg) !important}
-html.lmd-dark .mtg-symbol-c{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/C.svg) !important}
-html.lmd-dark .mtg-symbol-chaos{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CHAOS.svg) !important}
-html.lmd-dark .mtg-symbol-e{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/E.svg) !important}
-html.lmd-dark .mtg-symbol-g{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/G.svg) !important}
-html.lmd-dark .mtg-symbol-gp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/GP.svg) !important}
-html.lmd-dark .mtg-symbol-gu{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/GU.svg) !important}
-html.lmd-dark .mtg-symbol-gw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/GW.svg) !important}
-html.lmd-dark .mtg-symbol-half{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/HALF.svg) !important}
-html.lmd-dark .mtg-symbol-hr{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/HR.svg) !important}
-html.lmd-dark .mtg-symbol-hw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/HW.svg) !important}
-html.lmd-dark .mtg-symbol-infinity{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/INFINITY.svg) !important}
-html.lmd-dark .mtg-symbol-p{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/P.svg) !important}
-html.lmd-dark .mtg-symbol-pw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/PW.svg) !important}
-html.lmd-dark .mtg-symbol-q{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/Q.svg) !important}
-html.lmd-dark .mtg-symbol-r{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/R.svg) !important}
-html.lmd-dark .mtg-symbol-rg{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/RG.svg) !important}
-html.lmd-dark .mtg-symbol-rp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/RP.svg) !important}
-html.lmd-dark .mtg-symbol-rw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/RW.svg) !important}
-html.lmd-dark .mtg-symbol-s{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/S.svg) !important}
-html.lmd-dark .mtg-symbol-t{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/T.svg) !important}
-html.lmd-dark .mtg-symbol-u{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/U.svg) !important}
-html.lmd-dark .mtg-symbol-ub{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/UB.svg) !important}
-html.lmd-dark .mtg-symbol-up{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/UP.svg) !important}
-html.lmd-dark .mtg-symbol-ur{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/UR.svg) !important}
-html.lmd-dark .mtg-symbol-w{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/W.svg) !important}
-html.lmd-dark .mtg-symbol-wb{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/WB.svg) !important}
-html.lmd-dark .mtg-symbol-wp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/WP.svg) !important}
-html.lmd-dark .mtg-symbol-wu{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/WU.svg) !important}
-html.lmd-dark .mtg-symbol-x{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/X.svg) !important}
-html.lmd-dark .mtg-symbol-y{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/Y.svg) !important}
-html.lmd-dark .mtg-symbol-z{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/Z.svg) !important}
-html.lmd-dark .mtg-symbol-bpgp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/BPGP.svg) !important}
-html.lmd-dark .mtg-symbol-bprp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/BPRP.svg) !important}
-html.lmd-dark .mtg-symbol-gpup{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/GPUP.svg) !important}
-html.lmd-dark .mtg-symbol-gpwp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/GPWP.svg) !important}
-html.lmd-dark .mtg-symbol-rpgp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/RPGP.svg) !important}
-html.lmd-dark .mtg-symbol-rpwp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/RPWP.svg) !important}
-html.lmd-dark .mtg-symbol-upbp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/UPBP.svg) !important}
-html.lmd-dark .mtg-symbol-uprp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/UPRP.svg) !important}
-html.lmd-dark .mtg-symbol-wpbp{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/WPBP.svg) !important}
-html.lmd-dark .mtg-symbol-wpup{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/WPUP.svg) !important}
-html.lmd-dark .mtg-symbol-cb{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CB.svg) !important}
-html.lmd-dark .mtg-symbol-cg{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CG.svg) !important}
-html.lmd-dark .mtg-symbol-cr{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CR.svg) !important}
-html.lmd-dark .mtg-symbol-cu{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CU.svg) !important}
-html.lmd-dark .mtg-symbol-cw{background-image:url(https://www.lmcorp.com.br/arquivos/img/mtg/symb/CW.svg) !important}
 html.lmd-dark .mtg-symbol{-webkit-box-shadow:-1px 1px 0 rgba(0,0,0,0.75) !important;box-shadow:-1px 1px 0 rgba(0,0,0,0.75) !important}
 html.lmd-dark .exibir-mais{color:#fa6330 !important;background-color:#242424 !important;border-color:#303030 !important}
 html.lmd-dark .exibir-mais:hover{background-color:#191919 !important;border-color:#343434 !important}
@@ -324,12 +240,11 @@ html.lmd-dark .autocomplete{border:1px solid #383838 !important;background:#2424
 html.lmd-dark .autocomplete strong{color:#fa6330 !important}
 html.lmd-dark #mainsugg .autocomplete-w1{background-color:#242424 !important;box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
 html.lmd-dark #mainsugg .autocomplete{background:#242424 !important;color:#ededed !important}
-html.lmd-dark #mainsugg .autocomplete div{border-bottom:1px solid #323232 !important;color:#ededed !important;background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/magnifying-glass-16.svg) !important}
+html.lmd-dark #mainsugg .autocomplete div{border-bottom:1px solid #323232 !important;color:#ededed !important}
 html.lmd-dark .autocomplete div:hover{background:#1c1c1c !important}
 html.lmd-dark .autocomplete div.selected{background:#1c1c1c !important}
 html.lmd-dark .btnLaranja,html.lmd-dark .botao,html.lmd-dark .botao-reto{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark .btnLaranja:hover,html.lmd-dark .botao:hover,html.lmd-dark .btn-topo:hover{background-color:#c74a06 !important;border-color:#d9530b !important}
-html.lmd-dark .hoverSpoiler{background:url(https://www.lmcorp.com.br/arquivos/img/opacity6.png) repeat !important}
 html.lmd-dark .btnBranco{border:1px solid #343434 !important}
 html.lmd-dark .btnBranco:hover{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark .lazy{background-color:#1f1f1f !important}
@@ -419,14 +334,6 @@ html.lmd-dark .ui-state-highlight a,html.lmd-dark .ui-widget-content .ui-state-h
 html.lmd-dark .ui-state-error,html.lmd-dark .ui-widget-content .ui-state-error{border:1px solid #c31414 !important;background:#261c18 url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x !important;color:#f36262 !important}
 html.lmd-dark .ui-state-error a,html.lmd-dark .ui-widget-content .ui-state-error a{color:#f36262 !important}
 html.lmd-dark .ui-state-error-text,html.lmd-dark .ui-widget-content .ui-state-error-text{color:#f36262 !important}
-html.lmd-dark .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_222222_256x240.png) !important}
-html.lmd-dark .ui-widget-content .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_222222_256x240.png) !important}
-html.lmd-dark .ui-widget-header .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_222222_256x240.png) !important}
-html.lmd-dark .ui-state-default .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_888888_256x240.png) !important}
-html.lmd-dark .ui-state-focus .ui-icon,html.lmd-dark .ui-state-hover .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_454545_256x240.png) !important}
-html.lmd-dark .ui-state-active .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_454545_256x240.png) !important}
-html.lmd-dark .ui-state-highlight .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_2e83ff_256x240.png) !important}
-html.lmd-dark .ui-state-error .ui-icon,html.lmd-dark .ui-state-error-text .ui-icon{background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-icons_cd0a0a_256x240.png) !important}
 html.lmd-dark .ui-widget-overlay{background:#303030 url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x !important}
 html.lmd-dark .ui-widget-shadow{background:#303030 url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x !important}
 /* template-home-v56-min.css */
@@ -473,29 +380,27 @@ html.lmd-dark .card-blue .card-footer{border-color:#282d3b !important}
 html.lmd-dark .card-blue .card-footer .btn{color:#8292d4 !important;border-color:#3e54aa !important}
 html.lmd-dark .card-blue .card-footer .btn:hover{background-color:#181920 !important}
 html.lmd-dark .card-blue .card-panel-filter{background-color:#1a1c23 !important}
-html.lmd-dark .card-blue .card-panel-filter-select{background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
 html.lmd-dark .card-green .card-header{background-color:#2e4230 !important}
 html.lmd-dark .card-green .card-footer{border-color:#2b3a2c !important}
 html.lmd-dark .card-green .card-footer .btn{color:#88b48d !important;border-color:#394c3b !important}
 html.lmd-dark .card-green .card-footer .btn:hover{background-color:#1e261e !important}
 html.lmd-dark .card-green .card-panel-filter{background-color:#191f19 !important}
-html.lmd-dark .card-green .card-panel-filter-select{color:#88b48d !important;background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
+html.lmd-dark .card-green .card-panel-filter-select{color:#88b48d !important}
 html.lmd-dark .card-red .card-header{background-color:#dd2343 !important}
 html.lmd-dark .card-red .card-footer{border-color:#3b272a !important}
 html.lmd-dark .card-red .card-footer .btn{color:#e8677e !important;border-color:#dd3f5b !important}
 html.lmd-dark .card-red .card-footer .btn:hover{background-color:#242424 !important}
 html.lmd-dark .card-red .card-panel-filter{background-color:#25181a !important}
-html.lmd-dark .card-red .card-panel-filter-select{background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
 html.lmd-dark .card-orange .card-header{background-color:#ee6019 !important}
 html.lmd-dark .card-orange .card-footer .btn{color:#f06c29 !important;border-color:#ea6b2a !important}
 html.lmd-dark .card-orange .card-footer .btn:hover{background-color:#242424 !important}
 html.lmd-dark .card-orange .card-panel-filter{background-color:#261d18 !important}
-html.lmd-dark .card-orange .card-panel-filter-select{color:#f06c29 !important;background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
+html.lmd-dark .card-orange .card-panel-filter-select{color:#f06c29 !important}
 html.lmd-dark .card-dark-gray .card-footer{border-color:#313133 !important}
 html.lmd-dark .card-dark-gray .card-footer .btn{color:#d0d1d2 !important;border-color:#4b4b4d !important}
 html.lmd-dark .card-dark-gray .card-footer .btn:hover{background-color:#2d2d2f !important}
 html.lmd-dark .card-dark-gray .card-panel-filter{background-color:#202020 !important}
-html.lmd-dark .card-dark-gray .card-panel-filter-select{color:#d0d1d2 !important;background:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon_arrow_down.svg) no-repeat 92% 50% !important}
+html.lmd-dark .card-dark-gray .card-panel-filter-select{color:#d0d1d2 !important}
 html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#fa6330 !important}
 html.lmd-dark li.spoiler.last a{color:#ededed !important}
 html.lmd-dark li.spoiler.last a:hover{color:#fa6330 !important}
@@ -550,7 +455,6 @@ html.lmd-dark #evn .progress[dprog="90"]{background-image:linear-gradient(54deg,
 html.lmd-dark #evn .progress[dprog="95"]{background-image:linear-gradient(72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
 html.lmd-dark #evn .progress[dprog="100"]{background-image:linear-gradient(90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
 html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#fa6330 !important}
-html.lmd-dark .flip-turn button:before{background:url(https://www.lmcorp.com.br/arquivos/img/marketplace/icon-flip.svg) center center no-repeat !important}
 html.lmd-dark #sliderSpoiler .layer-pool{border:1px solid #303030 !important}
 html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark #sliderSpoiler .layer-pool-vote{border:1px solid #303030 !important}
@@ -560,8 +464,7 @@ html.lmd-dark #ratePopup hr{border-top:1px solid #333333 !important}
 @media screen and (max-width:766px){
 html.lmd-dark #spoiler .card-actions button{border:1px solid #f45f2c !important}
 html.lmd-dark #spoiler .card-actions button:first-child{color:#fa6330 !important}
-html.lmd-dark #spoiler .card-actions button:nth-child(2){background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon-chat.svg) !important}
-html.lmd-dark #spoiler .card-actions .bt-rate{background-image:url(https://www.lmcorp.com.br/arquivos/img/icon/star_y.svg) !important;color:#fa6330 !important}
+html.lmd-dark #spoiler .card-actions .bt-rate{color:#fa6330 !important}
 html.lmd-dark #spoiler .card-actions div{border:1px solid #303030 !important}
 }
 html.lmd-dark .modal-content{background-color:#242424 !important}
@@ -654,7 +557,6 @@ html.lmd-dark #mp-botao-comprar-holder select,html.lmd-dark #mp-botao-comprar-ho
 html.lmd-dark #marketplace-lojas-lista-compra .mp-btn-comprar-qualidade{color:#c2c2c2 !important}
 html.lmd-dark .mp-btn-comprar-btn-alerta{background-color:#272727 !important;color:#d9d9d9 !important}
 html.lmd-dark .mp-btn-comprar-btn-alerta:hover{background-color:#f7470c !important}
-html.lmd-dark #marketplace-lojas-lista-compra .ui-icon.ui-icon-triangle-2-n-s,html.lmd-dark #mp-botao-comprar-holder .mp-btn-comprar-edicao-wrapper .ui-icon.ui-icon-triangle-2-n-s{background:center url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon-arrow-down-o-bold.svg) !important}
 html.lmd-dark #mp-botao-comprar-holder hr{border-top:1px solid rgba(81,81,81,0.1) !important}
 html.lmd-dark .mp-botao-comprar:hover,html.lmd-dark .lc-buy-btn:hover{background-color:#14662c !important;border-color:#1d863c !important}
 html.lmd-dark .lc-buy-btn-holder .lc-buy-btn-input{background-color:#242424 !important}
@@ -669,7 +571,6 @@ html.lmd-dark .popup-tabela-precos{background-color:#1a1a1a !important}
 html.lmd-dark .bloco-info-aux{color:#cfcfcf !important}
 html.lmd-dark .info-topo-bazar{background-color:#242424 !important}
 html.lmd-dark #busca input,html.lmd-dark #busca input:focus{color:#f96c1f !important;background:#1c1c1c !important}
-html.lmd-dark #busca button,html.lmd-dark #busca button:focus{background-image:url(https://www.lmcorp.com.br/arquivos/img/header_search_magglass.png) !important}
 html.lmd-dark .boxshadow{box-shadow:2px 2px 5px rgba(0,0,0,0.75) !important}
 html.lmd-dark .box-header,html.lmd-dark .box-footer{background-color:#df5307 !important}
 html.lmd-dark .box-scroll{background-color:#242424 !important}
@@ -703,7 +604,6 @@ html.lmd-dark .up{border-color:#fff0 #fff0 #384a38 #fff0 !important}
 html.lmd-dark .down{border-color:#d23c3c #fff0 #fff0 #fff0 !important}
 html.lmd-dark .right{border-color:#fff0 #fff0 #fff0 #545454 !important}
 html.lmd-dark .busca input,html.lmd-dark .busca input:focus{color:#f96c1f !important;background:#242424 !important}
-html.lmd-dark .busca button,html.lmd-dark .busca button:focus{background-image:url(https://www.lmcorp.com.br/arquivos/img/bg_search.png) !important}
 html.lmd-dark .edicoes li:hover{background:#242424 !important}
 html.lmd-dark .edicoes li.lineSelWhite{background:#242424 !important}
 html.lmd-dark .titulo-card,html.lmd-dark .subtitulo-card{color:#b9b9b9 !important}
@@ -748,7 +648,6 @@ html.lmd-dark .blogTitle{color:#dce3ea !important}
 html.lmd-dark .blogMsg{border:1px dotted #383838 !important}
 html.lmd-dark .blogImg{background:none repeat scroll 0 0 #1c1c1c !important}
 html.lmd-dark A.a01d,html.lmd-dark A.a01d:visited,html.lmd-dark A.a01d:active,html.lmd-dark A.a01d:link,html.lmd-dark A.a01d:hover{color:#fb5b5b !important}
-html.lmd-dark .b30{background:url(https://www.lmcorp.com.br/arquivos/img/icon/a.png) no-repeat -176px -16px !important}
 html.lmd-dark .padraoMsg{color:#ededed !important}
 html.lmd-dark A.linkCkEditor,html.lmd-dark A.linkCkEditor:visited,html.lmd-dark A.linkCkEditor:active,html.lmd-dark A.linkCkEditor:link,html.lmd-dark A.linkCkEditor:hover{color:#f96c1f !important}
 html.lmd-dark A.laranja,html.lmd-dark A.laranja:visited,html.lmd-dark A.laranja:active,html.lmd-dark A.laranja:link,html.lmd-dark A.laranja:hover{color:#f96c1f !important}
@@ -785,7 +684,6 @@ html.lmd-dark .paginacao-quadro{background:#df5307 !important}
 html.lmd-dark .paginacao-quadro-selecionada{background:#242424 !important;color:#f96c1f !important}
 html.lmd-dark .remove-formatacao-busca{color:#ededed !important}
 html.lmd-dark .busca-mini input,html.lmd-dark .busca-mini input:focus{color:#f96c1f !important;background:#242424 !important}
-html.lmd-dark .busca-mini button,html.lmd-dark .busca-mini button:focus{background-image:url(https://www.lmcorp.com.br/arquivos/img/bg_search.png) !important}
 html.lmd-dark .botaoLeilao{background-color:#0d0d0d !important}
 html.lmd-dark .botaoLeilao:hover{background-color:#df5307 !important}
 html.lmd-dark #deckresponsivo A{color:#fb5b5b !important}
@@ -879,7 +777,6 @@ html.lmd-dark .card-grid .tcg-edit a{color:#d7d7d7 !important}
 html.lmd-dark .card-grid .card-item .main-card{box-shadow:1px 1px 6px rgba(0,0,0,0.608) !important;background-color:#141313 !important}
 html.lmd-dark .card-grid .card-item .main-card.lazy{background-color:#171717 !important}
 html.lmd-dark .card-grid .card-noimage .invisible-label{color:#ededed !important}
-html.lmd-dark .card-grid .layer-hover,html.lmd-dark .mtg-picture .layer-hover{background:url(https://www.lmcorp.com.br/arquivos/img/opacity6.png) repeat !important}
 html.lmd-dark .card-grid .layer-hover .layer-pool,html.lmd-dark .mtg-picture .layer-hover .layer-pool{border:1px solid #303030 !important}
 html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark .layer-hover .layer-pool .layer-pool-vote,html.lmd-dark .mtg-picture .layer-pool .layer-pool-vote{border:1px solid #303030 !important}
@@ -956,10 +853,7 @@ html.lmd-dark #card-info .detalhes{color:#bdbdbd !important}
 html.lmd-dark #card-info a{color:#bdbdbd !important}
 html.lmd-dark #card-info a:hover{color:#fa6330 !important}
 html.lmd-dark #card-info .circle,html.lmd-dark #popupAvgPrice .circle,html.lmd-dark #mobile-precomedio .circle{border:1px solid #363636 !important;background-color:#272727 !important}
-html.lmd-dark #card-image-src:after{background:url(https://www.lmcorp.com.br/arquivos/img/icon/zoom.png) !important}
 html.lmd-dark .thumbs li:hover{background:#242424 !important}
-html.lmd-dark #card-image-src.prod-video:before{background:url(https://www.lmcorp.com.br/arquivos/img/icon/play-white.png) no-repeat !important}
-html.lmd-dark .card-image ul li.prod-video:after{background:url(https://www.lmcorp.com.br/arquivos/img/icon/play-white.png) no-repeat !important}
 html.lmd-dark .contents-list .contents-list-item{background-color:#242424 !important;box-shadow:2px 2px 6px 2px rgba(0,0,0,0.135) !important}
 html.lmd-dark .contents-list .contents-list-item.selected{border:3px solid #f45f2c !important}
 html.lmd-dark #info-view-product-modal .main-item{box-shadow:2px 2px 6px 2px rgba(0,0,0,0.135) !important}
@@ -1170,10 +1064,6 @@ html.lmd-dark #card-menu .card-menu-opc div.selecionado{background:#f7470c !impo
 html.lmd-dark .bzr-structure-top #card-menu{box-shadow:1px 1px 3px rgba(0,0,0,0.75) !important}
 html.lmd-dark .prod-card-list .pcl-sep,html.lmd-dark .pcl-header .pcl-sep{border:1px solid #363636 !important;background-color:#272727 !important}
 html.lmd-dark #pcl-main .pcl-show-all{color:#fa6330 !important}
-html.lmd-dark span.stars,html.lmd-dark span.stars span{background:url(https://www.lmcorp.com.br/arquivos/img/star-orange-0.svg) 0 0 repeat-x !important}
-html.lmd-dark span.stars span{background-image:url(https://www.lmcorp.com.br/arquivos/img/star-orange.svg) !important}
-html.lmd-dark #main-compras .pedido-selected span.stars,html.lmd-dark #main-compras .pedido-selected span.stars span{background:url(https://www.lmcorp.com.br/arquivos/img/star-yellow-0.svg) 0 0 repeat-x !important}
-html.lmd-dark #main-compras .pedido-selected span.stars span{background-image:url(https://www.lmcorp.com.br/arquivos/img/star-yellow.svg) !important}
 html.lmd-dark .mp-multiestoque{background-color:#f8eb18 !important;color:#ededed !important}
 html.lmd-dark .mp-loja-semlogo{border:1px solid #343434 !important;color:#d7d7d7 !important}
 html.lmd-dark .mp-loja-semlogo:hover,html.lmd-dark #card-estoque .estoque-linha:hover .mp-loja-semlogo{border:1px solid #313131 !important;background-color:#222222 !important}
@@ -1334,15 +1224,12 @@ html.lmd-dark .mtg-variacao-bt div:hover{background:#f7470c !important;border:1p
 }
 @media (max-width:767px){
 html.lmd-dark .dataTables_wrapper .dataTables_paginate .paginate_button,html.lmd-dark .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,html.lmd-dark .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,html.lmd-dark .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{border:1px solid #3e3e3e !important}
-html.lmd-dark #mtg-cards .card-image-zoom{background:url(https://www.lmcorp.com.br/arquivos/img/icon/zoom-reverse.png) !important}
 }
 @media (max-width:766px){
 html.lmd-dark #grid-topbar .tb-sort-bottom{color:#d7d7d7 !important}
-html.lmd-dark .card-grid .card-item:before{background:url(https://www.lmcorp.com.br/arquivos/img/icon/zoom-32-white.svg) !important}
 html.lmd-dark .card-grid .card-actions button{border:1px solid #f45f2c !important}
 html.lmd-dark .card-grid .card-actions button:first-child{color:#fa6330 !important}
-html.lmd-dark .card-grid .card-actions button:nth-child(2){background-image:url(https://www.lmcorp.com.br/arquivos/img/assets/icons/icon-chat.svg) !important}
-html.lmd-dark .card-grid .card-actions .bt-rate{background-image:url(https://www.lmcorp.com.br/arquivos/img/icon/star_y.svg) !important;color:#fa6330 !important}
+html.lmd-dark .card-grid .card-actions .bt-rate{color:#fa6330 !important}
 }
 html.lmd-dark .modal-content{background-color:#242424 !important;border:1px solid rgba(84,84,84,0.2) !important}
 html.lmd-dark #spoilerModal .botao{background-color:#f7470c !important;border:1px solid #f45f2c !important}
@@ -1435,7 +1322,6 @@ html.lmd-dark #filtro_cardname,html.lmd-dark #filtro_nome_deck,html.lmd-dark #fi
 html.lmd-dark .dk-filtro-preco input[type="text"],html.lmd-dark .dk-filtro-precotipo #filtro_preco_tipo,html.lmd-dark .dk-filtro-data input[type="text"]{border:1px solid #383838 !important;background-color:#242424 !important}
 html.lmd-dark .filtros-buscar{border:1px solid #363636 !important;color:#ededed !important;background-color:#272727 !important}
 html.lmd-dark .decks .dk-linha div{color:#9e9e9e !important}
-html.lmd-dark .decks .dk-comp input[type=checkbox]+label{background-image:url(https://www.lmcorp.com.br/arquivos/img/icon/checkradio2.png) !important}
 html.lmd-dark .decks .dk-comp input[type=checkbox]:checked+label{color:#c0c0c0 !important}
 html.lmd-dark .decks .dk-comp input[type=checkbox]:checked+label:hover{color:#a1a1a1 !important}
 html.lmd-dark .decks .dk-formato font:hover,html.lmd-dark .decks .dk-nomeevento:hover,html.lmd-dark .decks .dk-nomejogador:hover,html.lmd-dark .decks .dk-data font:hover{color:#f96c1f !important}
@@ -1512,7 +1398,6 @@ html.lmd-dark .deckhome .deckhomeprice,html.lmd-dark .deckhome .deckhomeformat,h
 html.lmd-dark .deckhome .deckposition{background-color:#242424 !important;color:#ededed !important;-webkit-box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important}
 html.lmd-dark .deckhome .deck-data{color:#afafaf !important}
 html.lmd-dark .deckhome .decktournament a:hover,html.lmd-dark .deckhome .deckname a:hover,html.lmd-dark .deckhome .deckhomeformat a:hover,html.lmd-dark .deckhome .deckhomeevent a:hover{color:#f96c1f !important}
-html.lmd-dark .deckhome .dk-comp input[type=checkbox]+label{background-image:url(https://www.lmcorp.com.br/arquivos/img/icon/checkradio2.png) !important}
 html.lmd-dark .deckhome .dk-comp input[type=checkbox]:checked+label{color:#c0c0c0 !important}
 html.lmd-dark .deckhome .dk-comp input[type=checkbox]:checked+label:hover{color:#a1a1a1 !important}
 html.lmd-dark .deckhome .dk-XXcomp{background-color:#0d0d0d !important}
@@ -1679,11 +1564,6 @@ html.lmd-dark .container-qty{border:1px solid #373737 !important}
 html.lmd-dark .container-qty input{color:#e9eaf2 !important}
 html.lmd-dark .container-qty input::placeholder{color:#e9eaf2 !important}
 html.lmd-dark .container-qty button.plus,html.lmd-dark .container-qty button.minus{border:2px solid #3b3b3a !important}
-html.lmd-dark .manas-icons span.b{background-image:url(https://www.lmcorp.com.br/arquivos/img/marketplace/mana-icons/b.svg) !important}
-html.lmd-dark .manas-icons span.u{background-image:url(https://www.lmcorp.com.br/arquivos/img/marketplace/mana-icons/u.svg) !important}
-html.lmd-dark .manas-icons span.w{background-image:url(https://www.lmcorp.com.br/arquivos/img/marketplace/mana-icons/w.svg) !important}
-html.lmd-dark .manas-icons span.r{background-image:url(https://www.lmcorp.com.br/arquivos/img/marketplace/mana-icons/r.svg) !important}
-html.lmd-dark .manas-icons span.g{background-image:url(https://www.lmcorp.com.br/arquivos/img/marketplace/mana-icons/g.svg) !important}
 html.lmd-dark .container-pre-order{background-color:#141711 !important;color:#3ddb49 !important}
 html.lmd-dark .container-ntl{background-color:#2e1f20 !important;color:#fb5b7b !important}
 html.lmd-dark .go-store{color:#a7a7a6 !important}
@@ -1887,7 +1767,7 @@ html.lmd-dark .title-page{color:#e9eaf2 !important}
 html.lmd-dark .title-page::after{background-color:#f7470c !important}
 html.lmd-dark .container-options.is-floating{background:#141313 !important;box-shadow:0 0 20px 12px rgba(0,0,0,0.27) !important}
 html.lmd-dark .container-options .container-filter input{background:#242424 !important;color:#cacaca !important;box-shadow:0 9px 28px 8px rgba(0,0,0,0.08),0 6px 16px 0 rgba(0,0,0,0.108),0 3px 6px -4px rgba(0,0,0,0.162) !important}
-html.lmd-dark .container-select select{background-image:url(https://www.lmcorp.com.br/arquivos/img/arrow_down.png) !important;background-color:#242424 !important;color:#cacaca !important;box-shadow:0 9px 28px 8px rgba(0,0,0,0.08),0 6px 16px 0 rgba(0,0,0,0.108),0 3px 6px -4px rgba(0,0,0,0.162) !important}
+html.lmd-dark .container-select select{background-color:#242424 !important;color:#cacaca !important;box-shadow:0 9px 28px 8px rgba(0,0,0,0.08),0 6px 16px 0 rgba(0,0,0,0.108),0 3px 6px -4px rgba(0,0,0,0.162) !important}
 html.lmd-dark .container-language span{color:#cacaca !important}
 html.lmd-dark .container-switch .switch-shadow+label{background-color:#141414 !important}
 html.lmd-dark .container-switch .switch-shadow+label:before{background-color:#1d1d1d !important}
@@ -1976,7 +1856,7 @@ html.lmd-dark .categoria__card-container .price-out-of-stock,html.lmd-dark .card
 html.lmd-dark .header-options-container__title{background-color:#3f3f3f !important}
 html.lmd-dark .price-input{border:1px solid rgba(66,66,66,0.438) !important;color:#e9eaf2 !important}
 html.lmd-dark .price-input:focus{border:1px solid #f45f2c !important}
-html.lmd-dark .header-options-background{background-image:url(https://www.lmcorp.com.br/arquivos/img/sites/prod_bg_image/1.jpg) !important;background-image:linear-gradient(rgba(16,17,20,0.722),rgba(16,17,20,0.722)),url(https://www.lmcorp.com.br/arquivos/img/sites/prod_bg_image/1.jpg) !important}
+html.lmd-dark .header-options-background{background-image:linear-gradient(rgba(16,17,20,0.722),rgba(16,17,20,0.722)),url(https://www.lmcorp.com.br/arquivos/img/sites/prod_bg_image/1.jpg) !important}
 html.lmd-dark .price-arrow-container{background-color:#f7470c !important}
 html.lmd-dark .btn-triangle-left{border-color:#fff0 #444862 #fff0 #fff0 !important}
 html.lmd-dark .btn-triangle-right{border-color:#fff0 #fff0 #fff0 #444862 !important}
@@ -2049,7 +1929,6 @@ html.lmd-dark .ddcommon input.text{color:#9e9e9e !important;background:#242424 !
 html.lmd-dark .borderRadius .shadow{-webkit-box-shadow:5px 5px 5px -5px rgba(0,0,0,0.75) !important;box-shadow:5px 5px 5px -5px rgba(0,0,0,0.75) !important}
 html.lmd-dark .borderRadiusBtm .shadow{-webkit-box-shadow:-5px -5px 5px -5px rgba(0,0,0,0.75) !important;box-shadow:-5px -5px 5px -5px rgba(0,0,0,0.75) !important}
 html.lmd-dark .dd{background-color:#242424 !important}
-html.lmd-dark .dd .ddArrow{background:url(https://www.lmcorp.com.br/arquivos/img/icon/comboarrow.png) no-repeat !important}
 html.lmd-dark .dd .ddTitle .description{color:#afafaf !important}
 html.lmd-dark .dd .ddChild{border:1px solid #393939 !important;background-color:#242424 !important}
 html.lmd-dark .dd .ddChild li{background-color:#242424 !important;border-bottom:1px solid #303030 !important}
@@ -2268,7 +2147,6 @@ html.lmd-dark .btnsTextArea{border:1px solid #383838 !important;box-shadow:0 2px
 html.lmd-dark .linhaForum{border-bottom:1px solid #333333 !important}
 html.lmd-dark .headerMapFeat{color:#f96c1f !important}
 html.lmd-dark .inp_pesquisaGoogle input{color:#f96c1f !important}
-html.lmd-dark .inp_pesquisaGoogle button{background-image:url(https://www.lmcorp.com.br/arquivos/img/bg_search.png) !important}
 html.lmd-dark .titulosForum{background:#383838 !important}
 html.lmd-dark .conteudoForum{border-left:1px solid #333333 !important;border-right:1px solid #333333 !important;border-bottom:1px solid #333333 !important}
 html.lmd-dark .conteudoForum li{color:#ededed !important}
@@ -2292,7 +2170,6 @@ html.lmd-dark #bzr-edit input[type="submit"]:hover,html.lmd-dark .bzr-botao:hove
 html.lmd-dark .bgCinza{background:#3c3c3c !important}
 html.lmd-dark .conteudoPainelLeft{background:#242424 !important}
 html.lmd-dark input.buscaSimples{color:#f96c1f !important;background:#242424 !important}
-html.lmd-dark .cardsSearch button{background-image:url(https://www.lmcorp.com.br/arquivos/img/bg_search.png) !important}
 html.lmd-dark table tbody>tr:hover{background:#1b1b1b !important}
 html.lmd-dark .titleTable{background:#383838 !important}
 html.lmd-dark .vPreco{COLOR:#f96c1f !important}
@@ -2321,7 +2198,6 @@ html.lmd-dark .filtro-leilao .filtro p.title{color:#d7d7d7 !important}
 html.lmd-dark .filtro-leilao{background-color:#242424 !important;color:#a4a4a4 !important;box-shadow:0 2px 5px 0 rgba(0,0,0,0.108) !important}
 html.lmd-dark .filtro-leilao input[type=text],html.lmd-dark .filtro-leilao select{border:1px solid #383838 !important;background-color:#242424 !important}
 html.lmd-dark .filtro-leilao .filtro-exibir{color:#cccccc !important}
-html.lmd-dark .filtro-leilao input[type=radio]+label,html.lmd-dark .filtro-leilao input[type=checkbox]+label{background-image:url(https://www.lmcorp.com.br/arquivos/img/icon/checkradio.png) !important}
 html.lmd-dark .filtro-leilao input[type=checkbox]:checked+label{color:#c0c0c0 !important}
 html.lmd-dark .filtro-leilao input[type=checkbox]:checked+label:hover{color:#a1a1a1 !important}
 html.lmd-dark .filtrar-adv li:last-child:hover{color:#ed6940 !important}
