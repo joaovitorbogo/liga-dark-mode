@@ -491,6 +491,42 @@ html.lmd-dark .card-dark-gray .card-panel-filter-select {
   color: #d0d1d2 !important;
 }
 
+/* Compra por lista, passo 3: o degrau do zebrado e do botao de "outras cartas".
+ *
+ * Aqui o mapeamento por papel acerta a direcao e erra a intensidade. No tema
+ * claro a lista alterna #fff e #e7e7e7 e o botao e #eee sobre o card branco:
+ * degraus de ~6 a 9 pontos de L* (CIE), bem visiveis. O gerador preserva a
+ * ordem de elevacao -- a faixa continua mais escura que o card --, mas a mesma
+ * distancia em RGB rende muito menos contraste percebido na ponta escura da
+ * escala: #242424 -> #191919 sao 5,5 de L*, e o botao sobra em 2,8. Foi o que o
+ * usuario viu: "zebrando... ruim pra ver".
+ *
+ * Corrigimos clareando em vez de escurecer. Descer os 8,7 de L* do tema claro a
+ * partir de #242424 chegaria em ~#131313, praticamente o fundo da pagina
+ * (#131316) -- as linhas alternadas virariam buracos no card. Subir chega no
+ * mesmo degrau sem colidir com nada, e e a convencao que o resto da extensao ja
+ * usa no zebrado de tabela (secao 5).
+ *
+ * Branco translucido em vez de cor fixa: a linha herda o fundo do container, e
+ * o container aqui muda de cor entre os blocos de loja. */
+html.lmd-dark #content-step-3 .itens > .row:nth-child(even),
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-holder > .row:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+}
+
+/* O botao ("Clique aqui para visualizar as outras cartas...") ficava branco com
+   texto branco: a folha da compra por lista nao estava no tema (ver
+   INJETADOS em scripts/fetch-css.mjs). Com ela dentro o texto ja le, mas o
+   bloco fica a 2,8 de L* do card e nao parece mais clicavel. */
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder,
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text {
+  background-color: rgba(255, 255, 255, 0.07) !important;
+}
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder:hover,
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text:hover {
+  background-color: rgba(255, 255, 255, 0.11) !important;
+}
+
 /* Simbolos de mana, cores de carta e miniaturas de carta sao a linguagem
  * visual do jogo, nao decoracao de interface: o "W" branco tem que continuar
  * branco e o "B" preto tem que continuar preto, senao o custo de mana fica

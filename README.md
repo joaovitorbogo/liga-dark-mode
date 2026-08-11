@@ -5,7 +5,7 @@ Extensão do Chrome (Manifest V3) que aplica um tema escuro no
 decks, edições, artigos, fórum, carrinho e login.
 
 O tema **não** é um filtro de inversão. Ele é derivado do CSS real do site: os
-18 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
+19 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
 valores de cor — e por papel, não por cor. Isso preserva o que faz o site ser
 reconhecível: o laranja da marca continua laranja, o verde de "menor preço"
 continua verde, o vermelho de "maior preço" continua vermelho, e os símbolos de
@@ -35,13 +35,21 @@ Cada etapa isolada:
 
 | Comando | O que faz |
 |---|---|
-| `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 18 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
+| `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 19 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
 | `npm run measure` | decodifica cada imagem de fundo num canvas e mede a luminância média |
-| `npm run build` | gera `content/theme.generated.css` (~226 KB, 2.172 regras) |
+| `npm run build` | gera `content/theme.generated.css` (~227 KB, 2.182 regras) |
 | `npm run check` | verificações estáticas: parse, escopo dos seletores, URLs, regras-chave |
 | `npm run audit` | mede o tema aplicado nas páginas reais e lista o que sobrou claro |
 | `npm run icons` | regenera os PNGs do ícone |
 | `npm run store` | gera as capturas e blocos promocionais da Chrome Web Store em `store/` |
+
+Um bundle escapa da descoberta por `<link>`: o da **compra por lista** é
+injetado por JavaScript depois que o passo do wizard monta, então não existe no
+HTML servido — e a página inteira ficou fora do tema por causa disso (zebrado
+branco, botão branco no branco). Ele está fixado em `INJETADOS`, em
+`scripts/fetch-css.mjs`. Como ali não há `<link>` para ler a versão, a versão
+conhecida é só o ponto de partida: se ela morrer, o fetch procura as próximas e
+avisa qual encontrou. Fixar o número devolveria o silêncio.
 
 ### Mapeamento por papel
 
@@ -97,6 +105,10 @@ algoritmo não alcança sozinho:
   atinge tudo. No claro isso passa (o select não tem caixa), no escuro ele
   pintava o retângulo inteiro da cor do painel e engolia o texto. A camada à mão
   desliga o filtro e devolve a seta como SVG embutido
+- **degrau de elevação na ponta escura da escala**: mapear por papel preserva a
+  ordem certa, mas não a distância percebida — `#fff`/`#e7e7e7` viram
+  `#242424`/`#191919`, que é metade do contraste em L\*. O zebrado da compra por
+  lista precisou do ajuste à mão
 
 ## Verificação
 

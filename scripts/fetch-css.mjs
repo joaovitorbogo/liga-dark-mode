@@ -41,6 +41,23 @@ const PAGES = {
   cadastro: 'https://www.ligamagic.com.br/?view=newuser',
 };
 
+// Bundles que nenhuma pagina declara em <link>: sao injetados por JavaScript
+// depois que o passo do wizard monta. A descoberta acima le o HTML servido,
+// entao nunca os enxerga -- a compra por lista ficou fora do tema inteira por
+// causa disso (zebrado branco, botao branco no branco).
+//
+// O numero de versao sobe a cada deploy igual ao dos outros, e aqui nao ha
+// <link> para ler, entao a versao conhecida e so o ponto de partida: subimos a
+// partir dela ate as versoes acabarem. Fixar o numero devolveria o silencio.
+//
+// Tem que ser a MAIOR que responde, nao a primeira: o servidor continua
+// entregando as versoes antigas (a v11 esta no ar do lado da v12), entao parar
+// no primeiro 200 congelaria o tema numa folha velha sem nenhum erro aparecer.
+const INJETADOS = [
+  { base: 'https://www.lmcorp.com.br/arquivos/compraporlista/package/', nome: 'compraporlista-v%-min.css', v: 12 },
+];
+const VERSOES_VAZIAS = 4;   // quantos 404 seguidos encerram a busca
+
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
   '(KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36';
 
@@ -83,6 +100,29 @@ for (const [nome, url] of Object.entries(PAGES)) {
     console.error(`${nome}: ERRO ${e.message}`);
   }
   await dorme(1200);
+}
+
+// A ordem importa no cascade e estes carregam por ultimo (entram depois que a
+// pagina ja montou), entao vao para o fim da lista.
+for (const b of INJETADOS) {
+  let ultima = null, vazias = 0;
+  for (let v = b.v; vazias < VERSOES_VAZIAS; v++) {
+    const url = b.base + b.nome.replace('%', v);
+    let ok = false;
+    try {
+      const r = await fetch(url, { method: 'HEAD', headers: { 'user-agent': UA } });
+      ok = r.ok;
+    } catch { /* rede instavel: conta como vazia e segue */ }
+    if (ok) { ultima = { v, url }; vazias = 0; } else vazias++;
+    await dorme(150);
+  }
+  if (ultima) {
+    cssUrls.add(ultima.url);
+    console.log(`injetado: ${ultima.url.split('/').pop()}` +
+      (ultima.v !== b.v ? `  (a versao subiu de v${b.v}: atualize INJETADOS)` : ''));
+  } else {
+    console.error(`injetado: ERRO nao achei ${b.nome} a partir de v${b.v} em ${b.base}`);
+  }
 }
 
 // Limpa o cache antigo: os nomes tem versao e sobrariam bundles obsoletos, que

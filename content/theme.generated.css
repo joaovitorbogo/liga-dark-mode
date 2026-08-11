@@ -1,5 +1,5 @@
 /* LigaMagic Dark Mode - camada gerada
- * Derivada automaticamente dos 18 bundles de CSS de www.ligamagic.com.br.
+ * Derivada automaticamente dos 19 bundles de CSS de www.ligamagic.com.br.
  * Nao editar a mao: regenerar com scripts/gen.mjs.
  * Ajustes finos ficam em theme-core.css, que carrega depois desta camada.
  */
@@ -2272,3 +2272,14 @@ html.lmd-dark #colecao-filtro .select2-container .select2-selection--single{bord
 html.lmd-dark #colecao-filtro .select2-container .select2-selection--single .select2-selection__rendered{color:#ededed !important}
 html.lmd-dark span.select2-dropdown.select2-dropdown--above{border:1px solid #403f3f !important}
 html.lmd-dark span.select2-dropdown.select2-dropdown--below{border:1px solid #403f3f !important}
+/* compraporlista-v12-min.css */
+html.lmd-dark .compra-lista-tag{background-color:#229b46 !important;box-shadow:0 1px 2px 0 rgba(0,0,0,0.405) !important}
+html.lmd-dark #cl-btn-bring-to-top{background-color:#df5307 !important;box-shadow:0 0 4px rgba(0,0,0,0.75) !important}
+html.lmd-dark #cl-btn-bring-to-top:hover{background-color:#b64306 !important}
+html.lmd-dark .passo-lista-cards .change-input-type-btn-simple{color:#f96c1f !important}
+html.lmd-dark #content-step-wizard .mention.compramassa:focus,html.lmd-dark #content-step-wizard select:focus,html.lmd-dark #content-step-wizard input:focus,html.lmd-dark #content-step-wizard button.ui-multiselect:focus{border:1px solid #f25e0d !important}
+html.lmd-dark #content-step-3 .itens>.row:nth-child(even),html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-holder>.row:nth-child(even){background:#191919 !important}
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder,html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text{background-color:#1c1c1c !important}
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder:hover{background-color:#161616 !important}
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text{background-color:#272727 !important}
+html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text:hover{background-color:#2b2b2b !important}
