@@ -436,6 +436,61 @@ html.lmd-dark .quantity-with-image > div:not(.imgnum-monet):not(.imgnum-unid) {
   mix-blend-mode: screen;
 }
 
+/* Filtros dos paineis da home ("Assuntos do Momento", "Decks", "Analise de
+ * Cartas"): o <select> e pintado por um `filter:`, nao por `color`.
+ *
+ * Para tingir a seta (um SVG remoto de fill #555555) o site aplica uma cadeia
+ * `invert() sepia() saturate() hue-rotate()` no PROPRIO <select>. Filtro nao
+ * atinge so o background-image: atinge o elemento inteiro. No tema claro isso
+ * passa despercebido -- o select nao tem caixa (`background:0 0; border:0`),
+ * entao so a seta e o texto sao coloridos, e a cadeia foi calibrada para levar
+ * #555555 no laranja/verde/vermelho/azul do painel.
+ *
+ * No escuro a conta muda duas vezes:
+ *
+ *   1. a camada gerada da ao select um fundo (#1f1f24) e uma borda, como faz
+ *      com todo controle de formulario -- e o filtro tinge esse retangulo;
+ *   2. as cadeias saturam pesado (saturate ate 6743%), entao qualquer cinza
+ *      escuro sai como a cor cheia do painel.
+ *
+ * Resultado: um bloco solido laranja/verde/azul com o texto quase da mesma cor
+ * por cima. Foi o que o usuario descreveu -- e nao da para corrigir com `color`,
+ * porque o filtro roda depois, sobre o que ja foi pintado.
+ *
+ * A saida e desligar o filtro e devolver o select ao que ele e no tema claro:
+ * sem caixa, sobre a faixa `.card-panel-filter` (que a camada gerada ja tinge
+ * por painel). Sem o filtro a seta voltaria ao #555555 original, invisivel no
+ * escuro, entao ela vira um SVG embutido na cor de cada painel -- as mesmas
+ * cores que o gerador ja derivou para o texto de acento do painel
+ * (`.card-footer .btn`), todas acima de 5,4:1 sobre a faixa. */
+html.lmd-dark .card-panel-filter-select {
+  filter: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  color: var(--lmd-text) !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 12 7'><path fill='%23d0d1d2' d='M0 0h12L6 7z'/></svg>") !important;
+}
+
+html.lmd-dark .card-orange .card-panel-filter-select {
+  color: #f06c29 !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 12 7'><path fill='%23f06c29' d='M0 0h12L6 7z'/></svg>") !important;
+}
+html.lmd-dark .card-green .card-panel-filter-select {
+  color: #88b48d !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 12 7'><path fill='%2388b48d' d='M0 0h12L6 7z'/></svg>") !important;
+}
+html.lmd-dark .card-red .card-panel-filter-select {
+  color: #e8677e !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 12 7'><path fill='%23e8677e' d='M0 0h12L6 7z'/></svg>") !important;
+}
+html.lmd-dark .card-blue .card-panel-filter-select {
+  color: #8292d4 !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 12 7'><path fill='%238292d4' d='M0 0h12L6 7z'/></svg>") !important;
+}
+html.lmd-dark .card-dark-gray .card-panel-filter-select {
+  color: #d0d1d2 !important;
+}
+
 /* Simbolos de mana, cores de carta e miniaturas de carta sao a linguagem
  * visual do jogo, nao decoracao de interface: o "W" branco tem que continuar
  * branco e o "B" preto tem que continuar preto, senao o custo de mana fica

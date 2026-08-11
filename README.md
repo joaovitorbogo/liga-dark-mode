@@ -91,6 +91,12 @@ algoritmo não alcança sozinho:
   leilões) ainda usam `bgcolor` no `<tr>` e `<font color=red>`. Isso não está em
   stylesheet nenhum, então o gerador nunca alcança — quem apontou foi o audit,
   com 50 superfícies claras e 48 textos vermelhos ilegíveis nessas páginas
+- **`filter:` sobre controle de formulário**: os filtros dos painéis da home
+  tingem a seta do `<select>` com uma cadeia `invert()/sepia()/hue-rotate()`
+  aplicada no próprio elemento. Filtro não atinge só o `background-image`:
+  atinge tudo. No claro isso passa (o select não tem caixa), no escuro ele
+  pintava o retângulo inteiro da cor do painel e engolia o texto. A camada à mão
+  desliga o filtro e devolve a seta como SVG embutido
 
 ## Verificação
 
