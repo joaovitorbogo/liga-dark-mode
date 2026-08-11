@@ -1,5 +1,5 @@
 /* LigaMagic Dark Mode - camada gerada
- * Derivada automaticamente dos 19 bundles de CSS de www.ligamagic.com.br.
+ * Derivada automaticamente dos 20 bundles de CSS de www.ligamagic.com.br.
  * Nao editar a mao: regenerar com scripts/gen.mjs.
  * Ajustes finos ficam em theme-core.css, que carrega depois desta camada.
  */
@@ -2283,3 +2283,37 @@ html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder,html.lmd-dark
 html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-holder:hover{background-color:#161616 !important}
 html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text{background-color:#272727 !important}
 html.lmd-dark #content-step-3 #carrinho-footer-outras-lojas-itens-text:hover{background-color:#2b2b2b !important}
+/* template-perfil-v5-min.css */
+html.lmd-dark .btn-topo{background-color:#f7470c !important;border:1px solid #f45f2c !important}
+html.lmd-dark .foto{box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .no-avatar{background-color:#1c1c1c !important;color:#d7d7d7 !important;box-shadow:2px 2px 4px rgba(0,0,0,0.75) !important}
+html.lmd-dark .bloco-infos-pessoais{background:#242424 !important;box-shadow:1px 0 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .infos-pessoais li a{color:#c5c5c5 !important}
+html.lmd-dark .negociacoes li a{color:#c5c5c5 !important}
+html.lmd-dark .bloco-referencias{background:#242424 !important;box-shadow:1px 0 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .referencias li:first-child{background:linear-gradient(-135deg,#1db31d 0%,#4d614d 100%) !important}
+html.lmd-dark .referencias li:nth-child(2){background:linear-gradient(-135deg,#399d9d 0%,#3b4343 100%) !important}
+html.lmd-dark .referencias li:last-child{background:linear-gradient(-135deg,#bb1b1b 0%,#8c1f1f 100%) !important}
+html.lmd-dark .bloco-artigos,html.lmd-dark .bloco-decks,html.lmd-dark .bloco-leiloes{background:#242424 !important;box-shadow:1px 0 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .bloco-leiloes{border-left:1px solid #383838 !important}
+html.lmd-dark .artigos li:before{background-color:#262626 !important}
+html.lmd-dark .artigos li:after{background:#c74a06 !important}
+html.lmd-dark .nome-artigo{color:#a2a2a2 !important}
+html.lmd-dark .nome-artigo a{color:#c8c7c8 !important}
+html.lmd-dark .blocos-semitem{color:#bdbdbd !important}
+html.lmd-dark .leiloes li:before{background-color:#262626 !important}
+html.lmd-dark .leiloes li:after{background:#c74a06 !important}
+html.lmd-dark .preco-leilao{color:#f96c1f !important}
+html.lmd-dark .decks-perfil .dk-linha{background-color:#242424 !important;border-top:1px solid #333333 !important;color:#b1b1b1 !important}
+html.lmd-dark .decks-perfil .dk-linha .d-col1,html.lmd-dark .decks-perfil .dk-linha .d-col2,html.lmd-dark .decks-perfil .dk-linha .d-col3{color:#b1b1b1 !important}
+html.lmd-dark .decks-perfil .dk-nome a{color:#b1b1b1 !important}
+html.lmd-dark .decks-perfil .dk-linha .dk-menor{color:#89b395 !important}
+html.lmd-dark .decks-perfil .dk-linha .dk-medio{color:#e7aa88 !important}
+html.lmd-dark .decks-perfil .dk-linha .dk-maior{color:#eb6e72 !important}
+html.lmd-dark .decks-perfil .dk-linha a{color:#b1b1b1 !important}
+html.lmd-dark .decks-perfil .dk-linha a:hover{color:#fa6330 !important}
+html.lmd-dark .decks-perfil .dk-hits{color:#bdbdbd !important}
+html.lmd-dark .bloco-forum{background:#242424 !important;box-shadow:1px 0 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .table-forum a{color:#c5c5c5 !important}
+html.lmd-dark .bloco-bzr{background:#242424 !important;box-shadow:1px 0 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .bzr-stats .stats-main{box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}

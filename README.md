@@ -5,7 +5,7 @@ Extensão do Chrome (Manifest V3) que aplica um tema escuro no
 decks, edições, artigos, fórum, carrinho e login.
 
 O tema **não** é um filtro de inversão. Ele é derivado do CSS real do site: os
-19 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
+20 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
 valores de cor — e por papel, não por cor. Isso preserva o que faz o site ser
 reconhecível: o laranja da marca continua laranja, o verde de "menor preço"
 continua verde, o vermelho de "maior preço" continua vermelho, e os símbolos de
@@ -35,21 +35,28 @@ Cada etapa isolada:
 
 | Comando | O que faz |
 |---|---|
-| `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 19 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
+| `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 20 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
 | `npm run measure` | decodifica cada imagem de fundo num canvas e mede a luminância média |
-| `npm run build` | gera `content/theme.generated.css` (~227 KB, 2.182 regras) |
+| `npm run build` | gera `content/theme.generated.css` (~230 KB, 2.215 regras) |
 | `npm run check` | verificações estáticas: parse, escopo dos seletores, URLs, regras-chave |
 | `npm run audit` | mede o tema aplicado nas páginas reais e lista o que sobrou claro |
 | `npm run icons` | regenera os PNGs do ícone |
 | `npm run store` | gera as capturas e blocos promocionais da Chrome Web Store em `store/` |
 
-Um bundle escapa da descoberta por `<link>`: o da **compra por lista** é
-injetado por JavaScript depois que o passo do wizard monta, então não existe no
-HTML servido — e a página inteira ficou fora do tema por causa disso (zebrado
-branco, botão branco no branco). Ele está fixado em `INJETADOS`, em
-`scripts/fetch-css.mjs`. Como ali não há `<link>` para ler a versão, a versão
-conhecida é só o ponto de partida: se ela morrer, o fetch procura as próximas e
-avisa qual encontrou. Fixar o número devolveria o silêncio.
+Dois bundles escapam da descoberta por `<link>`, cada um por um motivo:
+
+- **compra por lista** — é injetado por JavaScript depois que o passo do wizard
+  monta, então não existe no HTML servido;
+- **perfil** — a página de usuário (`?view=user&nick=...`) responde *"você
+  precisa estar logado"* para quem baixa o HTML no fetch, e o `<link>` só sai
+  junto com o conteúdo.
+
+Nos dois casos a página inteira ficava fora do tema (a compra por lista com
+zebrado branco e botão branco no branco; o perfil com todos os blocos em
+`#fff`). Eles estão fixados em `SEM_LINK`, em `scripts/fetch-css.mjs`. Como ali
+não há `<link>` para ler a versão, a versão conhecida é só o ponto de partida:
+se ela morrer, o fetch procura as próximas e avisa qual encontrou. Fixar o
+número devolveria o silêncio.
 
 ### Mapeamento por papel
 
@@ -135,7 +142,10 @@ edicoes  0/0    loja      0/0
 
 - Páginas atrás de login (meus decks, minha loja, pedidos, mensagens) não puderam
   ser verificadas visualmente — o tema cobre o CSS delas, porque ele vem dos
-  bundles e não da renderização, mas ninguém olhou o resultado.
+  bundles e não da renderização, mas ninguém olhou o resultado. E o audit
+  também não as vê: o perfil ficou branco até alguém logado reclamar, porque a
+  folha dele nem estava sendo baixada. Uma página fora do audit é uma página
+  cujo bundle pode estar faltando sem que nada acuse.
 - Banners de anunciantes são imagens: continuam claros. É para isso que serve a
   opção **Suavizar banners**.
 - Se a LigaMagic publicar um deploy com CSS novo, rode `npm run theme` de novo.

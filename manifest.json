@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LigaMagic Dark Mode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Modo escuro para o ligamagic.com.br: marketplace, cards, decks, edicoes, artigos e forum.",
   "icons": {
     "16": "icons/icon16.png",

@@ -41,10 +41,15 @@ const PAGES = {
   cadastro: 'https://www.ligamagic.com.br/?view=newuser',
 };
 
-// Bundles que nenhuma pagina declara em <link>: sao injetados por JavaScript
-// depois que o passo do wizard monta. A descoberta acima le o HTML servido,
-// entao nunca os enxerga -- a compra por lista ficou fora do tema inteira por
-// causa disso (zebrado branco, botao branco no branco).
+// Bundles que a varredura acima nunca enxerga, por dois motivos diferentes:
+//
+// - compra por lista: e injetado por JavaScript depois que o passo do wizard
+//   monta, entao nao existe no HTML servido. A pagina inteira ficou fora do
+//   tema por causa disso (zebrado branco, botao branco no branco).
+// - perfil: a pagina de usuario (?view=user&nick=...) responde "voce precisa
+//   estar logado" para quem baixa o HTML aqui, e o <link> so sai junto com o
+//   conteudo. Logado, era a folha que pintava os blocos de #fff -- o perfil
+//   aparecia branco inteiro.
 //
 // O numero de versao sobe a cada deploy igual ao dos outros, e aqui nao ha
 // <link> para ler, entao a versao conhecida e so o ponto de partida: subimos a
@@ -53,8 +58,9 @@ const PAGES = {
 // Tem que ser a MAIOR que responde, nao a primeira: o servidor continua
 // entregando as versoes antigas (a v11 esta no ar do lado da v12), entao parar
 // no primeiro 200 congelaria o tema numa folha velha sem nenhum erro aparecer.
-const INJETADOS = [
+const SEM_LINK = [
   { base: 'https://www.lmcorp.com.br/arquivos/compraporlista/package/', nome: 'compraporlista-v%-min.css', v: 12 },
+  { base: 'https://www.lmcorp.com.br/arquivos/css/', nome: 'template-perfil-v%-min.css', v: 5 },
 ];
 const VERSOES_VAZIAS = 4;   // quantos 404 seguidos encerram a busca
 
@@ -102,9 +108,10 @@ for (const [nome, url] of Object.entries(PAGES)) {
   await dorme(1200);
 }
 
-// A ordem importa no cascade e estes carregam por ultimo (entram depois que a
-// pagina ja montou), entao vao para o fim da lista.
-for (const b of INJETADOS) {
+// A ordem importa no cascade e estes carregam por ultimo (o da compra por
+// lista entra depois que a pagina ja montou; o do perfil e a folha da pagina,
+// que vem depois das do template), entao vao para o fim da lista.
+for (const b of SEM_LINK) {
   let ultima = null, vazias = 0;
   for (let v = b.v; vazias < VERSOES_VAZIAS; v++) {
     const url = b.base + b.nome.replace('%', v);
@@ -118,10 +125,10 @@ for (const b of INJETADOS) {
   }
   if (ultima) {
     cssUrls.add(ultima.url);
-    console.log(`injetado: ${ultima.url.split('/').pop()}` +
-      (ultima.v !== b.v ? `  (a versao subiu de v${b.v}: atualize INJETADOS)` : ''));
+    console.log(`sem link: ${ultima.url.split('/').pop()}` +
+      (ultima.v !== b.v ? `  (a versao subiu de v${b.v}: atualize SEM_LINK)` : ''));
   } else {
-    console.error(`injetado: ERRO nao achei ${b.nome} a partir de v${b.v} em ${b.base}`);
+    console.error(`sem link: ERRO nao achei ${b.nome} a partir de v${b.v} em ${b.base}`);
   }
 }
 
