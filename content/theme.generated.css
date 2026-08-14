@@ -336,233 +336,85 @@ html.lmd-dark .ui-state-error a,html.lmd-dark .ui-widget-content .ui-state-error
 html.lmd-dark .ui-state-error-text,html.lmd-dark .ui-widget-content .ui-state-error-text{color:#f36262 !important}
 html.lmd-dark .ui-widget-overlay{background:#303030 url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x !important}
 html.lmd-dark .ui-widget-shadow{background:#303030 url(https://www.lmcorp.com.br/arquivos/img/assets/calendar/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x !important}
-/* template-home-v56-min.css */
-html.lmd-dark #hm .slider-botoes .carousel-control-prev:hover,html.lmd-dark #hm .slider-botoes .carousel-control-next:hover{background-color:#0d0d0d !important;color:#ededed !important}
-html.lmd-dark #hm .hm-news-title,html.lmd-dark #hm .hm-news-subtitle{text-shadow:2px 2px 3px rgba(0,0,0,0.75) !important}
-html.lmd-dark a h4.card-title:hover{color:#fa6330 !important}
-html.lmd-dark #layerblocker{background-color:#0d0d0d !important;background-color:rgba(13,13,13,0.75) !important}
-html.lmd-dark #forum .forum-title a{color:#d7d7d7 !important}
-html.lmd-dark #forum .forum-coment a{color:#bdbdbd !important}
-html.lmd-dark #forum .forum-info-coment a,html.lmd-dark #forum .forum-error a{color:#fb9d6a !important}
-html.lmd-dark #forum .forum-info-coment{color:#afafaf !important}
-html.lmd-dark #forum .forum-right{color:#afafaf !important}
-html.lmd-dark #forum .forum-lines .forum-left{border-top:1px solid #333333 !important}
-html.lmd-dark #forum .forum-lines .forum-left:hover{background-color:#202020 !important}
-html.lmd-dark .morepages li{background-color:#292929 !important}
-html.lmd-dark .morepages .active{background-color:#f7470c !important}
-html.lmd-dark #torneios .trn-main{border:1px solid #333333 !important}
-html.lmd-dark #torneios .trn-main-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
-html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#fa6330 !important}
-html.lmd-dark #torneios .trn-main:hover{background-color:#202020 !important}
-html.lmd-dark #torneios .trn-avatar{background-color:#1c1c1c !important;color:#d7d7d7 !important}
-html.lmd-dark #torneios .trn-date-only{color:#d7d7d7 !important}
-html.lmd-dark #torneios .trn-date-info a{color:#fb9d6a !important}
-html.lmd-dark #torneios .trn-label a{color:#d7d7d7 !important}
-html.lmd-dark #torneios .trn-info-aux{color:#bdbdbd !important}
-html.lmd-dark #torneios .trn-tag{background-color:#3a3a3a !important}
-html.lmd-dark #torneios .trn-tag-3{background-color:#0d0d0d !important}
-html.lmd-dark #torneios .trn-tag-4{background-color:#d29f06 !important}
-html.lmd-dark #torneios .trn-tag-11{background-color:#9d0505 !important}
-html.lmd-dark #torneios .trn-tag-15{background-color:#2d2c37 !important}
-html.lmd-dark .table-cards tr{border-top:1px solid #323537 !important}
-html.lmd-dark .table-cards a{color:#ededed !important}
-html.lmd-dark .card-green table tr td:first-child,html.lmd-dark .card-green table tr td:nth-child(3){color:#90b995 !important}
-html.lmd-dark .card-red table tr td:first-child,html.lmd-dark .card-red table tr td:nth-child(3){color:#e96d83 !important}
-html.lmd-dark #prod table tr td:nth-child(3){color:#90b995 !important}
-html.lmd-dark .cards-analysis table tr:hover,html.lmd-dark #prod table tr:hover{background-color:#202020 !important}
-html.lmd-dark .card-panel{-webkit-box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
-html.lmd-dark .card-panel .card-footer{border-color:#3c2f28 !important;background-color:#242424 !important}
-html.lmd-dark .card-panel .card-footer .btn{background-color:#242424 !important}
-html.lmd-dark .card-panel .table-striped tbody tr:nth-of-type(odd){background-color:#242424 !important}
-html.lmd-dark .card-panel .table-striped tbody tr:nth-of-type(even){background-color:#212121 !important}
-html.lmd-dark .card-blue .card-header{background-color:#364a9b !important}
-html.lmd-dark .card-blue .card-footer{border-color:#282d3b !important}
-html.lmd-dark .card-blue .card-footer .btn{color:#8292d4 !important;border-color:#3e54aa !important}
-html.lmd-dark .card-blue .card-footer .btn:hover{background-color:#181920 !important}
-html.lmd-dark .card-blue .card-panel-filter{background-color:#1a1c23 !important}
-html.lmd-dark .card-green .card-header{background-color:#2e4230 !important}
-html.lmd-dark .card-green .card-footer{border-color:#2b3a2c !important}
-html.lmd-dark .card-green .card-footer .btn{color:#88b48d !important;border-color:#394c3b !important}
-html.lmd-dark .card-green .card-footer .btn:hover{background-color:#1e261e !important}
-html.lmd-dark .card-green .card-panel-filter{background-color:#191f19 !important}
-html.lmd-dark .card-green .card-panel-filter-select{color:#88b48d !important}
-html.lmd-dark .card-red .card-header{background-color:#dd2343 !important}
-html.lmd-dark .card-red .card-footer{border-color:#3b272a !important}
-html.lmd-dark .card-red .card-footer .btn{color:#e8677e !important;border-color:#dd3f5b !important}
-html.lmd-dark .card-red .card-footer .btn:hover{background-color:#242424 !important}
-html.lmd-dark .card-red .card-panel-filter{background-color:#25181a !important}
-html.lmd-dark .card-orange .card-header{background-color:#ee6019 !important}
-html.lmd-dark .card-orange .card-footer .btn{color:#f06c29 !important;border-color:#ea6b2a !important}
-html.lmd-dark .card-orange .card-footer .btn:hover{background-color:#242424 !important}
-html.lmd-dark .card-orange .card-panel-filter{background-color:#261d18 !important}
-html.lmd-dark .card-orange .card-panel-filter-select{color:#f06c29 !important}
-html.lmd-dark .card-dark-gray .card-footer{border-color:#313133 !important}
-html.lmd-dark .card-dark-gray .card-footer .btn{color:#d0d1d2 !important;border-color:#4b4b4d !important}
-html.lmd-dark .card-dark-gray .card-footer .btn:hover{background-color:#2d2d2f !important}
-html.lmd-dark .card-dark-gray .card-panel-filter{background-color:#202020 !important}
-html.lmd-dark .card-dark-gray .card-panel-filter-select{color:#d0d1d2 !important}
-html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#fa6330 !important}
-html.lmd-dark li.spoiler.last a{color:#ededed !important}
-html.lmd-dark li.spoiler.last a:hover{color:#fa6330 !important}
-html.lmd-dark #sliderSpoiler{background:#242424 !important}
-html.lmd-dark #sliderSpoiler .btn-green{background:#136319 !important}
-html.lmd-dark #sliderSpoiler .btn-green:hover{color:#3ddb49 !important;background:#141711 !important}
-html.lmd-dark #sliderSpoiler .container-qty{border:1px solid #373737 !important}
-html.lmd-dark #sliderSpoiler .container-qty button.plus,html.lmd-dark #sliderSpoiler .container-qty button.minus{border:2px solid #3b3b3a !important}
-html.lmd-dark #sliderSpoiler .container-qty input{color:#e9eaf2 !important}
-html.lmd-dark .iconDelete{color:#ef6767 !important;text-shadow:0 1px 0 rgba(0,0,0,0.75) !important}
-html.lmd-dark #dks .dks-main{border:1px solid #333333 !important}
-html.lmd-dark #dks .dk-title a{color:#d7d7d7 !important}
-html.lmd-dark #dks .dk-subtitle{color:#bdbdbd !important}
-html.lmd-dark #dks .deck-title{color:#bdbdbd !important}
-html.lmd-dark #dks .deck-title a{color:#d7d7d7 !important}
-html.lmd-dark #dks .dk-menor{color:#90b995 !important}
-html.lmd-dark #dks .dk-maior{color:#e96d83 !important}
-html.lmd-dark #dks .deck-autor{color:#bdbdbd !important}
-html.lmd-dark #dks .deck-autor a{color:#bdbdbd !important}
-html.lmd-dark #dks .dk-line:hover{background-color:#202020 !important}
-html.lmd-dark #dks .dks-more,html.lmd-dark .hm-decks-sem-spoiler #dks .dks-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
-html.lmd-dark #dks .dks-more:hover{background-color:#202020 !important;color:#fa6330 !important}
-html.lmd-dark #evn .item .item-info span{color:#9e9e9e !important}
-html.lmd-dark #evn .item .item-info div{color:#cacaca !important}
-html.lmd-dark #evn .progress{background-color:#27292b !important}
-html.lmd-dark #evn .progress>span{background-color:#242424 !important}
-html.lmd-dark #evn .progress>span strong{color:#e4e4e4 !important}
-html.lmd-dark #evn .progress>span span{color:#9e9e9e !important}
-html.lmd-dark #evn .item:hover{background-color:#202020 !important}
-html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#fa6330 !important}
-html.lmd-dark #evn .item:hover .progress>span strong{color:#ededed !important}
-html.lmd-dark #evn .item-borderlink{border:1px solid #373737 !important}
-html.lmd-dark #evn .progress[dprog="0"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(90deg,#161616 50%,#33c914 50%,#33c914) !important}
-html.lmd-dark #evn .progress[dprog="5"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(108deg,#161616 50%,#33c914 50%,#33c914) !important}
-html.lmd-dark #evn .progress[dprog="10"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(126deg,#161616 50%,#33c914 50%,#33c914) !important}
-html.lmd-dark #evn .progress[dprog="15"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(144deg,#161616 50%,#33c914 50%,#33c914) !important}
-html.lmd-dark #evn .progress[dprog="20"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(162deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="25"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(180deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="30"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(198deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="35"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(216deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="40"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(234deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="45"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(252deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="50"]{background-image:linear-gradient(-90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="55"]{background-image:linear-gradient(-72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="60"]{background-image:linear-gradient(-54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="65"]{background-image:linear-gradient(-36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="70"]{background-image:linear-gradient(-18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="75"]{background-image:linear-gradient(0deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="80"]{background-image:linear-gradient(18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="85"]{background-image:linear-gradient(36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="90"]{background-image:linear-gradient(54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="95"]{background-image:linear-gradient(72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #evn .progress[dprog="100"]{background-image:linear-gradient(90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
-html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#fa6330 !important}
-html.lmd-dark #sliderSpoiler .layer-pool{border:1px solid #303030 !important}
-html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#f7470c !important;border:1px solid #f45f2c !important}
-html.lmd-dark #sliderSpoiler .layer-pool-vote{border:1px solid #303030 !important}
-html.lmd-dark #half-stars .pool_loading{background-color:#242424 !important}
-html.lmd-dark #ratePopup{background-color:#242424 !important}
-html.lmd-dark #ratePopup hr{border-top:1px solid #333333 !important}
-@media screen and (max-width:766px){
-html.lmd-dark #spoiler .card-actions button{border:1px solid #f45f2c !important}
-html.lmd-dark #spoiler .card-actions button:first-child{color:#fa6330 !important}
-html.lmd-dark #spoiler .card-actions .bt-rate{color:#fa6330 !important}
-html.lmd-dark #spoiler .card-actions div{border:1px solid #303030 !important}
-}
-html.lmd-dark .modal-content{background-color:#242424 !important}
-html.lmd-dark .modal-backdrop{background-color:#0d0d0d !important}
-html.lmd-dark .modal-footer{border-top:1px solid #303336 !important}
-html.lmd-dark .l-comments-card-details{color:#ededed !important}
-html.lmd-dark .modal-header{border-bottom:1px solid #303336 !important}
-html.lmd-dark .l-product-btn{color:#c5c5c5 !important}
-html.lmd-dark .l-product-btn:hover{color:#ededed !important}
-html.lmd-dark .l-product-spoiler-actions{background-color:rgba(13,13,13,0.84) !important}
-html.lmd-dark .l-product-spoiler .btn{color:#8292d4 !important;border-color:#3e54aa !important;background-color:#242424 !important}
-html.lmd-dark .l-product-best-price,html.lmd-dark .l-product-medium-price,html.lmd-dark .l-product-worst-price{color:#88b48d !important;background-color:#1b221c !important}
-html.lmd-dark .l-product-medium-price{color:#f06c29 !important;background-color:#231b16 !important}
-html.lmd-dark .l-product-best-price{color:#88b48d !important;background-color:#1b221c !important}
-html.lmd-dark .l-product-worst-price{color:#e8677e !important;background-color:#27191b !important}
-html.lmd-dark .l-modal-body-card-comments{background-color:#1e1e1e !important}
-html.lmd-dark .l-modal-body-card-comments-create{-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,0.75) !important;box-shadow:0 1px 1px 0 rgba(0,0,0,0.75) !important;background:#242424 !important}
-html.lmd-dark .l-comment{border-bottom:1px solid #333333 !important}
-html.lmd-dark .l-comment-username{color:#b1b1b1 !important}
-html.lmd-dark .l-comment-date,html.lmd-dark .l-comment-total,html.lmd-dark .l-comment-views,html.lmd-dark .l-dislike-total,html.lmd-dark .l-like-total{color:#9e9e9e !important}
-html.lmd-dark .l-comment-input{color:#ededed !important}
-html.lmd-dark .form-control::-webkit-input-placeholder{color:#a0a4a8 !important}
-html.lmd-dark .form-control:-ms-input-placeholder{color:#a0a4a8 !important}
-html.lmd-dark .form-control::-ms-input-placeholder{color:#a0a4a8 !important}
-html.lmd-dark .form-control::placeholder{color:#a0a4a8 !important}
-html.lmd-dark .form-control{color:#bec1c4 !important;background-color:#242424 !important;border:1px solid #343639 !important}
-html.lmd-dark .l-comment-resume{color:#ededed !important}
-html.lmd-dark #articles .main{background-color:#242424 !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
-html.lmd-dark #articles .row{border-top:1px solid #333333 !important}
-html.lmd-dark #articles .main .views{background-color:#0d0d0d !important}
-html.lmd-dark #articles .title{color:#d7d7d7 !important}
-html.lmd-dark #articles .subtitle{color:#bdbdbd !important}
-html.lmd-dark #articles .date-author,html.lmd-dark #articles .date-author a{color:#a5a5a5 !important}
-html.lmd-dark #articles .main .tags a{color:#9e9e9e !important}
-html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#fa6330 !important}
-html.lmd-dark #artigos_warning a{color:#fa6330 !important}
-html.lmd-dark #articles .boxblock{background-color:#242424 !important;-webkit-box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
-html.lmd-dark #articles .boxblock .lines{border-top:1px solid #333333 !important}
-html.lmd-dark #articles .boxblock .title{color:#d7d7d7 !important}
-html.lmd-dark #articles .boxblock .subtitle{color:#bdbdbd !important}
-html.lmd-dark #articles .lines .views{color:#9e9e9e !important}
-html.lmd-dark #articles .lines .tags a{color:#9e9e9e !important}
+/* template-package-home-v07-min.css */
+html.lmd-dark{--color-background:#1b1b1a !important}
+html.lmd-dark .bg-white{background-color:#242424 !important}
+html.lmd-dark .title-home{color:#e9eaf2 !important}
+html.lmd-dark .title-home::before{background-color:#f7470c !important}
+html.lmd-dark .title-home .btn-see-more a{color:#fa6330 !important}
+html.lmd-dark .body-md{color:#e9eaf2 !important}
+html.lmd-dark .btn-green{background:#136319 !important}
+html.lmd-dark .btn-green:hover{color:#3ddb49 !important;background:#141711 !important}
+html.lmd-dark .divider{border:1px solid #373737 !important}
+html.lmd-dark .skeleton{background-image:linear-gradient(100deg,#fff0,rgba(36,36,36,0.5) 50%,#fff0 80%),linear-gradient(#262626 400px,transparent 0) !important}
+html.lmd-dark .container-releases .content .highlight:hover .title a{color:#fa6330 !important}
+html.lmd-dark .container-releases .content .title a{color:#e9eaf2 !important}
+html.lmd-dark .container-releases .content .title a::before{background:rgba(34,34,32,0.7) !important}
+html.lmd-dark .container-releases .content .release .thumb:hover .title a{color:#fa6330 !important}
+html.lmd-dark .container-previews .preview .date{color:#e9eaf2 !important}
+html.lmd-dark .container-previews .preview .container-info{background-color:#242424 !important}
+html.lmd-dark .container-previews .preview:hover .name a{color:#fa6330 !important}
+html.lmd-dark .container-previews .prices .lowest{color:#7ac257 !important}
+html.lmd-dark .container-previews .prices .highest{color:#fb5873 !important}
+html.lmd-dark .container-previews .add-list .container-qty{border:1px solid #373737 !important}
+html.lmd-dark .container-previews .add-list .container-qty input{color:#e9eaf2 !important}
+html.lmd-dark .container-previews .add-list .container-qty .plus,html.lmd-dark .container-previews .add-list .container-qty .minus{border:2px solid #373737 !important}
+html.lmd-dark .container-previews-editions{background-color:#333333 !important}
+html.lmd-dark .container-previews-editions .previews-editions .edition a{color:#a7a7a6 !important}
+html.lmd-dark .container-previews-editions .previews-editions .edition a:hover{color:#fa6330 !important}
+html.lmd-dark .container-previews-editions .btn-see-all{color:#fa6330 !important}
+html.lmd-dark .container-editions-highlight .edition-highlight:hover .container-name .name-edition,html.lmd-dark .container-accessories-highlight .accessories-highlight:hover .container-name .name-accessories{color:#fa6330 !important}
+html.lmd-dark .container-editions-highlight a.skeleton,html.lmd-dark .container-accessories-highlight a.skeleton{background-image:linear-gradient(100deg,#fff0,rgba(36,36,36,0.5) 50%,#fff0 80%),linear-gradient(#262626 412px,transparent 0) !important}
+html.lmd-dark .container-editions-highlight .edition-highlight .container-name,html.lmd-dark .container-accessories-highlight .accessories-highlight .container-name{background:rgba(34,34,32,0.64) !important}
+html.lmd-dark .container-editions-highlight .edition-highlight .container-name .name-edition,html.lmd-dark .container-accessories-highlight .accessories-highlight .container-name .name-accessories{color:#e9eaf2 !important}
+html.lmd-dark .bolts-area .info .display-video{color:#a7a7a6 !important}
+html.lmd-dark .bolts-area .info .display-video span{color:#fa6330 !important}
+html.lmd-dark .container-cards .title{color:#e9eaf2 !important}
+html.lmd-dark .container-cards .container-prices .header .see-more a{color:#fa6330 !important}
+html.lmd-dark .container-cards .container-prices .header .filters .period>div{background:rgba(31,31,29,0.8) !important;color:#c9c9c8 !important}
+html.lmd-dark .container-cards .container-prices .header .filters .period>div.selected,html.lmd-dark .container-cards .container-prices .header .filters .period>div:hover{background:#333333 !important}
+html.lmd-dark .container-cards .container-prices .header .filters .format select{background:rgba(31,31,29,0.8) !important;color:#c9c9c8 !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price{background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .empty-cards{color:#fb5873 !important;background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price .green{color:#7ac257 !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price .red{color:#fb5873 !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price .name-card a{color:#c9c9c8 !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price:hover .name-card a{color:#fa6330 !important}
+html.lmd-dark .tournament-decks .container-name{background:rgba(34,34,32,0.64) !important}
+html.lmd-dark .tournament-decks .container-name .name-deck a{color:#e9eaf2 !important}
+html.lmd-dark .tournament-decks .deck:hover .container-name .name-deck a{color:#fa6330 !important}
+html.lmd-dark .tournament-decks .container-name .info-deck .format,html.lmd-dark .tournament-decks .container-name .info-deck .date{color:#e9eaf2 !important}
+html.lmd-dark .tournament-decks .container-name .info-deck .divider{border:1px solid #4f4f4f !important}
+html.lmd-dark .container-products .content .container-product{background-color:#242424 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
+html.lmd-dark .container-products .content .container-product .name a{color:#e2e2e2 !important}
+html.lmd-dark .container-products .content .container-product .name a:hover,html.lmd-dark .container-products .content .container-product:hover .name a{color:#fa6330 !important}
+html.lmd-dark .container-products .content .container-product .price{color:#7ac257 !important}
+html.lmd-dark .container-products .content .container-product .price span{color:#9f9f9d !important}
+html.lmd-dark .container-articles .articles .article .container-title{background:rgba(34,34,32,0.72) !important}
+html.lmd-dark .container-articles .articles .article .container-title .title,html.lmd-dark .container-articles .articles .article .container-title .desc{color:#e9eaf2 !important}
+html.lmd-dark .container-articles .articles .article .container-title .title:hover,html.lmd-dark .container-articles .articles .article:hover .container-title .title{color:#fa6330 !important}
+html.lmd-dark .container-articles .articles .article .container-title .desc{color:#e2e2e2 !important}
+html.lmd-dark .container-articles .articles .article .container-title .desc:hover{color:#e9eaf2 !important}
+html.lmd-dark .container-articles .articles .article .container-title .container-author .divider{border:1px solid #4f4f4f !important}
+html.lmd-dark .container-articles .articles .article .container-title .container-author .author a{color:#c9c9c8 !important}
+html.lmd-dark .container-articles .articles .article .container-title .container-author .author a:hover{color:#e9eaf2 !important}
+html.lmd-dark .container-tags .title a{color:#e2e2e2 !important}
+html.lmd-dark .container-tags .tags .tag a{background-color:#333333 !important;color:#a7a7a6 !important}
+html.lmd-dark .stickytooltip{background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
 html.lmd-dark #backgroundPopup{background:#0d0d0d !important}
-html.lmd-dark .l-product-best-price-home,html.lmd-dark .l-product-medium-price-home,html.lmd-dark .l-product-worst-price-home{color:#88b48d !important;background-color:#1b221c !important}
-html.lmd-dark .l-product-medium-price-home{color:#f06c29 !important;background-color:#231b16 !important}
-html.lmd-dark .l-product-worst-price-home{color:#e8677e !important;background-color:#27191b !important}
-@media (min-width:701px) and (max-width:1024px){
-html.lmd-dark #articles .main{background-color:#242424 !important}
+@media screen and (max-width:460px){
+html.lmd-dark .container-articles .articles .article .container-title{background:#242424 !important}
 }
-@media (max-width:700px){
-html.lmd-dark #articles .row{background-color:#242424 !important}
-html.lmd-dark #articles .title-mob{color:#d7d7d7 !important}
-html.lmd-dark #articles .main,html.lmd-dark #articles .main div,html.lmd-dark #articles .date-author,html.lmd-dark #articles .date-author a{color:#ededed !important}
-}
-html.lmd-dark .social-text p,html.lmd-dark .social-text a,html.lmd-dark .social-text div,html.lmd-dark .social-text font{color:#d7d7d7 !important}
-html.lmd-dark .social-text .social-right{border-left:1px solid #333333 !important}
-html.lmd-dark .social-text .social-title{color:#d7d7d7 !important}
-html.lmd-dark .social-text .social-title:hover{color:#fa6330 !important}
-html.lmd-dark .social-text .social-left div:hover,html.lmd-dark .social-text .social-right div:hover{background-color:#202020 !important}
-html.lmd-dark .social-text hr{border-top:1px solid #313131 !important}
-html.lmd-dark .social-text a{color:#fa6330 !important}
-html.lmd-dark .social-text a:hover{color:#d7d7d7 !important}
-html.lmd-dark .social-text .social-views{color:#afafaf !important}
-html.lmd-dark .deckhome{border:1px solid #373737 !important}
-html.lmd-dark .deckhome .deckdados a{color:#fa6330 !important}
-html.lmd-dark #dks a.deckjog:hover{color:#d7d7d7 !important}
-html.lmd-dark .deckhome:hover .deckdados{background-color:#202020 !important}
-html.lmd-dark .deckhome .deckname a{color:#d7d7d7 !important}
-html.lmd-dark .deckhome .decktournament a{color:#d7d7d7 !important}
-html.lmd-dark .deckhome .deckhomeprice{background-color:#0d0d0d !important}
-html.lmd-dark div.lazy{background-color:#171717 !important}
-html.lmd-dark div.deck-cost.lazy abbr.mtg-symbol{background-color:#171717 !important}
-html.lmd-dark .deckhome .deck-views{color:#afafaf !important}
-html.lmd-dark .deckshome-more:hover{background-color:#202020 !important}
-html.lmd-dark .prod-home{border:1px solid #373737 !important}
-html.lmd-dark .prod-home:hover{background-color:#202020 !important}
-html.lmd-dark .prod-home .price-min{color:#49f91f !important}
-html.lmd-dark .prod-home .prod-circle{border:1px solid #363636 !important;background-color:#272727 !important}
-html.lmd-dark .prod-home .price-max{color:#fb5b5b !important}
-html.lmd-dark .stream-stop:hover{background-color:#272727 !important;color:#9e9e9e !important}
-html.lmd-dark .stream-stop-warning{background-color:#272727 !important;color:#ededed !important}
-html.lmd-dark .mp-botao-comprar,html.lmd-dark .lc-buy-btn-holder .lc-buy-btn{background-color:#229b46 !important;border-color:#29aa4f !important}
-html.lmd-dark #carrinho-lista-compra .btn-buscar-holder .btn-buscar{background-color:#229b46 !important;border-color:#29aa4f !important}
-html.lmd-dark #carrinho-lista-compra .btn-buscar-holder .btn-buscar:hover{background-color:#14662c !important}
-html.lmd-dark #carrinho-lista-compra .carrinho-lista-compra-footer select{border:.5px solid #3d3d3d !important;color:#e0e0e0 !important}
-html.lmd-dark #carrinho-lista-compra .show-more{background-image:linear-gradient(to bottom,transparent,#242424) !important}
-html.lmd-dark #carrinho-lista-compra .show-more a.botao:hover{background-color:#c74a06 !important}
-html.lmd-dark .lc-buy-btn-holder .lc-buy-btn.outline span{color:#d7d7d7 !important}
-html.lmd-dark #mp-botao-comprar-holder select,html.lmd-dark #mp-botao-comprar-holder button,html.lmd-dark #marketplace-lojas-lista-compra select:not(.select-idioma),html.lmd-dark #marketplace-lojas-lista-compra button{color:#d6d6d6 !important}
-html.lmd-dark #marketplace-lojas-lista-compra .mp-btn-comprar-qualidade{color:#c2c2c2 !important}
-html.lmd-dark .mp-btn-comprar-btn-alerta{background-color:#272727 !important;color:#d9d9d9 !important}
-html.lmd-dark .mp-btn-comprar-btn-alerta:hover{background-color:#f7470c !important}
-html.lmd-dark #mp-botao-comprar-holder hr{border-top:1px solid rgba(81,81,81,0.1) !important}
-html.lmd-dark .mp-botao-comprar:hover,html.lmd-dark .lc-buy-btn:hover{background-color:#14662c !important;border-color:#1d863c !important}
-html.lmd-dark .lc-buy-btn-holder .lc-buy-btn-input{background-color:#242424 !important}
-html.lmd-dark .lc-card-separator-info{border:.5px solid #414141 !important;background-color:#1a1a1a !important}
-html.lmd-dark .lc-card-separator-info:hover{background-color:#2a2a2a !important}
-html.lmd-dark .alerta-cards-sem-estoque .ver-mais-btn{color:#fa6330 !important;background-image:linear-gradient(to bottom,transparent,#36361d) !important}
+html.lmd-dark .container-horizontal-slider .container-title{color:#e9eaf2 !important}
+html.lmd-dark .container-horizontal-slider .container-title::before{background:rgba(34,34,32,0.7) !important}
+html.lmd-dark .container-horizontal-slider .item-slider:hover .title{color:#fa6330 !important}
+html.lmd-dark .container-article-slider .arrow:hover{background-color:rgba(13,13,13,0.1) !important}
+html.lmd-dark .modal-js{background-color:rgba(13,13,13,0.4) !important}
+html.lmd-dark .modal-js .modal-content{background-color:#242424 !important;border:1px solid #414141 !important}
+html.lmd-dark .modal-js .modal-content .header{border-bottom:1px solid #373737 !important;color:#c9c9c8 !important}
+html.lmd-dark .modal-js .modal-content .body .field-container .field-title{color:#c9c9c8 !important}
+html.lmd-dark .modal-js .modal-content .body .field-container .field textarea,html.lmd-dark .modal-js .modal-content .body .field-container .field input,html.lmd-dark .modal-js .modal-content .body .field-container .field select,html.lmd-dark .history-modal-header select{border:1px solid #373737 !important;color:#c9c9c8 !important}
+html.lmd-dark .l-header-cart .cart-list .btn-view-cart.btn-primary{border:1px solid #f45f2c !important}
 /* template-legado-v26-min.css */
 html.lmd-dark .bg-cinza{background-color:#1e1e1e !important}
 html.lmd-dark .bg-informativo{background-color:#1a1a1a !important}
@@ -732,8 +584,6 @@ html.lmd-dark table#tableCards tbody tr:nth-child(odd){background-color:#1e1e1e 
 html.lmd-dark .btn-circle{border:4px solid #484848 !important;background:conic-gradient(from 90deg at var(--cross) var(--cross),#555555 90deg,#242424 0) calc(100% + var(--cross)/2) calc(100% + var(--cross)/2)/ calc(50%  + var(--cross)) calc(50%  + var(--cross)) !important}
 html.lmd-dark .btn-circle.remove:hover{border-color:#d82525 !important;background:conic-gradient(from 90deg at var(--cross) var(--cross),#c61e1e 90deg,#242424 0) calc(100% + var(--cross)/2) calc(100% + var(--cross)/2)/ calc(50%  + var(--cross)) calc(50%  + var(--cross)) !important}
 html.lmd-dark .btn-circle.add:hover{border-color:#29aa4f !important;background:conic-gradient(from 90deg at var(--cross) var(--cross),#229b46 90deg,#242424 0) calc(100% + var(--cross)/2) calc(100% + var(--cross)/2)/ calc(50%  + var(--cross)) calc(50%  + var(--cross)) !important}
-html.lmd-dark .btn-green{background:#136319 !important}
-html.lmd-dark .btn-green:hover{color:#3ddb49 !important;background:#141711 !important}
 html.lmd-dark .card-grid .container-qty,html.lmd-dark #mtg-cards .container-qty{border:1px solid #373737 !important}
 html.lmd-dark .card-grid .container-qty button.plus,html.lmd-dark #mtg-cards .container-qty button.plus,html.lmd-dark .card-grid .container-qty button.minus,html.lmd-dark #mtg-cards .container-qty button.minus{border:2px solid #3b3b3a !important}
 html.lmd-dark .card-grid .container-qty input,html.lmd-dark #mtg-cards .container-qty input{color:#e9eaf2 !important}
@@ -791,6 +641,7 @@ html.lmd-dark .card-prices .avgp-maxprc{color:#fb5b5b !important}
 html.lmd-dark .card-prices .avgp-circle{border:1px solid #3e3e3e !important;background-color:#333333 !important}
 html.lmd-dark .flip-img,html.lmd-dark .card-grid figure{background-color:#141313 !important;box-shadow:1px 1px 6px rgba(0,0,0,0.608) !important}
 html.lmd-dark #half-stars button{border:1px solid #303030 !important}
+html.lmd-dark #half-stars .pool_loading{background-color:#242424 !important}
 html.lmd-dark .card-grid .layer-hover .pool-media button,html.lmd-dark .mtg-picture .layer-hover .pool-media button{border:1px solid #303030 !important}
 html.lmd-dark .card-grid .layer-hover .pool-media button:hover,html.lmd-dark #half-stars button:hover,html.lmd-dark .mtg-picture .layer-hover .pool-media button:hover{background-color:#d24e06 !important}
 html.lmd-dark .warning-full{background-color:#242424 !important}
@@ -807,6 +658,7 @@ html.lmd-dark #comments-container .coment-quote{color:#bdbdbd !important}
 html.lmd-dark .box-cards-esquerda #card-estoque .container-lot-of-stock{background-color:rgba(215,166,8,0.702) !important;color:#e9e6db !important;box-shadow:0 2px 5px 0 rgba(0,0,0,0.108) !important}
 html.lmd-dark a.edition-name{color:#c5c5c5 !important}
 html.lmd-dark .modal hr{border-top:1px solid #333333 !important}
+html.lmd-dark #layerblocker{background-color:#0d0d0d !important;background-color:rgba(13,13,13,0.75) !important}
 html.lmd-dark .botao-paginacao{border-color:#4e4e4e !important}
 html.lmd-dark .botao-paginacao:hover{background-color:#0d0d0d !important;border-color:#545454 !important}
 html.lmd-dark #meucarrinho .qtyPlus{background-color:#0d0d0d !important}
@@ -1231,11 +1083,25 @@ html.lmd-dark .card-grid .card-actions button{border:1px solid #f45f2c !importan
 html.lmd-dark .card-grid .card-actions button:first-child{color:#fa6330 !important}
 html.lmd-dark .card-grid .card-actions .bt-rate{color:#fa6330 !important}
 }
+html.lmd-dark .l-product-best-price,html.lmd-dark .l-product-medium-price,html.lmd-dark .l-product-worst-price{color:#88b48d !important;background-color:#1b221c !important}
+html.lmd-dark .l-product-medium-price{color:#f06c29 !important;background-color:#231b16 !important}
+html.lmd-dark .l-product-best-price{color:#88b48d !important;background-color:#1b221c !important}
+html.lmd-dark .l-product-worst-price{color:#e8677e !important;background-color:#27191b !important}
 html.lmd-dark .modal-content{background-color:#242424 !important;border:1px solid rgba(84,84,84,0.2) !important}
+html.lmd-dark .modal-backdrop{background-color:#0d0d0d !important}
+html.lmd-dark .modal-header{border-bottom:1px solid #303336 !important}
 html.lmd-dark #spoilerModal .botao{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark #spoilerModal .botao:hover{background-color:#c14806 !important;border-color:#d2510b !important}
+html.lmd-dark .l-modal-body-card-comments{background-color:#1e1e1e !important}
+html.lmd-dark .l-modal-body-card-comments-create{-webkit-box-shadow:0 1px 1px 0 rgba(0,0,0,0.75) !important;box-shadow:0 1px 1px 0 rgba(0,0,0,0.75) !important;background:#242424 !important}
+html.lmd-dark .l-comment{border-bottom:1px solid #333333 !important}
+html.lmd-dark .l-comment-username{color:#b1b1b1 !important}
+html.lmd-dark .l-comment-date,html.lmd-dark .l-comment-total,html.lmd-dark .l-comment-views,html.lmd-dark .l-dislike-total,html.lmd-dark .l-like-total{color:#9e9e9e !important}
 html.lmd-dark .l-comment-input{color:#9e9e9e !important}
 html.lmd-dark .form-control::-webkit-input-placeholder,html.lmd-dark .form-control:-ms-input-placeholder,html.lmd-dark .form-control::-ms-input-placeholder,html.lmd-dark .form-control::placeholder{color:#a0a4a8 !important}
+html.lmd-dark .form-control{color:#bec1c4 !important;background-color:#242424 !important;border:1px solid #343639 !important}
+html.lmd-dark .iconDelete{color:#ef6767 !important;text-shadow:0 1px 0 rgba(0,0,0,0.75) !important}
+html.lmd-dark .l-comment-resume{color:#ededed !important}
 html.lmd-dark #card-principal .layer-pool,html.lmd-dark .comment-rate .layer-pool{color:#bdbdbd !important}
 html.lmd-dark #card-principal .layer-pool:hover,html.lmd-dark .comment-rate .layer-pool:hover{background-color:#f7470c !important}
 html.lmd-dark #card-principal .layer-pool font.fmin,html.lmd-dark .comment-rate .layer-pool font.fmin{color:#9e9e9e !important}
@@ -1260,6 +1126,23 @@ html.lmd-dark .label-modal-preco-alterado{color:#bdbdbd !important}
 html.lmd-dark .icone-pre-order{background-color:#191919 !important;color:#76ee2a !important;border:1px solid #363636 !important}
 html.lmd-dark .icone-recesso-loja{background-color:#191919 !important;color:#f98d1f !important;border:1px solid #363636 !important}
 }
+html.lmd-dark .mp-botao-comprar,html.lmd-dark .lc-buy-btn-holder .lc-buy-btn{background-color:#229b46 !important;border-color:#29aa4f !important}
+html.lmd-dark #carrinho-lista-compra .btn-buscar-holder .btn-buscar{background-color:#229b46 !important;border-color:#29aa4f !important}
+html.lmd-dark #carrinho-lista-compra .btn-buscar-holder .btn-buscar:hover{background-color:#14662c !important}
+html.lmd-dark #carrinho-lista-compra .carrinho-lista-compra-footer select{border:.5px solid #3d3d3d !important;color:#e0e0e0 !important}
+html.lmd-dark #carrinho-lista-compra .show-more{background-image:linear-gradient(to bottom,transparent,#242424) !important}
+html.lmd-dark #carrinho-lista-compra .show-more a.botao:hover{background-color:#c74a06 !important}
+html.lmd-dark .lc-buy-btn-holder .lc-buy-btn.outline span{color:#d7d7d7 !important}
+html.lmd-dark #mp-botao-comprar-holder select,html.lmd-dark #mp-botao-comprar-holder button,html.lmd-dark #marketplace-lojas-lista-compra select:not(.select-idioma),html.lmd-dark #marketplace-lojas-lista-compra button{color:#d6d6d6 !important}
+html.lmd-dark #marketplace-lojas-lista-compra .mp-btn-comprar-qualidade{color:#c2c2c2 !important}
+html.lmd-dark .mp-btn-comprar-btn-alerta{background-color:#272727 !important;color:#d9d9d9 !important}
+html.lmd-dark .mp-btn-comprar-btn-alerta:hover{background-color:#f7470c !important}
+html.lmd-dark #mp-botao-comprar-holder hr{border-top:1px solid rgba(81,81,81,0.1) !important}
+html.lmd-dark .mp-botao-comprar:hover,html.lmd-dark .lc-buy-btn:hover{background-color:#14662c !important;border-color:#1d863c !important}
+html.lmd-dark .lc-buy-btn-holder .lc-buy-btn-input{background-color:#242424 !important}
+html.lmd-dark .lc-card-separator-info{border:.5px solid #414141 !important;background-color:#1a1a1a !important}
+html.lmd-dark .lc-card-separator-info:hover{background-color:#2a2a2a !important}
+html.lmd-dark .alerta-cards-sem-estoque .ver-mais-btn{color:#fa6330 !important;background-image:linear-gradient(to bottom,transparent,#36361d) !important}
 /* template-decks-v35-min.css */
 html.lmd-dark .botao-inverso{background-color:#323232 !important;border:1px solid #3e3e3e !important}
 html.lmd-dark .botao-inverso:hover{background-color:#363636 !important;border-color:#414141 !important}
@@ -1393,9 +1276,14 @@ html.lmd-dark .title-offbox{color:#d7d7d7 !important}
 html.lmd-dark .deckhome{box-shadow:2px 2px 5px rgba(0,0,0,0.75) !important}
 html.lmd-dark .deckhome .deckdados{background-color:#242424 !important}
 html.lmd-dark .deckhome .deckdados a{color:#f96c1f !important}
+html.lmd-dark .deckhome:hover .deckdados{background-color:#202020 !important}
+html.lmd-dark .deckhome .deckname a{color:#d7d7d7 !important}
+html.lmd-dark .deckhome .decktournament a{color:#d7d7d7 !important}
 html.lmd-dark .deckhome .deck-arq{color:#d7d7d7 !important}
 html.lmd-dark .deckhome .deckhomeprice,html.lmd-dark .deckhome .deckhomeformat,html.lmd-dark .deckhome .deckhomeevent{background-color:#0d0d0d !important}
 html.lmd-dark .deckhome .deckposition{background-color:#242424 !important;color:#ededed !important;-webkit-box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important}
+html.lmd-dark div.lazy{background-color:#171717 !important}
+html.lmd-dark div.deck-cost.lazy abbr.mtg-symbol{background-color:#171717 !important}
 html.lmd-dark .deckhome .deck-data{color:#afafaf !important}
 html.lmd-dark .deckhome .decktournament a:hover,html.lmd-dark .deckhome .deckname a:hover,html.lmd-dark .deckhome .deckhomeformat a:hover,html.lmd-dark .deckhome .deckhomeevent a:hover{color:#f96c1f !important}
 html.lmd-dark .deckhome .dk-comp input[type=checkbox]:checked+label{color:#c0c0c0 !important}
@@ -1416,7 +1304,7 @@ html.lmd-dark #select2-arquetipo .select2-container{background-color:#242424 !im
 html.lmd-dark .select2-container--open .select2-dropdown--below,html.lmd-dark .select2-container--open .select2-dropdown--above{border:1px solid #343639 !important}
 html.lmd-dark #select2-arquetipo .select2-container--default .select2-results>.select2-results__options{border:1px solid #403f3f !important}
 html.lmd-dark .deck-visual-grid .card-container-visual-grid{border-bottom:1px solid rgba(81,81,81,0.1) !important}
-/* package-cards-v27-min.css */
+/* package-cards-v28-min.css */
 html.lmd-dark input[type="checkbox"]{border:.125rem solid #3f3f3e !important}
 html.lmd-dark input[type="checkbox"]::before{box-shadow:inset 1em 1em rgba(0,0,0,0.75) !important}
 html.lmd-dark input[type="checkbox"]:checked{background:#0a0b10 !important}
@@ -1424,11 +1312,6 @@ html.lmd-dark .container-marketplace [type="radio"]:checked+label,html.lmd-dark 
 html.lmd-dark .container-marketplace [type="radio"]:checked+label:before,html.lmd-dark .container-marketplace [type="radio"]:not(:checked)+label:before,html.lmd-dark .radio-custom [type="radio"]:checked+label:before,html.lmd-dark .radio-custom [type="radio"]:not(:checked)+label:before{border:1px solid #4b4b4a !important}
 html.lmd-dark .container-marketplace [type="radio"]:checked+label:after,html.lmd-dark .container-marketplace [type="radio"]:not(:checked)+label:after,html.lmd-dark .radio-custom [type="radio"]:checked+label:after,html.lmd-dark .radio-custom [type="radio"]:not(:checked)+label:after{background:#f7470c !important;border:2px solid #303030 !important}
 html.lmd-dark .container-marketplace [type="radio"]:checked+label::before,html.lmd-dark .radio-custom [type="radio"]:checked+label::before{background-color:#f7470c !important;border-color:#f45f2c !important}
-html.lmd-dark .modal-js{background-color:rgba(13,13,13,0.4) !important}
-html.lmd-dark .modal-js .modal-content{background-color:#242424 !important;border:1px solid #414141 !important}
-html.lmd-dark .modal-js .modal-content .header{border-bottom:1px solid #373737 !important;color:#c9c9c8 !important}
-html.lmd-dark .modal-js .modal-content .body .field-container .field-title{color:#c9c9c8 !important}
-html.lmd-dark .modal-js .modal-content .body .field-container .field textarea,html.lmd-dark .modal-js .modal-content .body .field-container .field input,html.lmd-dark .modal-js .modal-content .body .field-container .field select,html.lmd-dark .history-modal-header select{border:1px solid #373737 !important;color:#c9c9c8 !important}
 html.lmd-dark .slider-js .limit-scroll{border-top:1px solid #373737 !important}
 html.lmd-dark .slider-thumbnail{background-color:#242424 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
 html.lmd-dark .slider-thumbnail.active,html.lmd-dark .slider-card.active{border-color:#3f302a !important}
@@ -1471,7 +1354,6 @@ html.lmd-dark .btn-transparent{color:#a7a7a6 !important}
 html.lmd-dark .btn-transparent:hover,html.lmd-dark .btn-transparent.selected{border:1px solid #f45f2c !important;color:#fa6330 !important}
 html.lmd-dark .btn-red{background-color:#b10528 !important}
 html.lmd-dark .btn-red:hover{background-color:#2e1f20 !important;color:#fb5b7b !important}
-html.lmd-dark .skeleton{background-image:linear-gradient(100deg,#fff0,rgba(36,36,36,0.5) 50%,#fff0 80%),linear-gradient(#262626 400px,transparent 0) !important}
 html.lmd-dark .rarity{background-color:#5d5e1e !important}
 html.lmd-dark .rarity_c{background-color:#0a0b10 !important}
 html.lmd-dark .rarity_u{background-color:#3b3b3b !important}
@@ -1502,12 +1384,13 @@ html.lmd-dark .select2-container--default .select2-selection--single .select2-se
 html.lmd-dark .select2-container--default .select2-selection--single .select2-selection__rendered{color:#cacaca !important}
 html.lmd-dark .select2-container--default .select2-selection--multiple .select2-selection__choice{background-color:#171717 !important;border:1px solid #3c3c3c !important}
 html.lmd-dark .select2-container--default .select2-selection--multiple .select2-selection__choice__remove{border-right:1px solid #3c3c3c !important;color:#9e9e9e !important}
+html.lmd-dark .container-latest-sold{background:#242424 !important}
 html.lmd-dark .container-item-info{background:#242424 !important}
 html.lmd-dark .container-item-info .item-image{border-right:1px solid #373737 !important}
 html.lmd-dark .item-info .item-name{color:#e9eaf2 !important}
 html.lmd-dark .item-info .item-name-en{color:#a7a7a6 !important}
 html.lmd-dark .item-info .container-title-divider{background-color:#333333 !important}
-html.lmd-dark .container-details-item .title,html.lmd-dark .container-price-mkp-item .title{color:#e9eaf2 !important}
+html.lmd-dark .container-details-item .title,html.lmd-dark .container-price-mkp-item .title,html.lmd-dark .container-show-latestsales-all .title{color:#e9eaf2 !important}
 html.lmd-dark .container-details-item .title span,html.lmd-dark .container-price-mkp-item .title span{color:#fa6330 !important}
 html.lmd-dark .container-details-item .details-item .container-details,html.lmd-dark #full-detail-card .details-card .container-details{color:#c9c9c8 !important}
 html.lmd-dark .container-details-item .details-item>div span.title,html.lmd-dark #full-detail-card .details-card>div span.title{color:#c9c9c8 !important}
@@ -1681,17 +1564,30 @@ html.lmd-dark .container-tooltip-store-information .container-bottom button.btn-
 html.lmd-dark .container-highlight-review.bad-review{background-color:#b10528 !important;border-color:#c10a2f !important}
 html.lmd-dark .container-highlight-review.optimal-review{color:#d9bb3f !important;background-color:#242424 !important;border-color:#ae9327 !important}
 html.lmd-dark .container-highlight-review.excellent-review{background-color:#0a0b10 !important;border-color:#444862 !important}
+html.lmd-dark #modal-help-lista-compra .body .help-list div:before,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div:before{background-color:#f7470c !important}
+html.lmd-dark #modal-help-lista-compra .body .help-list div span,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div span{color:#fa6330 !important}
 @media screen and (max-width:1024px){
 html.lmd-dark .container-filter .filter .group-filter{background-color:#242424 !important}
 }
 @media screen and (max-width:740px){
-html.lmd-dark .container-price-mkp-item{background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
+html.lmd-dark .container-price-mkp-item,html.lmd-dark .container-show-latestsales-all{background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
 html.lmd-dark .container-price-mkp{border-bottom:1px solid #343434 !important}
 }
 @media screen and (max-width:480px){
 html.lmd-dark .container-card-auctions .card-auctions .auction .auction-infos .auction-ref{border-top:1px solid #3e3e3e !important}
 }
 html.lmd-dark #storeInfo .loja-recesso{background-color:#bd4016 !important}
+html.lmd-dark #container-latestsales-graph table thead tr,html.lmd-dark #container-lastsold-orders table thead tr{background-color:#0a0b10 !important}
+html.lmd-dark #container-latestsales-graph table,html.lmd-dark #container-lastsold-orders table{border-color:#3e3e3e !important}
+html.lmd-dark #container-latestsales-graph .ls-orders-more{color:#fa6330 !important}
+html.lmd-dark .latestsales-filters{background-color:#333333 !important}
+html.lmd-dark #latestsales-table table tr,html.lmd-dark #container-lastsold-orders table tr{border:1px solid #3e3e3e !important}
+html.lmd-dark #latestsales-table table tr:nth-child(even),html.lmd-dark #container-lastsold-orders table tr:nth-child(even){background-color:#333333 !important}
+html.lmd-dark .ls-orders-error{border:1px solid #3e3e3e !important}
+@media screen and (max-width:700px){
+html.lmd-dark #container-latestsales-graph table,html.lmd-dark #container-lastsold-orders table{border-color:#373737 !important}
+html.lmd-dark #latestsales-table table tr:nth-child(even),html.lmd-dark #container-lastsold-orders table tr:nth-child(even){background-color:#171717 !important}
+}
 html.lmd-dark .flag-card{color:#9e9e9e !important}
 html.lmd-dark .flag-reserved{background-color:#b10528 !important}
 html.lmd-dark .flag-digital{background-color:#0777df !important}
@@ -1726,8 +1622,6 @@ html.lmd-dark .stores .store .user .nickname,html.lmd-dark .stores .store .user 
 html.lmd-dark .stores .store .user .nickname a{color:#a7a7a6 !important}
 html.lmd-dark .stores .store .user .nickname a:hover{color:#fa6330 !important}
 html.lmd-dark .stores .store .prod-photo{border:.8px solid #373737 !important;background-color:#333333 !important}
-html.lmd-dark #modal-help-lista-compra .body .help-list div:before{background-color:#f7470c !important}
-html.lmd-dark #modal-help-lista-compra .body .help-list div span{color:#fa6330 !important}
 html.lmd-dark #modal-choose-filters .filters div.title{color:#c9c9c8 !important}
 html.lmd-dark #modal-choose-filters .filters .select2-container--default .select2-selection--single{border:1px solid #373737 !important}
 html.lmd-dark #modal-choose-filters .select2-container--default .select2-selection--multiple{border:1px solid #373737 !important}
@@ -1761,7 +1655,6 @@ html.lmd-dark .mkp-options-menu-cards .option{border-right:1px solid #373737 !im
 @media screen and (max-width:740px){
 html.lmd-dark .container-zoom-card{border:1px solid #373737 !important}
 }
-html.lmd-dark .l-header-cart .cart-list .btn-view-cart.btn-primary{border:1px solid #f45f2c !important}
 /* template-editions-v08-min.css */
 html.lmd-dark .title-page{color:#e9eaf2 !important}
 html.lmd-dark .title-page::after{background-color:#f7470c !important}
@@ -2085,9 +1978,20 @@ html.lmd-dark .table-layer-blocker{background-color:rgba(36,36,36,0.66) !importa
 /* template-artigos-v12-min.css */
 html.lmd-dark .tooltipster-default{background-color:#242424 !important;border:1px solid #3c3c3c !important;color:#ededed !important}
 html.lmd-dark #articles .main{background-color:#242424 !important;box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark #articles .row{border-top:1px solid #333333 !important}
 html.lmd-dark #articles .sugest-title{color:#d7d7d7 !important}
+html.lmd-dark #articles .main .views{background-color:#0d0d0d !important}
+html.lmd-dark #articles .title{color:#d7d7d7 !important}
+html.lmd-dark #articles .subtitle{color:#bdbdbd !important}
+html.lmd-dark #articles .date-author,html.lmd-dark #articles .date-author a{color:#a5a5a5 !important}
+html.lmd-dark #articles .main .tags a{color:#9e9e9e !important}
 html.lmd-dark #articles .boxblock{background-color:#242424 !important;box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark #articles .boxblock .lines{border-top:1px solid #333333 !important}
+html.lmd-dark #articles .boxblock .title{color:#d7d7d7 !important}
+html.lmd-dark #articles .boxblock .subtitle{color:#bdbdbd !important}
 html.lmd-dark #articles hr{background-color:#292929 !important}
+html.lmd-dark #articles .lines .views{color:#9e9e9e !important}
+html.lmd-dark #articles .lines .tags a{color:#9e9e9e !important}
 html.lmd-dark #news{background-color:#242424 !important;box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
 html.lmd-dark #news a{color:#bdbdbd !important}
 html.lmd-dark #news .news-title{color:#ededed !important}
@@ -2120,8 +2024,16 @@ html.lmd-dark .fmt-cards .card-blue .card-header{background-color:#364a9b !impor
 html.lmd-dark .fmt-cards .table-cards a:hover{color:#f96c1f !important}
 html.lmd-dark .fmt-cards .card-green table tr td:first-child,html.lmd-dark .fmt-cards .card-green table tr td:nth-child(3){color:#90b995 !important}
 html.lmd-dark .fmt-cards .card-red table tr td:first-child,html.lmd-dark .fmt-cards .card-red table tr td:nth-child(3){color:#e96d83 !important}
+@media (min-width:701px) and (max-width:1024px){
+html.lmd-dark #articles .main{background-color:#242424 !important}
+}
 @media (max-width:1023px){
 html.lmd-dark #articles.fmt-articles .sugest-title{color:#d7d7d7 !important}
+}
+@media (max-width:700px){
+html.lmd-dark #articles .row{background-color:#242424 !important}
+html.lmd-dark #articles .title-mob{color:#d7d7d7 !important}
+html.lmd-dark #articles .main,html.lmd-dark #articles .main div,html.lmd-dark #articles .date-author,html.lmd-dark #articles .date-author a{color:#ededed !important}
 }
 html.lmd-dark #news .btn-transparent{color:#a7a7a6 !important}
 html.lmd-dark #news .btn-transparent:hover{border-color:#f45f2c !important;color:#fa6330 !important}
