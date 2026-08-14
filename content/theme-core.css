@@ -118,6 +118,26 @@ html.lmd-dark optgroup {
   color: var(--lmd-text);
 }
 
+/* Botao de lupa das caixas de busca (`.busca`, na pagina de decks).
+ *
+ * O site nao declara cor nenhuma nele -- so `background-image:bg_search.png`,
+ * um PNG de 23x23 PALETADO E SEM ALFA: lupa laranja pintada sobre branco
+ * solido. Sem cor declarada nao ha o que a camada gerada remapeie, e o veu do
+ * gen.mjs nao alcanca porque so trata seletor container, nunca folha -- e um
+ * veu sobre um icone de 23px escureceria a propria lupa, nao resolveria.
+ * Como aqui o icone E a superficie inteira, a saida e trocar o bitmap por um
+ * SVG transparente, deixando aparecer o fundo que o `color-scheme: dark` ja
+ * desenha escuro sozinho. */
+html.lmd-dark .busca button,
+html.lmd-dark .busca button:focus,
+html.lmd-dark .busca-mini button,
+html.lmd-dark .busca-mini button:focus {
+  background-color: transparent !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none' stroke='%23ff6a1c' stroke-width='2'><circle cx='9.5' cy='9.5' r='6'/><path d='M14.2 14.2 20.4 20.4' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
 /* ------------------------------------------------------------------ *
  * 4. Rede de seguranca para estilos inline
  *
