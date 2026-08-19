@@ -1,6 +1,7 @@
 // Gera as imagens da Chrome Web Store em ./store.
 //
-// Tres etapas: captura o ligamagic real nos dois estados, fotografa o popup, e
+// Tres etapas: captura o ligamagic real nos dois estados (com a pilha de CSS
+// que o manifest declara para aquele host), fotografa o popup, e
 // compoe as pecas em HTML fotografado no tamanho exato que a loja exige.
 //
 // A peca central e um "split": a mesma pagina cortada ao meio, clara de um lado
@@ -19,6 +20,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pp from 'puppeteer-core';
+import { pilhaDe } from './pilha.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SHOTS = path.join(ROOT, '.cache', 'store-src');
@@ -31,9 +33,11 @@ const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
 
 for (const d of [SHOTS, TMP, OUT]) fs.mkdirSync(d, { recursive: true });
 
-const THEME =
-  fs.readFileSync(path.join(ROOT, 'content', 'theme.generated.css'), 'utf8') + '\n' +
-  fs.readFileSync(path.join(ROOT, 'content', 'theme-core.css'), 'utf8');
+// A pilha completa que o manifest declara para este host, nao so o nucleo. A
+// captura da home usa o template `template-package-home`, que mora num arquivo
+// de bucket separado: lendo so theme.generated.css + theme-core.css, a home
+// sairia com o topo sem tema justamente na imagem que a loja mostra maior.
+const THEME = pilhaDe('www.ligamagic.com.br');
 
 const browser = await pp.launch({
   executablePath: CHROME, headless: 'new',
@@ -47,7 +51,7 @@ const browser = await pp.launch({
  * raiz -- exatamente o que a extensao faz.
  *
  * Capturar claro e escuro em dois carregamentos separados NAO funciona aqui: a
- * LigaMagic gira os banners dos anunciantes a cada request, e as duas metades do
+ * Liga gira os banners dos anunciantes a cada request, e as duas metades do
  * split saem com anuncios diferentes no topo. Um carregamento so garante que o
  * conteudo e literalmente o mesmo, e a unica diferenca e o tema.
  */
@@ -214,8 +218,8 @@ const pages = {
 <div class="split">${split({ seam: 200, w: 440, imgW: 760, left: -6, top: -4 })}</div>
 <div class="scrim"></div>
 <div class="bar"><img src="${ICON}" alt="">
-  <div><h1 class="display">LigaMagic <em>Dark Mode</em></h1>
-  <div class="sub">Marketplace, cards, decks, edições e fórum</div></div>
+  <div><h1 class="display">Liga <em>Dark Mode</em></h1>
+  <div class="sub">15 sites da Liga: Magic, Yu-Gi-Oh!, Pokémon e mais</div></div>
 </div>` },
 
   'promo-marquee-1400x560': { w: 1400, h: 560, html: `
@@ -237,10 +241,10 @@ const pages = {
 </div>
 <div class="scrim"></div>
 <div class="copy"><img src="${ICON}" alt="">
-  <h1 class="display">LigaMagic<em>Dark Mode</em></h1>
+  <h1 class="display">Liga<em>Dark Mode</em></h1>
   <div class="rule"></div>
-  <div class="sub">Tema escuro para a LigaMagic inteira — sem<br>
-    mexer no verde do menor preço nem nos<br>símbolos de mana.</div>
+  <div class="sub">Tema escuro nos 15 sites da Liga — sem mexer<br>
+    no verde do menor preço nem nos símbolos<br>de custo de cada jogo.</div>
   <div class="meta mono">1 clique · sem recarregar a página</div>
 </div>` },
 
@@ -265,7 +269,7 @@ const pages = {
   <div class="fade" style="height:120px"></div>
 </div>
 <div class="foot"><img src="${ICON}" alt="">
-  <b class="display">A mesma LigaMagic, no escuro</b>
+  <b class="display">Os mesmos sites da Liga, no escuro</b>
   <span>— preços, tabelas, filtros e formulários</span>
 </div>` },
 

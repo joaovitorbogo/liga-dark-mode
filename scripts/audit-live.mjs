@@ -9,7 +9,8 @@
 // Injetar a pilha certa por host e o ponto todo. Jogar todos os arquivos em
 // toda pagina daria um audit verde que nao corresponde ao que o usuario ve: o
 // arquivo do Pokemon estaria consertando uma superficie do Yu-Gi-Oh que na
-// extensao real fica clara, porque la ele nem chega a ser injetado.
+// extensao real fica clara, porque la ele nem chega a ser injetado. Quem monta
+// a pilha e scripts/pilha.mjs, compartilhado com as pecas da loja.
 //
 // Uso: node scripts/audit-live.mjs [--shot] [--site=ygo,pkm]
 import fs from 'node:fs';
@@ -17,6 +18,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pp from 'puppeteer-core';
 import { SITES, PAGINAS_LIGAMAGIC, PAGINAS_POR_SITE } from './sites.mjs';
+import { pilhaDe } from './pilha.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SHOTS = path.join(ROOT, '.cache', 'shots');
@@ -26,25 +28,6 @@ const shot = process.argv.includes('--shot');
 const filtro = (process.argv.find(a => a.startsWith('--site=')) || '').slice(7)
   .split(',').filter(Boolean);
 
-const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'manifest.json'), 'utf8'));
-
-/**
- * A pilha de CSS que a extensao injeta num host, na ordem em que o manifest a
- * declara -- que e a ordem do cascade. Lida do proprio manifest.json em vez de
- * remontada a partir da tabela: se as duas coisas divergirem, e o manifest que
- * o Chrome obedece, entao e ele que tem que ser auditado.
- */
-function pilhaDe(host) {
-  const alvo = `https://${host}/`;
-  const casa = (p) => new RegExp(
-    '^' + p.replace(/[.]/g, '\\.').replace(/^\*:/, 'https?:').replace(/\*/g, '[^/]*') + '$'
-  ).test(alvo);
-  return manifest.content_scripts
-    .filter(c => c.matches.some(casa))
-    .flatMap(c => c.css || [])
-    .map(rel => fs.readFileSync(path.join(ROOT, rel), 'utf8'))
-    .join('\n');
-}
 
 const alvos = SITES.filter(s => !filtro.length || filtro.includes(s.id));
 const paginas = alvos.flatMap(s => {
