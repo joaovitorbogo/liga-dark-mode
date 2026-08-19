@@ -1,0 +1,175 @@
+/* Liga Dark Mode - camada gerada (home-v56)
+ * Derivada automaticamente de 1 bundle(s) de CSS de www.lmcorp.com.br.
+ * Nao editar a mao: regenerar com scripts/gen.mjs.
+ * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
+ * (excecoes por site), que carregam depois desta camada.
+ */
+/* css__template-home-v56-min.css */
+html.lmd-dark #hm .slider-botoes .carousel-control-prev:hover,html.lmd-dark #hm .slider-botoes .carousel-control-next:hover{background-color:#0d0d0d !important;color:#ededed !important}
+html.lmd-dark #hm .hm-news-title,html.lmd-dark #hm .hm-news-subtitle{text-shadow:2px 2px 3px rgba(0,0,0,0.75) !important}
+html.lmd-dark a h4.card-title:hover{color:#5d94d0 !important}
+html.lmd-dark #forum .forum-title a{color:#d7d7d7 !important}
+html.lmd-dark #forum .forum-coment a{color:#bdbdbd !important}
+html.lmd-dark #forum .forum-info-coment a,html.lmd-dark #forum .forum-error a{color:#fb9d6a !important}
+html.lmd-dark #forum .forum-info-coment{color:#afafaf !important}
+html.lmd-dark #forum .forum-right{color:#afafaf !important}
+html.lmd-dark #forum .forum-lines .forum-left{border-top:1px solid #333333 !important}
+html.lmd-dark #forum .forum-lines .forum-left:hover{background-color:#202020 !important}
+html.lmd-dark .morepages li{background-color:#292929 !important}
+html.lmd-dark .morepages .active{background-color:#3067a2 !important}
+html.lmd-dark #torneios .trn-main{border:1px solid #333333 !important}
+html.lmd-dark #torneios .trn-main-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
+html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#5d94d0 !important}
+html.lmd-dark #torneios .trn-main:hover{background-color:#202020 !important}
+html.lmd-dark #torneios .trn-avatar{background-color:#1c1c1c !important;color:#d7d7d7 !important}
+html.lmd-dark #torneios .trn-date-only{color:#d7d7d7 !important}
+html.lmd-dark #torneios .trn-date-info a{color:#fb9d6a !important}
+html.lmd-dark #torneios .trn-label a{color:#d7d7d7 !important}
+html.lmd-dark #torneios .trn-info-aux{color:#bdbdbd !important}
+html.lmd-dark #torneios .trn-tag{background-color:#3a3a3a !important}
+html.lmd-dark #torneios .trn-tag-3{background-color:#0d0d0d !important}
+html.lmd-dark #torneios .trn-tag-4{background-color:#d29f06 !important}
+html.lmd-dark #torneios .trn-tag-11{background-color:#9d0505 !important}
+html.lmd-dark #torneios .trn-tag-15{background-color:#2d2c37 !important}
+html.lmd-dark .table-cards tr{border-top:1px solid #323537 !important}
+html.lmd-dark .table-cards a{color:#ededed !important}
+html.lmd-dark .card-green table tr td:first-child,html.lmd-dark .card-green table tr td:nth-child(3){color:#90b995 !important}
+html.lmd-dark .card-red table tr td:first-child,html.lmd-dark .card-red table tr td:nth-child(3){color:#e96d83 !important}
+html.lmd-dark #prod table tr td:nth-child(3){color:#90b995 !important}
+html.lmd-dark .cards-analysis table tr:hover,html.lmd-dark #prod table tr:hover{background-color:#202020 !important}
+html.lmd-dark .card-panel{-webkit-box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
+html.lmd-dark .card-panel .card-footer{border-color:#3c2f28 !important;background-color:#242424 !important}
+html.lmd-dark .card-panel .card-footer .btn{background-color:#242424 !important}
+html.lmd-dark .card-panel .table-striped tbody tr:nth-of-type(odd){background-color:#242424 !important}
+html.lmd-dark .card-panel .table-striped tbody tr:nth-of-type(even){background-color:#212121 !important}
+html.lmd-dark .card-blue .card-header{background-color:#364a9b !important}
+html.lmd-dark .card-blue .card-footer{border-color:#282d3b !important}
+html.lmd-dark .card-blue .card-footer .btn{color:#8292d4 !important;border-color:#3e54aa !important}
+html.lmd-dark .card-blue .card-footer .btn:hover{background-color:#181920 !important}
+html.lmd-dark .card-blue .card-panel-filter{background-color:#1a1c23 !important}
+html.lmd-dark .card-green .card-header{background-color:#2e4230 !important}
+html.lmd-dark .card-green .card-footer{border-color:#2b3a2c !important}
+html.lmd-dark .card-green .card-footer .btn{color:#88b48d !important;border-color:#394c3b !important}
+html.lmd-dark .card-green .card-footer .btn:hover{background-color:#1e261e !important}
+html.lmd-dark .card-green .card-panel-filter{background-color:#191f19 !important}
+html.lmd-dark .card-green .card-panel-filter-select{color:#88b48d !important}
+html.lmd-dark .card-red .card-header{background-color:#dd2343 !important}
+html.lmd-dark .card-red .card-footer{border-color:#3b272a !important}
+html.lmd-dark .card-red .card-footer .btn{color:#e8677e !important;border-color:#dd3f5b !important}
+html.lmd-dark .card-red .card-footer .btn:hover{background-color:#242424 !important}
+html.lmd-dark .card-red .card-panel-filter{background-color:#25181a !important}
+html.lmd-dark .card-orange .card-header{background-color:#ee6019 !important}
+html.lmd-dark .card-orange .card-footer .btn{color:#f06c29 !important;border-color:#ea6b2a !important}
+html.lmd-dark .card-orange .card-footer .btn:hover{background-color:#242424 !important}
+html.lmd-dark .card-orange .card-panel-filter{background-color:#261d18 !important}
+html.lmd-dark .card-orange .card-panel-filter-select{color:#f06c29 !important}
+html.lmd-dark .card-dark-gray .card-footer{border-color:#313133 !important}
+html.lmd-dark .card-dark-gray .card-footer .btn{color:#d0d1d2 !important;border-color:#4b4b4d !important}
+html.lmd-dark .card-dark-gray .card-footer .btn:hover{background-color:#2d2d2f !important}
+html.lmd-dark .card-dark-gray .card-panel-filter{background-color:#202020 !important}
+html.lmd-dark .card-dark-gray .card-panel-filter-select{color:#d0d1d2 !important}
+html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#5d94d0 !important}
+html.lmd-dark li.spoiler.last a{color:#ededed !important}
+html.lmd-dark li.spoiler.last a:hover{color:#5d94d0 !important}
+html.lmd-dark #sliderSpoiler{background:#242424 !important}
+html.lmd-dark #sliderSpoiler .btn-green{background:#136319 !important}
+html.lmd-dark #sliderSpoiler .btn-green:hover{color:#3ddb49 !important;background:#141711 !important}
+html.lmd-dark #sliderSpoiler .container-qty{border:1px solid #373737 !important}
+html.lmd-dark #sliderSpoiler .container-qty button.plus,html.lmd-dark #sliderSpoiler .container-qty button.minus{border:2px solid #3b3b3a !important}
+html.lmd-dark #sliderSpoiler .container-qty input{color:#e9eaf2 !important}
+html.lmd-dark #dks .dks-main{border:1px solid #333333 !important}
+html.lmd-dark #dks .dk-title a{color:#d7d7d7 !important}
+html.lmd-dark #dks .dk-subtitle{color:#bdbdbd !important}
+html.lmd-dark #dks .deck-title{color:#bdbdbd !important}
+html.lmd-dark #dks .deck-title a{color:#d7d7d7 !important}
+html.lmd-dark #dks .dk-menor{color:#90b995 !important}
+html.lmd-dark #dks .dk-maior{color:#e96d83 !important}
+html.lmd-dark #dks .deck-autor{color:#bdbdbd !important}
+html.lmd-dark #dks .deck-autor a{color:#bdbdbd !important}
+html.lmd-dark #dks .dk-line:hover{background-color:#202020 !important}
+html.lmd-dark #dks .dks-more,html.lmd-dark .hm-decks-sem-spoiler #dks .dks-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
+html.lmd-dark #dks .dks-more:hover{background-color:#202020 !important;color:#5d94d0 !important}
+html.lmd-dark #evn .item .item-info span{color:#9e9e9e !important}
+html.lmd-dark #evn .item .item-info div{color:#cacaca !important}
+html.lmd-dark #evn .progress{background-color:#27292b !important}
+html.lmd-dark #evn .progress>span{background-color:#242424 !important}
+html.lmd-dark #evn .progress>span strong{color:#e4e4e4 !important}
+html.lmd-dark #evn .progress>span span{color:#9e9e9e !important}
+html.lmd-dark #evn .item:hover{background-color:#202020 !important}
+html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#5d94d0 !important}
+html.lmd-dark #evn .item:hover .progress>span strong{color:#ededed !important}
+html.lmd-dark #evn .item-borderlink{border:1px solid #373737 !important}
+html.lmd-dark #evn .progress[dprog="0"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(90deg,#161616 50%,#33c914 50%,#33c914) !important}
+html.lmd-dark #evn .progress[dprog="5"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(108deg,#161616 50%,#33c914 50%,#33c914) !important}
+html.lmd-dark #evn .progress[dprog="10"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(126deg,#161616 50%,#33c914 50%,#33c914) !important}
+html.lmd-dark #evn .progress[dprog="15"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(144deg,#161616 50%,#33c914 50%,#33c914) !important}
+html.lmd-dark #evn .progress[dprog="20"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(162deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="25"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(180deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="30"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(198deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="35"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(216deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="40"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(234deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="45"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(252deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="50"]{background-image:linear-gradient(-90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="55"]{background-image:linear-gradient(-72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="60"]{background-image:linear-gradient(-54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="65"]{background-image:linear-gradient(-36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="70"]{background-image:linear-gradient(-18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="75"]{background-image:linear-gradient(0deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="80"]{background-image:linear-gradient(18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="85"]{background-image:linear-gradient(36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="90"]{background-image:linear-gradient(54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="95"]{background-image:linear-gradient(72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #evn .progress[dprog="100"]{background-image:linear-gradient(90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
+html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#5d94d0 !important}
+html.lmd-dark #sliderSpoiler .layer-pool{border:1px solid #303030 !important}
+html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #sliderSpoiler .layer-pool-vote{border:1px solid #303030 !important}
+html.lmd-dark #ratePopup{background-color:#242424 !important}
+html.lmd-dark #ratePopup hr{border-top:1px solid #333333 !important}
+@media screen and (max-width:766px){
+html.lmd-dark #spoiler .card-actions button{border:1px solid #3872b1 !important}
+html.lmd-dark #spoiler .card-actions button:first-child{color:#5d94d0 !important}
+html.lmd-dark #spoiler .card-actions .bt-rate{color:#5d94d0 !important}
+html.lmd-dark #spoiler .card-actions div{border:1px solid #303030 !important}
+}
+html.lmd-dark .modal-content{background-color:#242424 !important}
+html.lmd-dark .modal-footer{border-top:1px solid #303336 !important}
+html.lmd-dark .l-comments-card-details{color:#ededed !important}
+html.lmd-dark .l-product-btn{color:#c5c5c5 !important}
+html.lmd-dark .l-product-btn:hover{color:#ededed !important}
+html.lmd-dark .l-product-spoiler-actions{background-color:rgba(13,13,13,0.84) !important}
+html.lmd-dark .l-product-spoiler .btn{color:#8292d4 !important;border-color:#3e54aa !important;background-color:#242424 !important}
+html.lmd-dark .l-comment-input{color:#ededed !important}
+html.lmd-dark .form-control::-webkit-input-placeholder{color:#a0a4a8 !important}
+html.lmd-dark .form-control:-ms-input-placeholder{color:#a0a4a8 !important}
+html.lmd-dark .form-control::-ms-input-placeholder{color:#a0a4a8 !important}
+html.lmd-dark .form-control::placeholder{color:#a0a4a8 !important}
+html.lmd-dark #articles .main{background-color:#242424 !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
+html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#5d94d0 !important}
+html.lmd-dark #artigos_warning a{color:#5d94d0 !important}
+html.lmd-dark #articles .boxblock{background-color:#242424 !important;-webkit-box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
+html.lmd-dark .l-product-best-price-home,html.lmd-dark .l-product-medium-price-home,html.lmd-dark .l-product-worst-price-home{color:#88b48d !important;background-color:#1b221c !important}
+html.lmd-dark .l-product-medium-price-home{color:#f06c29 !important;background-color:#231b16 !important}
+html.lmd-dark .l-product-worst-price-home{color:#e8677e !important;background-color:#27191b !important}
+html.lmd-dark .social-text p,html.lmd-dark .social-text a,html.lmd-dark .social-text div,html.lmd-dark .social-text font{color:#d7d7d7 !important}
+html.lmd-dark .social-text .social-right{border-left:1px solid #333333 !important}
+html.lmd-dark .social-text .social-title{color:#d7d7d7 !important}
+html.lmd-dark .social-text .social-title:hover{color:#5d94d0 !important}
+html.lmd-dark .social-text .social-left div:hover,html.lmd-dark .social-text .social-right div:hover{background-color:#202020 !important}
+html.lmd-dark .social-text hr{border-top:1px solid #313131 !important}
+html.lmd-dark .social-text a{color:#5d94d0 !important}
+html.lmd-dark .social-text a:hover{color:#d7d7d7 !important}
+html.lmd-dark .social-text .social-views{color:#afafaf !important}
+html.lmd-dark .deckhome{border:1px solid #373737 !important}
+html.lmd-dark .deckhome .deckdados a{color:#5d94d0 !important}
+html.lmd-dark #dks a.deckjog:hover{color:#d7d7d7 !important}
+html.lmd-dark .deckhome .deckhomeprice{background-color:#0d0d0d !important}
+html.lmd-dark .deckhome .deck-views{color:#afafaf !important}
+html.lmd-dark .deckshome-more:hover{background-color:#202020 !important}
+html.lmd-dark .prod-home{border:1px solid #373737 !important}
+html.lmd-dark .prod-home:hover{background-color:#202020 !important}
+html.lmd-dark .prod-home .price-min{color:#49f91f !important}
+html.lmd-dark .prod-home .prod-circle{border:1px solid #363636 !important;background-color:#272727 !important}
+html.lmd-dark .prod-home .price-max{color:#fb5b5b !important}
+html.lmd-dark .stream-stop:hover{background-color:#272727 !important;color:#9e9e9e !important}
+html.lmd-dark .stream-stop-warning{background-color:#272727 !important;color:#ededed !important}

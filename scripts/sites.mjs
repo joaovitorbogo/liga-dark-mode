@@ -31,25 +31,29 @@ export const HOME_GROUPS = {
 // id      curto: vira nome de arquivo, chave de bucket e valor de data-liga
 // host    hostname exato. Sem wildcard de subdominio: ver DOMINIOS_EXCLUIDOS
 // home    chave em HOME_GROUPS
-// bundle  prefixo do bundle proprio (sem versao), ou null
+// bundles prefixos dos bundles proprios (sem versao). Vazio no ligamagic.
+//         Quase sempre um so; o Pokemon tem dois porque usa um template de
+//         edicoes proprio alem do bundle principal.
 export const SITES = [
-  { id: 'magic', host: 'www.ligamagic.com.br',            home: 'package', bundle: null,                          nome: 'LigaMagic' },
-  { id: 'ygo',   host: 'www.ligayugioh.com.br',           home: 'package', bundle: 'template-ygo-',               nome: 'Liga Yu-Gi-Oh!' },
-  { id: 'onp',   host: 'www.ligaonepiece.com.br',         home: 'package', bundle: 'template-onepiece-',          nome: 'Liga One Piece' },
-  { id: 'lor',   host: 'www.ligalorcana.com.br',          home: 'package', bundle: 'template-lor-',               nome: 'Liga Lorcana' },
-  { id: 'fab',   host: 'www.ligafab.com.br',              home: 'package', bundle: 'template-fab-',               nome: 'Liga Flesh and Blood' },
-  { id: 'rft',   host: 'www.ligariftbound.com.br',        home: 'package', bundle: 'template-rb-',                nome: 'Liga Riftbound' },
+  { id: 'magic', host: 'www.ligamagic.com.br',            home: 'package', bundles: [],                                       nome: 'LigaMagic' },
+  { id: 'ygo',   host: 'www.ligayugioh.com.br',           home: 'package', bundles: ['template-ygo-'],               nome: 'Liga Yu-Gi-Oh!' },
+  { id: 'onp',   host: 'www.ligaonepiece.com.br',         home: 'package', bundles: ['template-onepiece-'],          nome: 'Liga One Piece' },
+  { id: 'lor',   host: 'www.ligalorcana.com.br',          home: 'package', bundles: ['template-lor-'],               nome: 'Liga Lorcana' },
+  { id: 'fab',   host: 'www.ligafab.com.br',              home: 'package', bundles: ['template-fab-'],               nome: 'Liga Flesh and Blood' },
+  { id: 'rft',   host: 'www.ligariftbound.com.br',        home: 'package', bundles: ['template-rb-'],                nome: 'Liga Riftbound' },
 
-  { id: 'pkm',   host: 'www.ligapokemon.com.br',          home: 'tcg02',   bundle: 'template-newlayout-package-', nome: 'Liga Pokemon' },
+  // O Pokemon e o unico com dois: alem do bundle principal, ele serve um
+  // template de edicoes proprio, no lugar do template-editions do nucleo.
+  { id: 'pkm',   host: 'www.ligapokemon.com.br',          home: 'tcg02',   bundles: ['template-newlayout-package-', 'template-pok-'], nome: 'Liga Pokemon' },
 
-  { id: 'vgd',   host: 'www.ligavanguard.com.br',         home: 'v56',     bundle: 'template-vgd-',               nome: 'Liga Vanguard' },
-  { id: 'dgm',   host: 'www.ligadigimon.com.br',          home: 'v56',     bundle: 'template-digimon-',           nome: 'Liga Digimon' },
-  { id: 'swu',   host: 'www.ligastarwars.com.br',         home: 'v56',     bundle: 'template-swu-',               nome: 'Liga Star Wars Unlimited' },
-  { id: 'gnd',   host: 'www.ligagundam.com.br',           home: 'v56',     bundle: 'template-gundam-',            nome: 'Liga Gundam' },
-  { id: 'sor',   host: 'www.ligasorcery.com.br',          home: 'v56',     bundle: 'template-sorcery-',           nome: 'Liga Sorcery' },
-  { id: 'dbm',   host: 'masters.ligadragonball.com.br',   home: 'v56',     bundle: 'template-db-',                nome: 'Liga Dragon Ball Masters' },
-  { id: 'dbf',   host: 'fusion.ligadragonball.com.br',    home: 'v56',     bundle: 'template-dfw-',               nome: 'Liga Dragon Ball Fusion World' },
-  { id: 'fnk',   host: 'www.mundofunko.com.br',           home: 'v56',     bundle: 'template-mundofunko-',        nome: 'Mundo Funko' },
+  { id: 'vgd',   host: 'www.ligavanguard.com.br',         home: 'v56',     bundles: ['template-vgd-'],               nome: 'Liga Vanguard' },
+  { id: 'dgm',   host: 'www.ligadigimon.com.br',          home: 'v56',     bundles: ['template-digimon-'],           nome: 'Liga Digimon' },
+  { id: 'swu',   host: 'www.ligastarwars.com.br',         home: 'v56',     bundles: ['template-swu-'],               nome: 'Liga Star Wars Unlimited' },
+  { id: 'gnd',   host: 'www.ligagundam.com.br',           home: 'v56',     bundles: ['template-gundam-'],            nome: 'Liga Gundam' },
+  { id: 'sor',   host: 'www.ligasorcery.com.br',          home: 'v56',     bundles: ['template-sorcery-'],           nome: 'Liga Sorcery' },
+  { id: 'dbm',   host: 'masters.ligadragonball.com.br',   home: 'v56',     bundles: ['template-db-'],                nome: 'Liga Dragon Ball Masters' },
+  { id: 'dbf',   host: 'fusion.ligadragonball.com.br',    home: 'v56',     bundles: ['template-dfw-'],               nome: 'Liga Dragon Ball Fusion World' },
+  { id: 'fnk',   host: 'www.mundofunko.com.br',           home: 'v56',     bundles: ['template-mundofunko-'],        nome: 'Mundo Funko' },
 ];
 
 // Ficam de fora de proposito. Rodam motores separados, sem NENHUM bundle em
@@ -79,7 +83,7 @@ export function bucketFor(nomeDoArquivo) {
     if (n.startsWith(prefix)) return `home-${grupo}`;
   }
   for (const s of SITES) {
-    if (s.bundle && n.startsWith(s.bundle)) return `site-${s.id}`;
+    if (s.bundles.some(p => n.startsWith(p))) return `site-${s.id}`;
   }
   return 'theme';
 }

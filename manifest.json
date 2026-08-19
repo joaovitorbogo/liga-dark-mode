@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "LigaMagic Dark Mode",
-  "version": "1.0.4",
-  "description": "Modo escuro para o ligamagic.com.br: marketplace, cards, decks, edicoes, artigos e forum.",
+  "name": "Liga Dark Mode",
+  "version": "2.0.0",
+  "description": "Modo escuro para os sites da Liga: Magic, Yu-Gi-Oh!, Pokemon, One Piece, Lorcana, Digimon e mais.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -10,7 +10,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "LigaMagic Dark Mode",
+    "default_title": "Liga Dark Mode",
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -19,17 +19,259 @@
       "128": "icons/icon128.png"
     }
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
   "content_scripts": [
     {
-      "matches": [
-        "*://*.ligamagic.com.br/*",
-        "*://ligamagic.com.br/*"
-      ],
-      "css": ["content/theme.generated.css", "content/theme-core.css"],
-      "js": ["content/apply.js"],
       "run_at": "document_start",
-      "all_frames": false
+      "all_frames": false,
+      "matches": [
+        "*://www.ligamagic.com.br/*",
+        "*://ligamagic.com.br/*",
+        "*://www.ligayugioh.com.br/*",
+        "*://ligayugioh.com.br/*",
+        "*://www.ligaonepiece.com.br/*",
+        "*://ligaonepiece.com.br/*",
+        "*://www.ligalorcana.com.br/*",
+        "*://ligalorcana.com.br/*",
+        "*://www.ligafab.com.br/*",
+        "*://ligafab.com.br/*",
+        "*://www.ligariftbound.com.br/*",
+        "*://ligariftbound.com.br/*",
+        "*://www.ligapokemon.com.br/*",
+        "*://ligapokemon.com.br/*",
+        "*://www.ligavanguard.com.br/*",
+        "*://ligavanguard.com.br/*",
+        "*://www.ligadigimon.com.br/*",
+        "*://ligadigimon.com.br/*",
+        "*://www.ligastarwars.com.br/*",
+        "*://ligastarwars.com.br/*",
+        "*://www.ligagundam.com.br/*",
+        "*://ligagundam.com.br/*",
+        "*://www.ligasorcery.com.br/*",
+        "*://ligasorcery.com.br/*",
+        "*://masters.ligadragonball.com.br/*",
+        "*://fusion.ligadragonball.com.br/*",
+        "*://www.mundofunko.com.br/*",
+        "*://mundofunko.com.br/*"
+      ],
+      "css": [
+        "content/theme.generated.css",
+        "content/theme-core.css",
+        "content/sites.css"
+      ],
+      "js": [
+        "content/apply.js"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligamagic.com.br/*",
+        "*://ligamagic.com.br/*",
+        "*://www.ligayugioh.com.br/*",
+        "*://ligayugioh.com.br/*",
+        "*://www.ligaonepiece.com.br/*",
+        "*://ligaonepiece.com.br/*",
+        "*://www.ligalorcana.com.br/*",
+        "*://ligalorcana.com.br/*",
+        "*://www.ligafab.com.br/*",
+        "*://ligafab.com.br/*",
+        "*://www.ligariftbound.com.br/*",
+        "*://ligariftbound.com.br/*"
+      ],
+      "css": [
+        "content/home-package.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligavanguard.com.br/*",
+        "*://ligavanguard.com.br/*",
+        "*://www.ligadigimon.com.br/*",
+        "*://ligadigimon.com.br/*",
+        "*://www.ligastarwars.com.br/*",
+        "*://ligastarwars.com.br/*",
+        "*://www.ligagundam.com.br/*",
+        "*://ligagundam.com.br/*",
+        "*://www.ligasorcery.com.br/*",
+        "*://ligasorcery.com.br/*",
+        "*://masters.ligadragonball.com.br/*",
+        "*://fusion.ligadragonball.com.br/*",
+        "*://www.mundofunko.com.br/*",
+        "*://mundofunko.com.br/*"
+      ],
+      "css": [
+        "content/home-v56.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligapokemon.com.br/*",
+        "*://ligapokemon.com.br/*"
+      ],
+      "css": [
+        "content/home-tcg02.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligayugioh.com.br/*",
+        "*://ligayugioh.com.br/*"
+      ],
+      "css": [
+        "content/sites/ygo.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligaonepiece.com.br/*",
+        "*://ligaonepiece.com.br/*"
+      ],
+      "css": [
+        "content/sites/onp.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligalorcana.com.br/*",
+        "*://ligalorcana.com.br/*"
+      ],
+      "css": [
+        "content/sites/lor.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligafab.com.br/*",
+        "*://ligafab.com.br/*"
+      ],
+      "css": [
+        "content/sites/fab.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligariftbound.com.br/*",
+        "*://ligariftbound.com.br/*"
+      ],
+      "css": [
+        "content/sites/rft.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligapokemon.com.br/*",
+        "*://ligapokemon.com.br/*"
+      ],
+      "css": [
+        "content/sites/pkm.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligavanguard.com.br/*",
+        "*://ligavanguard.com.br/*"
+      ],
+      "css": [
+        "content/sites/vgd.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligadigimon.com.br/*",
+        "*://ligadigimon.com.br/*"
+      ],
+      "css": [
+        "content/sites/dgm.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligastarwars.com.br/*",
+        "*://ligastarwars.com.br/*"
+      ],
+      "css": [
+        "content/sites/swu.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligagundam.com.br/*",
+        "*://ligagundam.com.br/*"
+      ],
+      "css": [
+        "content/sites/gnd.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.ligasorcery.com.br/*",
+        "*://ligasorcery.com.br/*"
+      ],
+      "css": [
+        "content/sites/sor.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://masters.ligadragonball.com.br/*"
+      ],
+      "css": [
+        "content/sites/dbm.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://fusion.ligadragonball.com.br/*"
+      ],
+      "css": [
+        "content/sites/dbf.generated.css"
+      ]
+    },
+    {
+      "run_at": "document_start",
+      "all_frames": false,
+      "matches": [
+        "*://www.mundofunko.com.br/*",
+        "*://mundofunko.com.br/*"
+      ],
+      "css": [
+        "content/sites/fnk.generated.css"
+      ]
     }
   ]
 }

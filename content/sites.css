@@ -1,0 +1,25 @@
+/* Liga Dark Mode - excecoes por site
+ *
+ * Este arquivo comeca vazio de proposito, e o normal e que continue quase
+ * vazio. Ele nao e "o CSS de cada site": disso cuidam os arquivos
+ * content/sites/<id>.generated.css, derivados do bundle proprio que cada site
+ * carrega, e servidos por uma entrada de content_scripts com o `matches`
+ * daquele host -- o CSS de um site nao chega nem a ser injetado no outro.
+ *
+ * O que entra aqui e a correcao manual pontual, quando o audit acha um detalhe
+ * que o gerador errou num site so. Exemplo do formato:
+ *
+ *   html.lmd-dark[data-liga="gnd"] .barra-topo { background: #16171a !important; }
+ *
+ * Regras:
+ *
+ * - Sempre escopar em `html.lmd-dark`, como faz a camada gerada. Sem isso a
+ *   regra pinta com o tema desligado.
+ * - Sempre escopar em `[data-liga="<id>"]`. Uma regra sem isso pertence a
+ *   theme-core.css, que vale para todos os sites.
+ * - Deixar um comentario com a pagina onde o problema aparece. Sem isso nao da
+ *   para saber se a regra ainda e necessaria depois de um deploy da LMCorp.
+ *
+ * Os ids sao os de scripts/sites.mjs: magic, ygo, onp, lor, fab, rft, pkm,
+ * vgd, dgm, swu, gnd, sor, dbm, dbf, fnk.
+ */

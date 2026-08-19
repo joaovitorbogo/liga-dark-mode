@@ -1,47 +1,25 @@
-// Descobre e baixa os bundles de CSS do ligamagic.com.br.
+// Descobre e baixa os bundles de CSS dos sites da Liga.
 //
-// O site e renderizado no servidor e serve o CSS de outro dominio
+// Os sites sao renderizados no servidor e servem o CSS de outro dominio
 // (www.lmcorp.com.br), com um numero de versao no nome do arquivo
 // (template-package-v95-min.css). Esse numero sobe a cada deploy, entao a lista
 // nao pode ser fixa: descobrimos pelos <link> das paginas de referencia.
+//
+// Cada bundle e roteado para um bucket (nucleo compartilhado, grupo de home, ou
+// site), que decide em qual arquivo de saida o gerador vai escreve-lo. Ver
+// scripts/sites.mjs.
 //
 // Uso: node scripts/fetch-css.mjs
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { paginasDeReferencia, bucketFor, SITES } from './sites.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, '.cache', 'css');
 const PAGES_OUT = path.join(ROOT, '.cache', 'pages');
 
-// Uma pagina por familia de template. Cada uma puxa um subconjunto diferente
-// dos bundles; juntas cobrem os seis.
-const PAGES = {
-  home: 'https://www.ligamagic.com.br/',
-  decks: 'https://www.ligamagic.com.br/?view=dks/decks&myown=1',
-  deck: 'https://www.ligamagic.com.br/?view=dks/deck&id=10150375',
-  card: 'https://www.ligamagic.com.br/?view=cards/card&card=Sol+Ring',
-  busca: 'https://www.ligamagic.com.br/?view=cards/card&card=Lightning+Bolt',
-  busca_lista: 'https://www.ligamagic.com.br/?view=cards/search&card=bolt',
-  edicoes: 'https://www.ligamagic.com.br/?view=cards/edicoes',
-  loja: 'https://www.ligamagic.com.br/?view=prod/home',
-  carrinho: 'https://www.ligamagic.com.br/?view=mp/carrinho',
-  artigos: 'https://www.ligamagic.com.br/?view=artigos/home',
-  artigo: 'https://www.ligamagic.com.br/?view=artigos/view&edicao=8600',
-  forum: 'https://www.ligamagic.com.br/?view=forum/forum',
-  forum_topico: 'https://www.ligamagic.com.br/?view=forum/topico&secao=15',
-  forum_mensagem: 'https://www.ligamagic.com.br/?view=forum/mensagem&id=183161',
-  bazar: 'https://www.ligamagic.com.br/?view=bzr/bazar',
-  leiloes: 'https://www.ligamagic.com.br/?view=leilao/listar',
-  colecao: 'https://www.ligamagic.com.br/?view=colecao/colecao',
-  lista: 'https://www.ligamagic.com.br/?view=cards/lista',
-  mostwanted: 'https://www.ligamagic.com.br/?view=prod/mostwanted',
-  variacao: 'https://www.ligamagic.com.br/?view=cards/variacao&card=Sol+Ring',
-  login: 'https://www.ligamagic.com.br/?view=logar',
-  cadastro: 'https://www.ligamagic.com.br/?view=newuser',
-};
-
-// Bundles que a varredura acima nunca enxerga, por dois motivos diferentes:
+// Bundles que a varredura nunca enxerga, por dois motivos diferentes:
 //
 // - compra por lista: e injetado por JavaScript depois que o passo do wizard
 //   monta, entao nao existe no HTML servido. A pagina inteira ficou fora do
@@ -50,6 +28,8 @@ const PAGES = {
 //   estar logado" para quem baixa o HTML aqui, e o <link> so sai junto com o
 //   conteudo. Logado, era a folha que pintava os blocos de #fff -- o perfil
 //   aparecia branco inteiro.
+//
+// Os dois sao do nucleo: valem para os 15 hosts.
 //
 // O numero de versao sobe a cada deploy igual ao dos outros, e aqui nao ha
 // <link> para ler, entao a versao conhecida e so o ponto de partida: subimos a
@@ -84,26 +64,36 @@ async function get(url, tentativas = 3) {
 fs.mkdirSync(OUT, { recursive: true });
 fs.mkdirSync(PAGES_OUT, { recursive: true });
 
-const cssUrls = new Set();
+const cssUrls = new Map();   // url -> Set de ids de site que a carregam
+const paginas = paginasDeReferencia();
+const falhas = [];
 
-for (const [nome, url] of Object.entries(PAGES)) {
+console.log(`varrendo ${paginas.length} paginas em ${SITES.length} hosts\n`);
+
+for (const { site, nome, url } of paginas) {
   try {
     const html = await get(url);
-    fs.writeFileSync(path.join(PAGES_OUT, `${nome}.html`), html);
+    // O nome tem "site:pagina" e ":" nao e valido em nome de arquivo no
+    // Windows. O cache e so para inspecao manual, entao trocar por "-" basta.
+    fs.writeFileSync(path.join(PAGES_OUT, `${nome.replace(/:/g, '-')}.html`), html);
+    const origem = new URL(url).origin;
     let n = 0;
     for (const m of html.matchAll(/<link[^>]+href=["']?([^"'> ]+\.css[^"'> ]*)/gi)) {
       let href = m[1];
       if (href.startsWith('//')) href = 'https:' + href;
-      else if (href.startsWith('/')) href = 'https://www.ligamagic.com.br' + href;
+      // Resolver contra a ORIGEM DA PAGINA, nao contra um host fixo. Com 15
+      // hosts, concatenar 'https://www.ligamagic.com.br' num href
+      // root-relative do ligayugioh baixaria o arquivo do site errado.
+      else if (href.startsWith('/')) href = origem + href;
       // Fontes do Google nao interessam: nao definem cor.
       if (/fonts\.googleapis\.com/.test(href)) continue;
-      if (cssUrls.has(href)) continue;
-      cssUrls.add(href);
-      n++;
+      if (!cssUrls.has(href)) { cssUrls.set(href, new Set()); n++; }
+      cssUrls.get(href).add(site);
     }
-    console.log(`${nome}: ${html.length} bytes, ${n} css novo(s)`);
+    console.log(`${nome.padEnd(22)} ${String(html.length).padStart(7)} bytes, ${n} css novo(s)`);
   } catch (e) {
-    console.error(`${nome}: ERRO ${e.message}`);
+    console.error(`${nome.padEnd(22)} ERRO ${e.message}`);
+    falhas.push(nome);
   }
   await dorme(1200);
 }
@@ -124,7 +114,7 @@ for (const b of SEM_LINK) {
     await dorme(150);
   }
   if (ultima) {
-    cssUrls.add(ultima.url);
+    if (!cssUrls.has(ultima.url)) cssUrls.set(ultima.url, new Set(['magic']));
     console.log(`sem link: ${ultima.url.split('/').pop()}` +
       (ultima.v !== b.v ? `  (a versao subiu de v${b.v}: atualize SEM_LINK)` : ''));
   } else {
@@ -141,17 +131,61 @@ for (const f of fs.readdirSync(OUT)) fs.unlinkSync(path.join(OUT, f));
 // diz nada). O caminho de origem tambem vai junto: as url() do CSS sao
 // relativas a pasta do bundle, e o gerador precisa disso para absolutiza-las.
 const manifest = [];
-for (const url of cssUrls) {
-  const nome = url.split('/').pop();
+const usados = new Set();
+console.log('');
+for (const [url, sites] of cssUrls) {
+  // O nome do bundle vem do caminho completo depois de /css/, com "/" virando
+  // "__": tcg_3/template-ygo-v32-min.css e tcg_9/template-lor-v02-min.css tem
+  // basename distinto hoje, mas nada garante isso -- a LMCorp poderia servir
+  // dois tcg_N/template-home-min.css e um sobrescreveria o outro em silencio.
+  const caminho = url.replace(/^https?:\/\/[^/]+\/arquivos\//, '');
+  const nome = caminho.replace(/\//g, '__');
+  if (usados.has(nome)) { console.error(`  colisao de nome: ${nome}`); continue; }
+  usados.add(nome);
+  const bucket = bucketFor(caminho);
   try {
     const css = await get(url);
     fs.writeFileSync(path.join(OUT, nome), css);
-    manifest.push({ nome, url, base: url.slice(0, url.lastIndexOf('/') + 1) });
-    console.log(`  ${nome}  ${(css.length / 1024).toFixed(0)} KB`);
+    manifest.push({ nome, url, base: url.slice(0, url.lastIndexOf('/') + 1), bucket, sites: [...sites] });
+    console.log(`  ${bucket.padEnd(11)} ${nome.padEnd(46)} ${(css.length / 1024).toFixed(0).padStart(4)} KB`);
   } catch (e) {
     console.error(`  ${nome}: ERRO ${e.message}`);
+    falhas.push(nome);
   }
 }
 
 fs.writeFileSync(path.join(ROOT, '.cache', 'css-manifest.json'), JSON.stringify(manifest, null, 1));
+
+// Um site sem bundle proprio no manifesto significa que a varredura dele
+// falhou -- e o sintoma seria um site sem tema, sem erro nenhum.
+const semBundle = SITES.filter(s => s.bundles.length && !manifest.some(m => m.bucket === `site-${s.id}`));
+
+// Candidatos a bundle proprio que cairam no nucleo. A tabela em sites.mjs e
+// que decide o roteamento, mas ela so sabe dos bundles que ja existiam: quando
+// a LMCorp der a um site um template proprio novo, ele entra no nucleo em
+// silencio e passa a ser injetado nos 15 hosts.
+//
+// A deteccao nao pode ser automatica. A varredura e assimetrica de proposito
+// (22 paginas no ligamagic, 3 nos demais), entao template-forum-v2 tambem
+// aparece carregado "so pelo magic" -- e ele e do motor compartilhado, os
+// outros sites tambem tem forum. Por isso isto avisa em vez de rotear: so o
+// caso de um site NAO-magic sozinho e suspeito de verdade.
+const suspeitos = manifest.filter(m =>
+  m.bucket === 'theme' && m.sites.length === 1 && m.sites[0] !== 'magic');
+
 console.log(`\n${manifest.length} bundles em ${path.relative(ROOT, OUT)}`);
+const porBucket = {};
+for (const m of manifest) porBucket[m.bucket] = (porBucket[m.bucket] || 0) + 1;
+console.log(`buckets: ${Object.keys(porBucket).sort().join(' ')}`);
+if (semBundle.length) {
+  console.error(`\nERRO: ${semBundle.length} site(s) sem bundle proprio: ${semBundle.map(s => s.id).join(', ')}`);
+  console.error('O tema desses sites ficaria incompleto. Rode de novo.');
+}
+if (suspeitos.length) {
+  console.warn(`\nAVISO: ${suspeitos.length} bundle(s) no nucleo carregado(s) por um site nao-magic so.`);
+  console.warn('Provavelmente sao bundles proprios. Se forem, acrescente o prefixo em SITES[].bundles,');
+  console.warn('senao eles sao injetados nos 15 hosts e podem colidir com classes homonimas:');
+  for (const s of suspeitos) console.warn(`  ${s.sites[0].padEnd(6)} ${s.nome}`);
+}
+if (falhas.length) console.error(`\n${falhas.length} falha(s): ${falhas.join(', ')}`);
+if (semBundle.length || falhas.length) process.exitCode = 1;

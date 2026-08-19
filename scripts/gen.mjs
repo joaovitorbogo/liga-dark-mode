@@ -1,15 +1,22 @@
-// Gera o stylesheet de dark mode a partir do CSS real do ligamagic.com.br.
+// Gera os stylesheets de dark mode a partir do CSS real dos sites da Liga.
 // Estrategia: reaproveita os seletores originais e remapeia apenas os valores
 // de cor, por propriedade (fundo / texto / borda / sombra).
+//
+// A saida e dividida em buckets (ver scripts/sites.mjs): o nucleo, que vale nos
+// 15 hosts; um arquivo por grupo de home; e um por site com bundle proprio.
+// Cada arquivo e servido por uma entrada de content_scripts com o `matches`
+// certo, entao o CSS de um site nao chega a ser injetado no outro -- o
+// isolamento e do navegador, nao de convencao de seletor.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import postcss from 'postcss';
+import { bucketFor, arquivoDoBucket, BUCKET_ORDER, SITES } from './sites.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.join(ROOT, '.cache', 'css');
 const MANIFEST = path.join(ROOT, '.cache', 'css-manifest.json');
-const OUT = path.join(ROOT, 'content', 'theme.generated.css');
+const OUT_DIR = path.join(ROOT, 'content');
 
 if (!fs.existsSync(SRC)) {
   console.error('CSS de origem nao encontrado. Rode antes: node scripts/fetch-css.mjs');
@@ -374,9 +381,53 @@ const manifest = fs.existsSync(MANIFEST)
   : fs.readdirSync(SRC).filter(f => f.endsWith('.css')).sort()
       .map(nome => ({ nome, base: 'https://www.lmcorp.com.br/arquivos/css/' }));
 
-const files = manifest.filter(m => fs.existsSync(path.join(SRC, m.nome)));
-const chunks = [];
-const seen = new Set();
+// Bundles baixados antes desta mudanca nao tem bucket gravado; deriva do nome.
+const files = manifest
+  .filter(m => fs.existsSync(path.join(SRC, m.nome)))
+  .map(m => ({ ...m, bucket: m.bucket || bucketFor(m.nome.replace(/__/g, '/')) }));
+
+const buckets = new Map();
+
+/* ---------- dedupe hierarquico ----------
+ *
+ * Descartar uma regra repetida so e seguro contra um bucket que seja injetado
+ * num conjunto de hosts que CONTENHA o do bucket atual.
+ *
+ *   theme        15 hosts   contem todo mundo
+ *   home-<grupo>  6, 8 ou 1 contem os sites daquele grupo
+ *   site-<id>     1         nao contem ninguem alem de si
+ *
+ * Com um `seen` unico e global isto quebra de um jeito silencioso: os bundles
+ * tcg_N sao quase identicos entre si (mesmo template, jogo diferente), entao o
+ * primeiro site processado ficava com as regras e os outros 13 saiam com o
+ * arquivo vazio -- perdendo o tema sem nenhum erro aparecer.
+ */
+const GRUPO_DO_SITE = Object.fromEntries(SITES.map(s => [s.id, s.home]));
+const seenTheme = new Set();
+const seenHome = new Map();   // grupo -> Set
+const seenSite = new Map();   // id -> Set
+
+const setDe = (mapa, chave) => {
+  if (!mapa.has(chave)) mapa.set(chave, new Set());
+  return mapa.get(chave);
+};
+
+function jaEmitido(bucket, key) {
+  if (seenTheme.has(key)) return true;
+  if (bucket === 'theme') return false;
+  if (bucket.startsWith('home-')) return setDe(seenHome, bucket.slice(5)).has(key);
+  const id = bucket.slice('site-'.length);
+  const grupo = GRUPO_DO_SITE[id];
+  if (grupo && seenHome.get(grupo)?.has(key)) return true;
+  return setDe(seenSite, id).has(key);
+}
+
+function registrar(bucket, key) {
+  if (bucket === 'theme') seenTheme.add(key);
+  else if (bucket.startsWith('home-')) setDe(seenHome, bucket.slice(5)).add(key);
+  else setDe(seenSite, bucket.slice('site-'.length)).add(key);
+}
+
 let ruleCount = 0, declCount = 0, skippedFiles = 0;
 
 // Seletores que nunca devem ser tematizados. Alem das midias, no ligamagic
@@ -446,7 +497,7 @@ function scrimFor(luma) {
   return `rgba(16,17,20,${a.toFixed(3)})`;
 }
 
-function processRoot(root, file, base) {
+function processRoot(root, file, base, bucket) {
   // Todos os seletores do arquivo, para saber quais sao containers (tem
   // descendentes estilizados).
   const allSelectors = [];
@@ -517,8 +568,8 @@ function processRoot(root, file, base) {
       const body = decls.join(';');
       const scoped = scopeSelector(sel);
       const key = scoped + '{' + body;
-      if (seen.has(key)) return;
-      seen.add(key);
+      if (jaEmitido(bucket, key)) return;
+      registrar(bucket, key);
       ruleCount++;
       prefix(scoped, body);
     });
@@ -532,17 +583,24 @@ function processRoot(root, file, base) {
     lines.push('}');
   };
   walk(root, emit);
-  if (lines.length) chunks.push(`/* ${file} */\n` + lines.join('\n'));
+  if (lines.length) {
+    if (!buckets.has(bucket)) buckets.set(bucket, []);
+    buckets.get(bucket).push(`/* ${file} */\n` + lines.join('\n'));
+  }
 }
 
 // Passo 1: tabela de variaveis. Precisa varrer TODOS os bundles antes de gerar,
 // porque uma variavel definida no template-package e usada no marketplace.
+// Este passo tem que continuar GLOBAL, sobre todos os bundles de todos os
+// buckets. Uma variavel definida no nucleo (--color-white) e usada dentro dos
+// bundles tcg_N; coletar por bucket deixaria essas var() sem literal conhecido
+// e o bundle do site geraria cor errada -- ou nenhuma.
 const parsed = [];
-for (const { nome, base } of files) {
+for (const { nome, base, bucket } of files) {
   const css = fs.readFileSync(path.join(SRC, nome), 'utf8');
   try {
     const root = postcss.parse(css, { from: nome });
-    parsed.push({ nome, base, root });
+    parsed.push({ nome, base, bucket, root });
     coletarVars(root);
   } catch (e) {
     skippedFiles++;
@@ -550,18 +608,48 @@ for (const { nome, base } of files) {
   }
 }
 
-// Passo 2: geracao.
-for (const { nome, base, root } of parsed) processRoot(root, nome, base);
+// Passo 2: geracao, na ordem nucleo -> homes -> sites (ver o comentario do
+// `seen`). Dentro do mesmo bucket, a ordem de descoberta e preservada, que e a
+// ordem de carga das folhas na pagina e portanto a ordem do cascade.
+const ordenados = parsed
+  .map((p, i) => ({ p, i }))
+  .sort((a, b) => BUCKET_ORDER(a.p.bucket) - BUCKET_ORDER(b.p.bucket) || a.i - b.i)
+  .map(x => x.p);
+for (const { nome, base, root, bucket } of ordenados) processRoot(root, nome, base, bucket);
 
-const header = `/* LigaMagic Dark Mode - camada gerada
- * Derivada automaticamente dos ${files.length} bundles de CSS de www.ligamagic.com.br.
+/* ---------- escrita ---------- */
+
+const cabecalho = (bucket, n) => `/* Liga Dark Mode - camada gerada (${bucket})
+ * Derivada automaticamente de ${n} bundle(s) de CSS de www.lmcorp.com.br.
  * Nao editar a mao: regenerar com scripts/gen.mjs.
- * Ajustes finos ficam em theme-core.css, que carrega depois desta camada.
+ * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
+ * (excecoes por site), que carregam depois desta camada.
  */
 `;
 
-fs.mkdirSync(path.dirname(OUT), { recursive: true });
-fs.writeFileSync(OUT, header + chunks.join('\n'));
+fs.mkdirSync(path.join(OUT_DIR, 'sites'), { recursive: true });
+
+// Um site cujo bundle nao gerou nenhuma regra ainda precisa do arquivo: o
+// manifest o referencia, e content_scripts com css ausente impede a extensao
+// inteira de carregar.
+const esperados = new Set(files.map(f => f.bucket));
+const escritos = [];
+for (const bucket of [...esperados].sort((a, b) => BUCKET_ORDER(a) - BUCKET_ORDER(b) || a.localeCompare(b))) {
+  const chunks = buckets.get(bucket) || [];
+  const destino = path.join(OUT_DIR, arquivoDoBucket(bucket));
+  fs.writeFileSync(destino, cabecalho(bucket, files.filter(f => f.bucket === bucket).length) + chunks.join('\n'));
+  escritos.push({ bucket, destino, chunks: chunks.length });
+}
+
+// Arquivos de bucket que sobraram de uma geracao anterior (um site removido da
+// tabela) mentiriam sobre a cobertura atual.
+const validos = new Set(escritos.map(e => path.basename(e.destino)));
+for (const f of fs.readdirSync(path.join(OUT_DIR, 'sites'))) {
+  if (!validos.has(f)) {
+    fs.unlinkSync(path.join(OUT_DIR, 'sites', f));
+    console.log(`removido (bucket nao existe mais): sites/${f}`);
+  }
+}
 
 const resolviveis = [...VARS.keys()].filter(n => resolveVar(n));
 if (scrimmed.length) {
@@ -569,7 +657,11 @@ if (scrimmed.length) {
   [...new Set(scrimmed)].sort().forEach(s => console.log('  ' + s));
   console.log('');
 }
-console.log(`arquivos: ${files.length} (falhas: ${skippedFiles})`);
+console.log(`arquivos de origem: ${files.length} (falhas: ${skippedFiles})`);
 console.log(`variaveis: ${VARS.size} na raiz, ${resolviveis.length} resolvem para cor, ${VAR_AMBIGUAS.size} ambiguas (ignoradas)`);
 console.log(`regras: ${ruleCount} | declaracoes: ${declCount}`);
-console.log(`saida: ${path.relative(ROOT, OUT)} (${(fs.statSync(OUT).size / 1024).toFixed(0)} KB)`);
+console.log(`\nsaida (${escritos.length} arquivos):`);
+for (const e of escritos) {
+  const kb = (fs.statSync(e.destino).size / 1024).toFixed(0);
+  console.log(`  ${e.bucket.padEnd(12)} ${path.relative(OUT_DIR, e.destino).padEnd(32)} ${kb.padStart(5)} KB`);
+}

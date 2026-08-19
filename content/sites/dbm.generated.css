@@ -1,0 +1,157 @@
+/* Liga Dark Mode - camada gerada (site-dbm)
+ * Derivada automaticamente de 1 bundle(s) de CSS de www.lmcorp.com.br.
+ * Nao editar a mao: regenerar com scripts/gen.mjs.
+ * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
+ * (excecoes por site), que carregam depois desta camada.
+ */
+/* css__tcg_7__template-db-v13-min.css */
+html.lmd-dark{--color-bg-menu:#df6c07 !important}
+html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#265688 !important;border:1px solid #2d5f95 !important}
+html.lmd-dark .card-orange .card-header{background-color:#3067a2 !important}
+html.lmd-dark .card-orange .card-panel-filter-select{color:#5d94d0 !important}
+html.lmd-dark .card-orange .card-panel-filter{background-color:#201826 !important}
+html.lmd-dark .filtrar-adv li:last-child:hover{color:#5799e0 !important}
+html.lmd-dark .l-header{background-color:#3067a2 !important}
+html.lmd-dark .cd-dropdown-trigger-right{background-color:#287ad3 !important}
+html.lmd-dark .cd-dropdown-trigger-right:hover,html.lmd-dark .cd-dropdown-right.dropdown-is-active:hover .cd-dropdown-trigger-right{background-color:#3067a2 !important}
+html.lmd-dark .cd-dropdown-right a:hover{background-color:#3067a2 !important}
+html.lmd-dark .db-call-menu:active,html.lmd-dark .db-call-menu:focus,html.lmd-dark .db-call-menu:hover,html.lmd-dark .liga-nav li a:active,html.lmd-dark .liga-nav li a:focus,html.lmd-dark .liga-nav li a:hover{color:#5799e0 !important;background-color:#242424 !important}
+html.lmd-dark .db-call-menu:active.liga-glow,html.lmd-dark .db-call-menu:focus.liga-glow,html.lmd-dark .db-call-menu:hover.liga-glow,html.lmd-dark .liga-nav li a:active.liga-glow,html.lmd-dark .liga-nav li a:focus,html.lmd-dark .liga-nav li a:hover.liga-glow{color:#5799e0 !important}
+html.lmd-dark .l-header-cart .alert{color:#5d94d0 !important}
+html.lmd-dark .liga-nav li.active a{color:#5d94d0 !important}
+html.lmd-dark #ms-body .submit input{color:#5d94d0 !important}
+html.lmd-dark #ms-body .submit input:hover{background-color:#3067a2 !important}
+html.lmd-dark .btnLaranja:hover,html.lmd-dark .botao:hover,html.lmd-dark #popupAvaliacao .btnSalvar:hover,html.lmd-dark #popupAvaliacao .btnClose:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao:hover{background-color:#3067a2 !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel,html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel:hover{background-color:#3067a2 !important}
+html.lmd-dark #card-filtros .filtro-limpar,html.lmd-dark #card-estoque .estoque-linha a:hover,html.lmd-dark #card-estoque .e-col4 font:hover,html.lmd-dark #card-estoque .l-preco,html.lmd-dark #card-estoque a.cinzaescuro:hover,html.lmd-dark #card-principal .prc-tab-lnk:hover{color:#5d94d0 !important}
+html.lmd-dark #main-compras .venda-selected{border-left:1px solid #3872b1 !important;border-right:1px solid #3872b1 !important;border-bottom:1px solid #3872b1 !important}
+html.lmd-dark #mtg-cards a:hover,html.lmd-dark #home-cards-tcg a:hover{color:#5d94d0 !important}
+@media (min-width:668px) and (max-width:1023px){
+html.lmd-dark #card-estoque .e-mob-preco{color:#5d94d0 !important}
+}
+html.lmd-dark .kart-multiple-mkt div:hover{background-color:#3067a2 !important}
+html.lmd-dark #popupAlert button.botao-laranja:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark #popupBuylistPayment .title-float-r:hover{color:#5d94d0 !important}
+html.lmd-dark #news #coments-block .coment-text a{color:#5d94d0 !important}
+html.lmd-dark #news #coments-block .exibir-mais{background-color:#3067a2 !important}
+html.lmd-dark #news .news-text a{color:#5d94d0 !important}
+html.lmd-dark #bzr-edit .sel-ed{color:#5d94d0 !important}
+html.lmd-dark #bzr-edit .bzr-return{color:#5d94d0 !important}
+html.lmd-dark #bloco-card .card-lista a:hover{color:#5d94d0 !important}
+html.lmd-dark #bzr-cart .info-topo .topo-avatar div.edita-avatar a{color:#5d94d0 !important}
+html.lmd-dark .bzr-user a:hover{color:#5d94d0 !important}
+html.lmd-dark #bzr-edit input[type="submit"]:hover,html.lmd-dark .bzr-botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .dk-opc div{background-color:#3067a2 !important}
+html.lmd-dark #dk-tab input[type="button"]{background:#3067a2 !important}
+html.lmd-dark .dk-success-title a{color:#5d94d0 !important}
+html.lmd-dark .dk-success-buttons .btn{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #app-deck .app-card{color:#5d94d0 !important}
+html.lmd-dark .decks .dk-formato font:hover,html.lmd-dark .decks .dk-nomeevento:hover,html.lmd-dark .decks .dk-nomejogador:hover,html.lmd-dark .decks .dk-data font:hover{color:#5d94d0 !important}
+html.lmd-dark #deck-tab .tab-selected,html.lmd-dark #deck-tab .tab-selected:hover{background-color:#3067a2 !important}
+html.lmd-dark #deck-view .deck-card,html.lmd-dark #deck-view .deck-card a{color:#5d94d0 !important}
+html.lmd-dark #deck-view-specific .deck-card,html.lmd-dark #deck-view-specific .deck-card a{color:#5d94d0 !important}
+html.lmd-dark .btnSimul{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .buy-cards .cards-item a{color:#ededed !important}
+html.lmd-dark .dck-main-coments #coments-block .exibir-mais{background-color:#3067a2 !important}
+html.lmd-dark .box-comparar a{color:#5d94d0 !important}
+html.lmd-dark .btnComparar{color:#5d94d0 !important}
+html.lmd-dark .dk-opc div:hover{background-color:#3067a2 !important}
+html.lmd-dark #dk-tab input[type="button"]:hover{background-color:#3067a2 !important}
+html.lmd-dark .dk-success-buttons .btn:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .a01,html.lmd-dark .evdeck-html a,html.lmd-dark .bloco-cielo a{color:#5d94d0 !important}
+html.lmd-dark .a01:hover,html.lmd-dark .evdeck-html a:hover,html.lmd-dark .bloco-cielo a:hover{color:#5d94d0 !important}
+html.lmd-dark #ev-abas .ev-abas-mob div.aba-selected{background:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #popupDecklist .header button,html.lmd-dark #popupDecklist .row button{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #popupDecklist .dk-nome a{color:#5d94d0 !important}
+html.lmd-dark #evp-header .evp-boxheader-3 .evp-roundresults{background-color:#3067a2 !important}
+@media (min-width:1024px){
+html.lmd-dark #ev-abas div.ev-aba:hover{background:#3067a2 !important;border:1px solid #3872b1 !important}
+}
+html.lmd-dark .botao,html.lmd-dark .mini-botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .headerMapFeat{color:#5d94d0 !important}
+html.lmd-dark .inp_pesquisaGoogle input{color:#5d94d0 !important}
+html.lmd-dark .btnLaranja{background-color:#3067a2 !important;border-color:#3872b1 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #dks .dks-more:hover{color:#5d94d0 !important}
+html.lmd-dark #busca input,html.lmd-dark #busca input:focus{color:#5d94d0 !important}
+html.lmd-dark .box-header,html.lmd-dark .box-footer{background-color:#3067a2 !important}
+html.lmd-dark .box h2,html.lmd-dark .box h2 a{color:#5d94d0 !important}
+html.lmd-dark .lj{color:#5d94d0 !important}
+html.lmd-dark .busca input,html.lmd-dark .busca input:focus{color:#5d94d0 !important}
+html.lmd-dark .card-detalhes a{color:#5d94d0 !important}
+html.lmd-dark .mini-botao{background-color:#3067a2 !important}
+html.lmd-dark article.blog .tooltipcard{color:#5d94d0 !important}
+html.lmd-dark A.linkCkEditor,html.lmd-dark A.linkCkEditor:visited,html.lmd-dark A.linkCkEditor:active,html.lmd-dark A.linkCkEditor:link,html.lmd-dark A.linkCkEditor:hover{color:#5d94d0 !important}
+html.lmd-dark A.laranja,html.lmd-dark A.laranja:visited,html.lmd-dark A.laranja:active,html.lmd-dark A.laranja:link,html.lmd-dark A.laranja:hover{color:#5d94d0 !important}
+html.lmd-dark A.laranjaP,html.lmd-dark A.laranjaP:visited,html.lmd-dark A.laranjaP:active,html.lmd-dark A.laranjaP:link,html.lmd-dark A.laranjaP:hover{color:#5d94d0 !important}
+html.lmd-dark A.laranjaPP,html.lmd-dark A.laranjaPP:visited,html.lmd-dark A.laranjaPP:active,html.lmd-dark A.laranjaPP:link,html.lmd-dark A.laranjaPP:hover{color:#5d94d0 !important}
+html.lmd-dark .paginacao-quadro{background:#3067a2 !important}
+html.lmd-dark .paginacao-quadro-selecionada{color:#5d94d0 !important}
+html.lmd-dark .busca-mini input,html.lmd-dark .busca-mini input:focus{color:#5d94d0 !important}
+html.lmd-dark .botaoLeilao:hover{background-color:#3067a2 !important}
+html.lmd-dark .col-header a:hover,html.lmd-dark .col-subheader a:hover{color:#5d94d0 !important}
+html.lmd-dark .ls-neg-botao:hover{background-color:#3067a2 !important}
+html.lmd-dark .ls-neg-botao-sel,html.lmd-dark .ls-neg-botao-sel:hover{background-color:#3067a2 !important}
+html.lmd-dark .bt-laranja{background-color:#3067a2 !important}
+html.lmd-dark a.fecha-modal{background:#3067a2 !important}
+html.lmd-dark .exibir_mais #btn-exibe-mais{color:#5d94d0 !important}
+html.lmd-dark #busca-avancada a.mini-botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #coments-block .coment-text a,html.lmd-dark #coments-block .coment-quote:hover,html.lmd-dark #coments-block.news-coments a:hover{color:#5d94d0 !important}
+html.lmd-dark a.mini-botao:hover{background-color:#3067a2 !important}
+html.lmd-dark .cards-links a:hover{color:#5d94d0 !important}
+html.lmd-dark #busca-avancada a.mini-botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark input.buscaSimples{color:#5d94d0 !important}
+html.lmd-dark .vPreco{COLOR:#5d94d0 !important}
+html.lmd-dark .newBuscaAdv .botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .filtro-leilao .filtro-limpar{color:#5d94d0 !important}
+html.lmd-dark .main-leiloes-home .view-grid li .nome-leilao a:hover{color:#5d94d0 !important}
+html.lmd-dark .main-leiloes-home .view-grid li .preco-leilao a{color:#5d94d0 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .nome-leilao a:hover{color:#5d94d0 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao{color:#5d94d0 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao a{color:#5d94d0 !important}
+html.lmd-dark .newBuscaAdv .botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .menu-follow li .qtd{color:#5d94d0 !important}
+html.lmd-dark .paginacao-quadro{border:1px solid #3872b1 !important}
+html.lmd-dark .lista-cc li .excluir-cc{color:#5d94d0 !important}
+html.lmd-dark .btn-topo:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .artigos li:after{background:#3067a2 !important}
+html.lmd-dark .leiloes li:after{background:#3067a2 !important}
+html.lmd-dark .preco-leilao{color:#5d94d0 !important}
+html.lmd-dark .preco-leilao a{color:#5d94d0 !important}
+html.lmd-dark .menu-principal li.selecionado{background:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .menu-principal li:hover{background:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .menu-dados-pessoais .btn,html.lmd-dark .bloco-dados-pessoais .btn{border:1px solid #3872b1 !important;color:#5d94d0 !important}
+html.lmd-dark .bloco-imagem i{color:#5d94d0 !important}
+html.lmd-dark .foto-ativa a{color:#5d94d0 !important}
+html.lmd-dark .menu-dados-pessoais .btn:hover,html.lmd-dark .bloco-dados-pessoais .btn:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-primary:hover{background-color:#287ad3 !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-default:hover{color:#5799e0 !important}
+html.lmd-dark .l-header-cart .cart-list .btn-finish-cart:hover{background-color:#287ad3 !important}
+html.lmd-dark #header-filters{background-color:#287ad3 !important}
+html.lmd-dark .btnLaranja,html.lmd-dark .botao,html.lmd-dark .botao-reto,html.lmd-dark #popupAvaliacao .btnSalvar,html.lmd-dark #popupAvaliacao .btnClose{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #popupAvaliacao .survey-selected{background-color:#3067a2 !important}
+html.lmd-dark #spoilers-edicoes .icon_label a{color:#5d94d0 !important}
+@media only screen and (min-width:992px){
+html.lmd-dark .cd-dropdown-content-right>.has-children-right>a.is-active{background-color:#3067a2 !important}
+}
+html.lmd-dark #card-principal .ed-sel{background-color:#b2ab0a !important}
+html.lmd-dark font.mp-sigla-key,html.lmd-dark font.mp-snumber-key{background-color:#287ad3 !important}
+html.lmd-dark font.mp-snumber-key{background-color:#3067a2 !important}
+html.lmd-dark .ed-sel font.mp-snumber-key{background-color:#287ad3 !important}
+html.lmd-dark .botao-inverso{background-color:#1c1c1c !important;border:1px solid #333333 !important}
+html.lmd-dark .card-grid .card-actions button{border-color:#3872b1 !important}
+html.lmd-dark #spoilerModal .botao{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark #spoilerModal .botao:hover,html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
+html.lmd-dark .card-grid .layer-hover .pool-media button:hover,html.lmd-dark #half-stars button:hover,html.lmd-dark .mtg-picture .layer-hover .pool-media button:hover{background-color:#3067a2 !important}
+html.lmd-dark #card-principal .pool-media button:hover,html.lmd-dark .comment-rate .pool-media button:hover{background-color:#3067a2 !important}
+html.lmd-dark .radio-card-input:checked+.radio-card,html.lmd-dark .btn-cadastrar-endereco{background-color:#3067a2 !important}
+html.lmd-dark .passo-lista-cards .change-input-type-btn-simple{color:#5d94d0 !important}
+html.lmd-dark .radio-card:hover{background-color:#1c131e !important}
+html.lmd-dark #content-step-wizard .mention.compramassa:focus,html.lmd-dark #content-step-wizard select:focus,html.lmd-dark #content-step-wizard input:focus,html.lmd-dark #content-step-wizard button.ui-multiselect:focus{border:1px solid #3872b1 !important}
+html.lmd-dark #mp-frete div.select{border:1px solid #c14af2 !important}
+html.lmd-dark #popupAlertMsg .titulo,html.lmd-dark .modal-popup .titulo{color:#5d94d0 !important}
+html.lmd-dark #neg-main a,html.lmd-dark #neg-type a,html.lmd-dark #neg-users a,html.lmd-dark #neg-acoes .titulo a,html.lmd-dark .titulo-direita{color:#5d94d0 !important}
+html.lmd-dark #neg-main a:hover,html.lmd-dark #neg-type a:hover,html.lmd-dark #neg-users a:hover,html.lmd-dark #neg-acoes .titulo a:hover,html.lmd-dark .titulo-direita:hover{color:#5d94d0 !important}
+html.lmd-dark #busca-avancada .mini-botao,html.lmd-dark #neg-acoes .mini-botao,html.lmd-dark .neg-botao,html.lmd-dark .botao-acao,html.lmd-dark .btn-imprimir,html.lmd-dark #neg-abertura .neg-aberta-bt,html.lmd-dark #neg-acoes .neg-minibotao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #busca-avancada .mini-botao:hover,html.lmd-dark #neg-acoes .mini-botao:hover,html.lmd-dark .neg-botao:hover,html.lmd-dark .botao-acao:hover,html.lmd-dark .btn-imprimir:hover,html.lmd-dark #neg-abertura .neg-aberta-bt:hover,html.lmd-dark #neg-acoes .neg-minibotao:hover{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark .enderecos>li:first-child a{color:#5d94d0 !important}
