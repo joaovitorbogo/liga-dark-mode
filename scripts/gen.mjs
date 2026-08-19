@@ -430,11 +430,21 @@ function registrar(bucket, key) {
 
 let ruleCount = 0, declCount = 0, skippedFiles = 0;
 
-// Seletores que nunca devem ser tematizados. Alem das midias, no ligamagic
-// entram os simbolos de mana e as cores de carta: sao a linguagem visual do
-// jogo (o "W" branco, o "B" preto), nao decoracao de interface. Escurece-los
-// deixaria o custo de mana ilegivel.
-const SELECTOR_DENY = /(^|[\s,>+~])(img|video|canvas|iframe|svg)\b|\.logo\b|\bmana\b|\bmana-|\bsymb\b|\bcard-color-|\bcard-img|\bfoil\b/i;
+// Seletores que nunca devem ser tematizados. Alem das midias, entram os
+// simbolos de custo e as cores de carta: sao a linguagem visual do jogo (o "W"
+// branco, o "B" preto), nao decoracao de interface. Escurece-los deixaria o
+// custo de mana ilegivel.
+//
+// `symbol` esta separado de `\bsymb\b` de proposito. A alternativa com word
+// boundary NAO casa "mtg-symbol" -- depois de "symb" vem "o", que nao e
+// fronteira de palavra -- entao `.mtg-symbol` e `.dk-symbols` passavam batido e
+// o gerador pintava `abbr.mtg-symbol{background-color:#171717}` por cima dos
+// SVG de mana. O check.mjs cobre isso agora.
+//
+// Vocabulario coberto: mtg-symbol (Magic), edc-symb e container-editon-symbol
+// (simbolo de edicao), dk-symbols (deck). Os bundles tcg_N dos outros jogos nao
+// tem simbolo em CSS: eles usam <img>, ja negado acima.
+const SELECTOR_DENY = /(^|[\s,>+~])(img|video|canvas|iframe|svg)\b|\.logo\b|\bmana\b|\bmana-|\bsymb\b|symbol|\bcard-color-|\bcard-img|\bfoil\b/i;
 
 // Classe que liga o tema. Todo seletor gerado e prefixado com ela, entao o
 // stylesheet pode ficar sempre injetado e o toggle vira um classList.toggle

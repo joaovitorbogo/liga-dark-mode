@@ -232,7 +232,6 @@ html.lmd-dark .boxshadow{box-shadow:1px 1px 2px rgba(0,0,0,0.75) !important}
 }
 html.lmd-dark .card{background-color:#242424 !important;border:1px solid rgba(84,84,84,0.125) !important}
 html.lmd-dark .card-dark-gray .card-header{background-color:#393a3c !important}
-html.lmd-dark .mtg-symbol{-webkit-box-shadow:-1px 1px 0 rgba(0,0,0,0.75) !important;box-shadow:-1px 1px 0 rgba(0,0,0,0.75) !important}
 html.lmd-dark .exibir-mais{color:#5d94d0 !important;background-color:#242424 !important;border-color:#303030 !important}
 html.lmd-dark .exibir-mais:hover{background-color:#191919 !important;border-color:#343434 !important}
 html.lmd-dark .cards-main-coments #coments-block .exibir-mais:hover{background-color:#cc4d06 !important}
@@ -1209,7 +1208,6 @@ html.lmd-dark .deckhome .deck-arq{color:#d7d7d7 !important}
 html.lmd-dark .deckhome .deckhomeprice,html.lmd-dark .deckhome .deckhomeformat,html.lmd-dark .deckhome .deckhomeevent{background-color:#0d0d0d !important}
 html.lmd-dark .deckhome .deckposition{background-color:#242424 !important;color:#ededed !important;-webkit-box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:1px 1px 6px 0 rgba(0,0,0,0.75) !important}
 html.lmd-dark div.lazy{background-color:#171717 !important}
-html.lmd-dark div.deck-cost.lazy abbr.mtg-symbol{background-color:#171717 !important}
 html.lmd-dark .deckhome .deck-data{color:#afafaf !important}
 html.lmd-dark .deckhome .decktournament a:hover,html.lmd-dark .deckhome .deckname a:hover,html.lmd-dark .deckhome .deckhomeformat a:hover,html.lmd-dark .deckhome .deckhomeevent a:hover{color:#f96c1f !important}
 html.lmd-dark .deckhome .dk-comp input[type=checkbox]:checked+label{color:#c0c0c0 !important}

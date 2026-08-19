@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import postcss from 'postcss';
+import { SITES, DOMINIOS_EXCLUIDOS, arquivoDoBucket, matchPatterns } from './sites.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -47,8 +48,48 @@ for (const r of [...new Set(refs)]) {
   fs.existsSync(path.join(ROOT, r)) ? pass(r) : fail(`arquivo ausente: ${r}`);
 }
 
-/* 2. CSS: precisa parsear e todo seletor de topo precisa estar escopado. */
-for (const rel of mf.content_scripts[0].css) {
+/* 1b. Cobertura: os 15 hosts entram, os dois motores separados ficam fora.
+ *
+ * Um site que sai da tabela mas fica no manifest continuaria sendo tematizado
+ * a partir de um arquivo velho; um que entra na tabela mas nao no manifest
+ * fica sem tema. Nos dois casos nada quebra de forma visivel. */
+console.log('\ncobertura de hosts');
+const patterns = mf.content_scripts.flatMap(c => c.matches);
+const semEntrada = SITES.filter(s => !matchPatterns(s.host).every(p => patterns.includes(p)));
+semEntrada.length === 0
+  ? pass(`os ${SITES.length} hosts da tabela tem entrada no manifest`)
+  : fail(`sem entrada no manifest: ${semEntrada.map(s => s.host).join(', ')}`);
+
+// Um wildcard de subdominio pegaria www.ligadragonball junto com masters. e
+// fusion. -- e a raiz roda outro motor, sem nenhum bundle em comum. O tema
+// entraria pela metade: pagina meio clara, meio escura.
+const vazamentos = [];
+for (const { host, motor } of DOMINIOS_EXCLUIDOS) {
+  for (const p of patterns) {
+    const re = new RegExp('^' + p.replace(/[.]/g, '\\.').replace(/^\*:/, 'https?:').replace(/\*/g, '[^/]*') + '$');
+    if (re.test(`https://${host}/`)) vazamentos.push(`${p} pega ${host} (${motor})`);
+  }
+}
+vazamentos.length === 0
+  ? pass(`nenhum pattern alcanca os ${DOMINIOS_EXCLUIDOS.length} dominios fora de escopo`)
+  : vazamentos.forEach(v => fail(v));
+
+// A tabela de hosts existe duas vezes: em sites.mjs e, repetida, dentro de
+// apply.js (content script nao importa modulo). Divergir significa um site sem
+// data-liga, e portanto sem as excecoes manuais de sites.css.
+const applyJs = fs.readFileSync(path.join(ROOT, 'content', 'apply.js'), 'utf8');
+const faltaNoApply = SITES.filter(s => !applyJs.includes(`'${s.host}': '${s.id}'`));
+faltaNoApply.length === 0
+  ? pass('a tabela host->id de apply.js bate com sites.mjs')
+  : fail(`apply.js nao mapeia: ${faltaNoApply.map(s => s.host).join(', ')}`);
+
+/* 2. CSS: precisa parsear e todo seletor de topo precisa estar escopado.
+ *
+ * Roda em TODOS os arquivos referenciados, nao so nos da primeira entrada: com
+ * 18 entradas de content_scripts, checar so a primeira deixaria os 17 arquivos
+ * por site e por home sem nenhuma verificacao. */
+const cssRefs = [...new Set(mf.content_scripts.flatMap(c => c.css || []))];
+for (const rel of cssRefs) {
   console.log(`\n${rel}`);
   const css = fs.readFileSync(path.join(ROOT, rel), 'utf8');
   let root;
@@ -105,24 +146,45 @@ for (const [hay, needle, label] of expected) {
  * dominio errado e daria 404 em todo icone. Sao dominios diferentes, entao nem
  * root-relative resolve -- tem que ser absoluta. */
 console.log('\nurls');
-const relUrls = [...gen.matchAll(/url\(\s*['"]?(?!data:|https?:|\/\/)[^'")]/gi)].length;
-relUrls === 0
-  ? pass('nenhuma url relativa no CSS gerado')
-  : fail(`${relUrls} url() relativa no CSS gerado — deveriam ser absolutas`);
+// Todos os arquivos gerados, nao so o do nucleo: os bundles tcg_N tambem tem
+// icones proprios, e uma url() relativa neles resolveria contra o dominio do
+// site em vez do da LMCorp.
+const gerados = [
+  'theme.generated.css',
+  ...new Set(SITES.map(s => arquivoDoBucket(`home-${s.home}`))),
+  ...SITES.filter(s => s.bundles.length).map(s => arquivoDoBucket(`site-${s.id}`)),
+].map(rel => ({ rel, css: fs.readFileSync(path.join(ROOT, 'content', rel), 'utf8') }));
 
-const lmcorp = [...gen.matchAll(/url\(\s*['"]?https:\/\/www\.lmcorp\.com\.br\//gi)].length;
-lmcorp > 0
-  ? pass(`${lmcorp} url() apontando para www.lmcorp.com.br`)
+let relTotal = 0, absTotal = 0;
+for (const { rel, css } of gerados) {
+  const r = [...css.matchAll(/url\(\s*['"]?(?!data:|https?:|\/\/)[^'")]/gi)].length;
+  if (r) fail(`${rel}: ${r} url() relativa — deveriam ser absolutas`);
+  relTotal += r;
+  absTotal += [...css.matchAll(/url\(\s*['"]?https:\/\/www\.lmcorp\.com\.br\//gi)].length;
+}
+if (!relTotal) pass(`nenhuma url relativa nos ${gerados.length} arquivos gerados`);
+absTotal > 0
+  ? pass(`${absTotal} url() apontando para www.lmcorp.com.br`)
   : fail('nenhuma url() absolutizada — a reescrita de assets nao rodou');
 
-/* 5. Simbolos de mana e cores de carta nao podem ter sido tematizados: sao a
- * linguagem visual do jogo, nao decoracao. */
-console.log('\nsimbolos de mana');
-const vazou = [...gen.matchAll(/(?:^|\n)([^\n{]*(?:card-color-|mana-|\bsymb\b)[^\n{]*)\{/g)]
-  .map(m => m[1].trim());
-vazou.length === 0
-  ? pass('nenhuma regra gerada toca simbolo de mana ou cor de carta')
-  : fail(`${vazou.length} regra(s) vazaram: ${vazou.slice(0, 3).join(' | ').slice(0, 160)}`);
+/* 5. Simbolos de custo e cores de carta nao podem ter sido tematizados: sao a
+ * linguagem visual do jogo, nao decoracao de interface.
+ *
+ * `card-color-*` e vocabulario COMPARTILHADO entre os jogos -- o Yu-Gi-Oh usa
+ * card-color-d onde o Magic usa card-color-c -- entao a checagem vale nos 15
+ * sites e nao so no ligamagic. Ja os simbolos tem prefixo por jogo
+ * (mtg-symbol), e por isso a busca e por sufixo `-symbol`, nao pelo prefixo. */
+console.log('\nsimbolos e cores de carta');
+const SEMANTICA = /(?:^|\n)([^\n{]*(?:card-color-|\bmana\b|mana-|-symbol|\bsymb\b|\bfoil\b)[^\n{]*)\{/g;
+let vazouTotal = 0;
+for (const { rel, css } of gerados) {
+  const vazou = [...css.matchAll(SEMANTICA)].map(m => m[1].trim());
+  if (vazou.length) {
+    fail(`${rel}: ${vazou.length} regra(s) vazaram: ${vazou.slice(0, 2).join(' | ').slice(0, 140)}`);
+    vazouTotal += vazou.length;
+  }
+}
+if (!vazouTotal) pass(`nenhuma regra gerada toca simbolo de custo ou cor de carta (${gerados.length} arquivos)`);
 
 /* 6. Imagens da loja: a Chrome Web Store recusa PNG com canal alfa.
  *
