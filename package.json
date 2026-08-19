@@ -11,6 +11,7 @@
     "manifest": "node scripts/gen-manifest.mjs",
     "theme": "npm run fetch && npm run measure && npm run build && npm run manifest && npm run check",
     "check": "node scripts/check.mjs",
+    "test": "node scripts/test-apply.mjs",
     "icons": "node scripts/make-icons.mjs",
     "audit": "node scripts/audit-live.mjs",
     "store": "node scripts/store-assets.mjs"

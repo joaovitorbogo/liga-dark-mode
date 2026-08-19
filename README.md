@@ -1,15 +1,60 @@
-# LigaMagic Dark Mode
+# Liga Dark Mode
 
-Extensão do Chrome (Manifest V3) que aplica um tema escuro no
-[ligamagic.com.br](https://www.ligamagic.com.br/): marketplace, página de card,
-decks, edições, artigos, fórum, carrinho e login.
+Extensão do Chrome (Manifest V3) que aplica um tema escuro nos **15 sites da
+Liga** (LMCorp): marketplace, página de card, decks, edições, artigos, fórum,
+leilões, bazar, carrinho e login.
 
-O tema **não** é um filtro de inversão. Ele é derivado do CSS real do site: os
-20 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
-valores de cor — e por papel, não por cor. Isso preserva o que faz o site ser
-reconhecível: o laranja da marca continua laranja, o verde de "menor preço"
-continua verde, o vermelho de "maior preço" continua vermelho, e os símbolos de
-mana continuam exatamente como o jogo os desenha.
+| Site | Host | | Site | Host |
+|---|---|---|---|---|
+| LigaMagic | `ligamagic.com.br` | | Liga Vanguard | `ligavanguard.com.br` |
+| Liga Yu-Gi-Oh! | `ligayugioh.com.br` | | Liga Digimon | `ligadigimon.com.br` |
+| Liga Pokémon | `ligapokemon.com.br` | | Liga Star Wars | `ligastarwars.com.br` |
+| Liga One Piece | `ligaonepiece.com.br` | | Liga Gundam | `ligagundam.com.br` |
+| Liga Lorcana | `ligalorcana.com.br` | | Liga Sorcery | `ligasorcery.com.br` |
+| Liga Flesh and Blood | `ligafab.com.br` | | Dragon Ball Masters | `masters.ligadragonball.com.br` |
+| Liga Riftbound | `ligariftbound.com.br` | | Dragon Ball Fusion | `fusion.ligadragonball.com.br` |
+| | | | Mundo Funko | `mundofunko.com.br` |
+
+O tema **não** é um filtro de inversão. Ele é derivado do CSS real dos sites: os
+37 bundles são baixados, parseados e reescritos regra a regra, remapeando só os
+valores de cor — e por papel, não por cor. Isso preserva o que faz cada site ser
+reconhecível: a cor da marca continua a mesma, o verde de "menor preço" continua
+verde, o vermelho de "maior preço" continua vermelho, e os símbolos de custo
+continuam exatamente como cada jogo os desenha.
+
+## Por que uma extensão e não quinze
+
+Os sites da Liga não são parecidos: são o **mesmo site**. Rodam o mesmo motor
+PHP (`?view=cards/search`, `?view=artigos/view`) e carregam o mesmo núcleo de
+bundles de `www.lmcorp.com.br`. Sobre esse núcleo, cada site empilha um bundle
+próprio em `tcg_N/`, carregado em todas as páginas — o LigaMagic é o único sem,
+porque ele *é* a base.
+
+Manter um repositório por site significaria manter 15 cópias do mesmo tema e
+republicar 15 itens a cada deploy da LMCorp, já que os bundles trazem a versão
+no nome do arquivo.
+
+### Como o isolamento entre sites é garantido
+
+A saída do gerador é dividida em *buckets*, e cada um vira uma entrada de
+`content_scripts` com o `matches` daquele host:
+
+| Bucket | Arquivo | Injetado em |
+|---|---|---|
+| núcleo | `content/theme.generated.css` | os 15 hosts |
+| home (3 grupos) | `content/home-<grupo>.generated.css` | os sites do grupo |
+| site (14) | `content/sites/<id>.generated.css` | um host só |
+
+Os bundles próprios reciclam nomes de classe genéricos sobre estruturas
+diferentes, então uma regra do Pokémon casaria num elemento homônimo do Magic se
+tudo morasse num arquivo só. Com arquivos separados, **o CSS de um site nem
+chega a ser injetado no outro**: a garantia é do navegador, não de convenção de
+seletor.
+
+`scripts/sites.mjs` é a fonte da verdade dessa tabela. Fetch, geração, manifest
+e audit leem dela — antes cada script tinha a sua lista, e listas que divergem
+em silêncio produzem um site sem tema sem nenhum erro aparecer. O
+`manifest.json` é **gerado** (`npm run manifest`); não edite à mão.
 
 ## Instalar
 
@@ -28,18 +73,20 @@ O tema já vem ligado. O ícone na barra abre um popup com três controles:
 
 ```
 npm install
-npm run theme      # fetch → measure → build → check
+npm run theme      # fetch → measure → build → manifest → check
 ```
 
 Cada etapa isolada:
 
 | Comando | O que faz |
 |---|---|
-| `npm run fetch` | descobre os bundles de CSS pelos `<link>` de 22 páginas de referência e baixa os 20 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
+| `npm run fetch` | descobre os bundles pelos `<link>` de 64 páginas de referência (22 no LigaMagic, 3 em cada um dos outros 14) e baixa os 37 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
 | `npm run measure` | decodifica cada imagem de fundo num canvas e mede a luminância média |
-| `npm run build` | gera `content/theme.generated.css` (~223 KB, 2.125 regras) |
-| `npm run check` | verificações estáticas: parse, escopo dos seletores, URLs, regras-chave |
-| `npm run audit` | mede o tema aplicado nas páginas reais e lista o que sobrou claro |
+| `npm run build` | gera os 18 arquivos de bucket (~380 KB somados, 4.514 regras) |
+| `npm run manifest` | gera `manifest.json` a partir de `scripts/sites.mjs` |
+| `npm run check` | verificações estáticas em todos os arquivos gerados: parse, escopo dos seletores, URLs, símbolos preservados, cobertura dos 15 hosts, e se a tabela repetida em `apply.js` bate com `sites.mjs` |
+| `npm test` | roda o `apply.js` num Chrome real e confere `data-liga` por host, o não-carimbo em host desconhecido e a recuperação pelo `MutationObserver` |
+| `npm run audit` | mede o tema nas páginas reais dos 15 hosts, com a pilha de CSS certa em cada um, e lista o que sobrou claro. Aceita `--shot` e `--site=ygo,pkm` |
 | `npm run icons` | regenera os PNGs do ícone |
 | `npm run store` | gera as capturas e blocos promocionais da Chrome Web Store em `store/` |
 
@@ -51,7 +98,7 @@ Dois bundles escapam da descoberta por `<link>`, cada um por um motivo:
   precisa estar logado"* para quem baixa o HTML no fetch, e o `<link>` só sai
   junto com o conteúdo.
 
-Nos dois casos a página inteira ficava fora do tema (a compra por lista com
+Os dois são do núcleo: valem para os 15 hosts. Nos dois casos a página inteira ficava fora do tema (a compra por lista com
 zebrado branco e botão branco no branco; o perfil com todos os blocos em
 `#fff`). Eles estão fixados em `SEM_LINK`, em `scripts/fetch-css.mjs`. Como ali
 não há `<link>` para ler a versão, a versão conhecida é só o ponto de partida:
@@ -76,7 +123,7 @@ O papel de uma cor muda o tratamento dela:
 
 ### Custom properties: duas famílias, dois tratamentos
 
-O site mistura duas convenções, e o que funciona para uma quebra a outra:
+Os sites misturam duas convenções, e o que funciona para uma quebra a outra:
 
 - As próprias (`--color-white`, `--color-gray`) nomeiam a **cor**, não o papel:
   `--color-white` aparece 28× como `background-color` e 20× como `color`.
@@ -119,19 +166,39 @@ algoritmo não alcança sozinho:
 
 ## Verificação
 
-`npm run audit` percorre 19 páginas reais com o tema aplicado, mede
+`npm run audit` percorre 64 páginas reais nos 15 hosts com o tema aplicado, mede
 `getComputedStyle` de todo elemento e lista (a) superfícies opacas com
 luminância > 0,62 e (b) texto com luminância < 0,35 sobre fundo escuro. A meta é
 zero dos dois — que é onde está hoje:
 
 ```
-home     0/0    artigos   0/0    bazar     0/0    variacao  0/0
-decks    0/0    artigo    0/0    leiloes   0/0    login     0/0
-deck     0/0    forum     0/0    colecao   0/0    cadastro  0/0
-card     0/0    forum_topico   0/0    lista   0/0
-busca    0/0    forum_mensagem 0/0
-edicoes  0/0    loja      0/0
+[ok] magic  www.ligamagic.com.br            claras=0  textoEscuro=0
+[ok] ygo    www.ligayugioh.com.br           claras=0  textoEscuro=0
+[ok] onp    www.ligaonepiece.com.br         claras=0  textoEscuro=0
+[ok] lor    www.ligalorcana.com.br          claras=0  textoEscuro=0
+[ok] fab    www.ligafab.com.br              claras=0  textoEscuro=0
+[ok] rft    www.ligariftbound.com.br        claras=0  textoEscuro=0
+[ok] pkm    www.ligapokemon.com.br          claras=0  textoEscuro=0
+[ok] vgd    www.ligavanguard.com.br         claras=0  textoEscuro=0
+[ok] dgm    www.ligadigimon.com.br          claras=0  textoEscuro=0
+[ok] swu    www.ligastarwars.com.br         claras=0  textoEscuro=0
+[ok] gnd    www.ligagundam.com.br           claras=0  textoEscuro=0
+[ok] sor    www.ligasorcery.com.br          claras=0  textoEscuro=0
+[ok] dbm    masters.ligadragonball.com.br   claras=0  textoEscuro=0
+[ok] dbf    fusion.ligadragonball.com.br    claras=0  textoEscuro=0
+[ok] fnk    www.mundofunko.com.br           claras=0  textoEscuro=0
 ```
+
+O audit injeta em cada host **exatamente** os arquivos que o `manifest.json`
+declara para ele, lidos do próprio manifest. Jogar todos os arquivos em toda
+página daria um verde que não corresponde ao que o usuário vê: o arquivo do
+Pokémon consertaria uma superfície do Yu-Gi-Oh que na extensão real fica clara,
+porque lá ele nem chega a ser injetado.
+
+A medição desconta área recortada por ancestral com `overflow` — sem isso o
+indicador de hover do menu do Pokémon (um bloco de 80 px empurrado por
+`transform` para fora de um container recortado) aparecia como pendência, sendo
+acento de marca preservado de propósito e invisível no estado normal.
 
 > O Chrome 137+ removeu `--load-extension`, então o audit **replica** o content
 > script via `evaluateOnNewDocument` em vez de carregar a extensão. Isso valida o
@@ -148,7 +215,15 @@ edicoes  0/0    loja      0/0
   cujo bundle pode estar faltando sem que nada acuse.
 - Banners de anunciantes são imagens: continuam claros. É para isso que serve a
   opção **Suavizar banners**.
-- Se a LigaMagic publicar um deploy com CSS novo, rode `npm run theme` de novo.
+- Se a LMCorp publicar um deploy com CSS novo, rode `npm run theme` de novo. O
+  `fetch` avisa quando um bundle carregado por um único site não-magic cai no
+  núcleo: é o sinal de que um site ganhou template próprio e o prefixo precisa
+  entrar em `SITES[].bundles`.
+- `www.ligadragonball.com.br` (a raiz) e `ligasegura.com.br` ficam **de fora**:
+  rodam motores separados (`tcg_250/`, `tcg_150/`), sem nenhum bundle em comum
+  com o núcleo. Aplicar o tema neles daria página meio clara, meio escura — é
+  por isso que os padrões de match usam host exato em vez de wildcard de
+  subdomínio.
 
 ## Publicar na Chrome Web Store
 
