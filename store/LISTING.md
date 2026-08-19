@@ -57,7 +57,7 @@ Liga Dark Mode
 ## Descrição breve (até 132 caracteres)
 
 ```
-Modo escuro para os sites da Liga: Magic, Yu-Gi-Oh!, Pokémon, One Piece e mais. Liga e desliga em um clique.
+Modo escuro para os sites da Liga. Liga e desliga em um clique.
 ```
 
 ## Descrição completa

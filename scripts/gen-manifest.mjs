@@ -67,7 +67,12 @@ const manifest = {
   manifest_version: 3,
   name: 'Liga Dark Mode',
   version: pkg.version,
-  description: 'Modo escuro para os sites da Liga: Magic, Yu-Gi-Oh!, Pokemon, One Piece, Lorcana, Digimon e mais.',
+  // Sem lista de jogos aqui. A versao anterior enumerava "Magic, Yu-Gi-Oh!,
+  // Pokemon, One Piece, Lorcana, Digimon e mais" e a revisao da Chrome Web
+  // Store reprovou por "palavras-chave excessivas na descricao do item"
+  // (referencia Yellow Argon). Os sites cobertos aparecem na listagem da loja e
+  // no README -- a descricao do manifest fica so com o que a extensao faz.
+  description: 'Modo escuro para os sites da Liga.',
   icons: ICONS,
   action: {
     default_title: 'Liga Dark Mode',
