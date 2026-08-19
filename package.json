@@ -9,9 +9,9 @@
     "measure": "node scripts/measure-bg-images.mjs",
     "build": "node scripts/gen.mjs",
     "manifest": "node scripts/gen-manifest.mjs",
-    "theme": "npm run fetch && npm run measure && npm run build && npm run manifest && npm run check",
+    "theme": "npm run fetch && npm run measure && npm run build && npm run manifest && npm run check && node scripts/test-marca.mjs",
     "check": "node scripts/check.mjs",
-    "test": "node scripts/test-apply.mjs",
+    "test": "node scripts/test-apply.mjs && node scripts/test-marca.mjs",
     "icons": "node scripts/make-icons.mjs",
     "audit": "node scripts/audit-live.mjs",
     "store": "node scripts/store-assets.mjs"

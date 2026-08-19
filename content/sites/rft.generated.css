@@ -4,167 +4,412 @@
  * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
  * (excecoes por site), que carregam depois desta camada.
  */
+/* css__template-package-v95-min.css */
+html.lmd-dark .container-main-menu{background-color:#16242a !important}
+html.lmd-dark .container-main-menu .main-menu .menu-option:hover{background-color:#242424 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-main-menu .main-menu .menu-option a:hover,html.lmd-dark .container-main-menu .main-menu .menu-option:hover a{color:#d8e4e8 !important}
+@media screen and (max-width:875px){
+html.lmd-dark .container-main-menu .main-menu .menu-option{border-bottom:1px solid #405760 !important}
+}
+html.lmd-dark #keyChangeMarketplace button{background:#1c2d33 !important}
+html.lmd-dark .dropdown-item.active,html.lmd-dark .dropdown-item:active{background-color:#1c2d33 !important}
+html.lmd-dark .spinner>div{background-color:#1c2d33 !important}
+html.lmd-dark .l-header{background-color:#1c2d33 !important}
+html.lmd-dark .l-header-topbar .l-header-cart{border-left:1px solid #405760 !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-primary{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-primary:hover{background-color:#0f181b !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-default{color:#d8e4e8 !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-default:hover{color:#e9eff2 !important}
+html.lmd-dark .menulogado-main .menu-destaque{color:#d8e4e8 !important}
+html.lmd-dark .nav-account-photo{border:5px solid #3f565e !important}
+html.lmd-dark .l-header-cart .cart-list .btn-finish-cart{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark .l-header-cart .cart-list .btn-finish-cart:hover{background-color:#0f181b !important}
+html.lmd-dark .l-header-cart .cart-list .btn-view-cart{border-color:#3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .l-header-cart .alert{background-color:#242424 !important;color:#d8e4e8 !important;-webkit-box-shadow:1px 2px 2px rgba(0,0,0,0.75) !important;box-shadow:1px 2px 2px rgba(0,0,0,0.75) !important}
+html.lmd-dark .l-header-cart .cart-list .btn-view-cart:hover{background-color:#1c2d33 !important}
+html.lmd-dark .l-nav-container{background-color:#16242a !important}
+html.lmd-dark .liga-nav li.active a{background-color:#242424 !important;color:#d8e4e8 !important}
+html.lmd-dark .db-call-menu:active.liga-glow,html.lmd-dark .db-call-menu:focus.liga-glow,html.lmd-dark .db-call-menu:hover.liga-glow,html.lmd-dark .liga-nav li a:active.liga-glow,html.lmd-dark .liga-nav li a:focus,html.lmd-dark .liga-nav li a:hover.liga-glow{color:#d8e4e8 !important}
+html.lmd-dark .db-call-menu:active,html.lmd-dark .db-call-menu:focus,html.lmd-dark .db-call-menu:hover,html.lmd-dark .liga-nav li a:active,html.lmd-dark .liga-nav li a:focus,html.lmd-dark .liga-nav li a:hover{background-color:#242424 !important;color:#d8e4e8 !important}
+html.lmd-dark #header-filters{background-color:#0f181b !important}
+html.lmd-dark #ms-body .submit input{background-color:#242424 !important;color:#e9eff2 !important;border:1px solid #303030 !important}
+html.lmd-dark #ms-body .submit input:hover{background-color:#0f181b !important;border:1px solid #303030 !important}
+html.lmd-dark .exibir-mais{color:#d8e4e8 !important;background-color:#242424 !important;border-color:#303030 !important}
+html.lmd-dark .cards-main-coments #coments-block .exibir-mais{background-color:#1c2d33 !important}
+html.lmd-dark .autocomplete strong{color:#d8e4e8 !important}
+html.lmd-dark .btnLaranja,html.lmd-dark .botao,html.lmd-dark .botao-reto{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .btnLaranja:hover,html.lmd-dark .botao:hover,html.lmd-dark .btn-topo:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .btnBranco:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+@media screen and (max-width:768px){
+html.lmd-dark #zoom-marketplace .btnBranco{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+}
+/* css__template-package-home-v08-min.css */
+html.lmd-dark .title-home::before{background-color:#1c2d33 !important}
+html.lmd-dark .title-home .btn-see-more a{color:#d8e4e8 !important}
+html.lmd-dark .container-releases .content .highlight:hover .title a{color:#d8e4e8 !important}
+html.lmd-dark .container-releases .content .release .thumb:hover .title a{color:#d8e4e8 !important}
+html.lmd-dark .container-previews .preview:hover .name a{color:#d8e4e8 !important}
+html.lmd-dark .container-previews-editions .previews-editions .edition a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-previews-editions .btn-see-all{color:#d8e4e8 !important}
+html.lmd-dark .container-editions-highlight .edition-highlight:hover .container-name .name-edition,html.lmd-dark .container-accessories-highlight .accessories-highlight:hover .container-name .name-accessories{color:#d8e4e8 !important}
+html.lmd-dark .bolts-area .info .display-video span{color:#d8e4e8 !important}
+html.lmd-dark .container-cards .container-prices .header .see-more a{color:#d8e4e8 !important}
+html.lmd-dark .container-cards .container-prices .container-cards-and-prices .card-price:hover .name-card a{color:#d8e4e8 !important}
+html.lmd-dark .tournament-decks .deck:hover .container-name .name-deck a{color:#d8e4e8 !important}
+html.lmd-dark .container-products .content .container-product .name a:hover,html.lmd-dark .container-products .content .container-product:hover .name a{color:#d8e4e8 !important}
+html.lmd-dark .container-articles .articles .article .container-title .title:hover,html.lmd-dark .container-articles .articles .article:hover .container-title .title{color:#d8e4e8 !important}
+html.lmd-dark .container-horizontal-slider .item-slider:hover .title{color:#d8e4e8 !important}
+html.lmd-dark .l-header-cart .cart-list .btn-view-cart.btn-primary{border:1px solid #3f565e !important}
+/* css__template-marketplace-v140-min.css */
+html.lmd-dark #depositobancario .title-divisor,html.lmd-dark #boleto-utils .title-divisor,html.lmd-dark #pix-utils .title-divisor{color:#d8e4e8 !important}
+html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .card-grid .layer-hover .pool-media button:hover,html.lmd-dark #half-stars button:hover,html.lmd-dark .mtg-picture .layer-hover .pool-media button:hover{background-color:#16242a !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao:hover{background:#1c2d33 url(https://www.lmcorp.com.br/images/ls/arrow-white.png) no-repeat !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel,html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel:hover{background:#1c2d33 url(https://www.lmcorp.com.br/images/ls/arrow-white-bold.png) no-repeat !important}
+html.lmd-dark #alerta-linha .preco-card{color:#d8e4e8 !important}
+html.lmd-dark #card-info a:hover{color:#d8e4e8 !important}
+html.lmd-dark .contents-list .contents-list-item.selected{border:3px solid #3f565e !important}
+html.lmd-dark #info-view-product-modal .splide__pagination__page.is-active{background:#1c2d33 !important}
+html.lmd-dark #info-view-product-modal .splide__pagination__page:hover{background:#16242a !important}
+html.lmd-dark #card-filtros .filtro-limpar{color:#d8e4e8 !important}
+html.lmd-dark #card-estoque .estoque-linha a:hover{color:#d8e4e8 !important}
+html.lmd-dark #card-estoque .e-col3,html.lmd-dark #popupObservacao .e-col3{color:#d8e4e8 !important}
+html.lmd-dark #card-estoque .e-col4 font:hover{color:#d8e4e8 !important}
+html.lmd-dark #card-estoque .l-preco{color:#d8e4e8 !important}
+html.lmd-dark #card-estoque a.cinzaescuro:hover{color:#d8e4e8 !important}
+html.lmd-dark #alerta-preco a:hover{color:#d8e4e8 !important}
+html.lmd-dark #meus-alertas>a{color:#d8e4e8 !important}
+html.lmd-dark .header-botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #card-comentarios input,html.lmd-dark #card-bazar .paginacao,html.lmd-dark #card-decks .paginacao,html.lmd-dark #card-duvidas .paginacao,html.lmd-dark #card-estoque .card-forceload{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark #card-principal .prc-tab-lnk:hover{color:#d8e4e8 !important}
+html.lmd-dark #main-compras .payment-bank-show .botao-destaque{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark #main-compras .payment-bank-show .botao-destaque:hover{background-color:#16242a !important;border-color:#405760 !important}
+html.lmd-dark #main-compras .pedido-selected:hover{background-color:#1c2d33 !important}
+html.lmd-dark #main-compras .pedido-selected{border-top:1px solid #3f565e !important;border-left:1px solid #3f565e !important;border-right:1px solid #3f565e !important;background-color:#1c2d33 !important}
+html.lmd-dark #main-compras .venda-selected{border-left:1px solid #3f565e !important;border-right:1px solid #3f565e !important;border-bottom:1px solid #3f565e !important;background-color:#242424 !important}
+html.lmd-dark #pop-pagamento .pop-p-selected{background-color:#1c2d33 !important}
+html.lmd-dark .kart-multiple-mkt div{background-color:#1c2d33 !important}
+html.lmd-dark #popupAvaliacao .loja span{color:#d8e4e8 !important}
+html.lmd-dark .bzr-cards .bzr-ref a:hover font{color:#d8e4e8 !important}
+html.lmd-dark .prod-deck-link a{color:#d8e4e8 !important}
+@media (min-width:1024px){
+html.lmd-dark #card-menu .card-menu-opc div:hover{background:#1c2d33 !important;border:1px solid #3f565e !important}
+}
+html.lmd-dark #card-menu .card-menu-opc div.selecionado{background:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #pcl-main .pcl-show-all{color:#d8e4e8 !important}
+@media (min-width:668px) and (max-width:1023px){
+html.lmd-dark #card-estoque .e-mob-preco,html.lmd-dark #popupObservacao .e-mob-preco{color:#d8e4e8 !important}
+}
+@media (max-width:731px){
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao:hover{background:#1c2d33 !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel,html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel:hover{background:#1c2d33 !important}
+}
+html.lmd-dark .assoc-item .name-main:hover{color:#d8e4e8 !important}
+html.lmd-dark .laranja{color:#d8e4e8 !important}
+html.lmd-dark #popupAlert button.botao-laranja{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #popupCelValidator .send-newcode{color:#d8e4e8 !important}
+html.lmd-dark .dirty .botao-dirty-bold{background-color:#1c2d33 !important}
+html.lmd-dark .red>span{background-image:-moz-linear-gradient(top,#df0707,#1c2d33) !important;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#df0707),color-stop(1,#1c2d33)) !important;background-image:-webkit-linear-gradient(#df0707,#1c2d33) !important}
+html.lmd-dark #cc-utils .title-divisor,html.lmd-dark #cc-novo .title-divisor{color:#d8e4e8 !important}
+html.lmd-dark .mtg-variacao-bt .variacao-sel{background:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #mtg-cards a:hover,html.lmd-dark #home-cards-tcg a:hover,html.lmd-dark .card-grid a:hover{color:#d8e4e8 !important}
+html.lmd-dark .box-prod-view a.prod-lermais,html.lmd-dark #popupObservacao a.prod-lermais{color:#d8e4e8 !important}
+html.lmd-dark #storeInfo #section-avaliacoes .slider{background-color:#1c2d33 !important}
+html.lmd-dark #storeInfo #section-avaliacoes .nav-tabs .active{color:#d8e4e8 !important}
+html.lmd-dark #store-menu .store-opt-sel{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark #popupBuylistPayment .title-float-r{color:#d8e4e8 !important}
+html.lmd-dark #popupBuylistPayment .info-aux{color:#d8e4e8 !important}
+@media (min-width:1024px){
+html.lmd-dark .mtg-variacao-bt div:hover{background:#1c2d33 !important;border:1px solid #3f565e !important}
+}
+@media (max-width:766px){
+html.lmd-dark .card-grid .card-actions button{border:1px solid #3f565e !important}
+html.lmd-dark .card-grid .card-actions button:first-child{color:#d8e4e8 !important}
+html.lmd-dark .card-grid .card-actions .bt-rate{color:#d8e4e8 !important}
+}
+html.lmd-dark #spoilerModal .botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #card-principal .layer-pool:hover,html.lmd-dark .comment-rate .layer-pool:hover{background-color:#1c2d33 !important}
+html.lmd-dark #card-principal .pool-media button:hover,html.lmd-dark .comment-rate .pool-media button:hover{background-color:#16242a !important}
+html.lmd-dark #carrinho-lista-compra .show-more a.botao:hover{background-color:#0f181b !important}
+html.lmd-dark .mp-btn-comprar-btn-alerta:hover{background-color:#1c2d33 !important}
+html.lmd-dark .alerta-cards-sem-estoque .ver-mais-btn{color:#d8e4e8 !important;background-image:linear-gradient(to bottom,transparent,#36361d) !important}
+/* css__marketplace__package-cards-v30-min.css */
+html.lmd-dark .container-marketplace [type="radio"]:checked+label:after,html.lmd-dark .container-marketplace [type="radio"]:not(:checked)+label:after,html.lmd-dark .radio-custom [type="radio"]:checked+label:after,html.lmd-dark .radio-custom [type="radio"]:not(:checked)+label:after{background:#1c2d33 !important;border:2px solid #303030 !important}
+html.lmd-dark .container-marketplace [type="radio"]:checked+label::before,html.lmd-dark .radio-custom [type="radio"]:checked+label::before{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark .slider-thumbnail.active,html.lmd-dark .slider-card.active{border-color:#313d41 !important}
+@media screen and (max-width:840px){
+html.lmd-dark .container-markers .markers div.active{background-color:#1c2d33 !important}
+}
+html.lmd-dark .container-qty-list .list-numbers .number:not(.disabled):hover,html.lmd-dark .container-qty-list .list-numbers .number.selected{background-color:#0a0b10 !important;border-color:#444862 !important}
+@media screen and (max-width:1024px){
+html.lmd-dark #bottom-sheet-filters.show .clean-filter{color:#d8e4e8 !important}
+}
+html.lmd-dark .warning{background-color:#1c2d33 !important}
+html.lmd-dark a.color-primary{color:#d8e4e8 !important}
+html.lmd-dark .btn-primary,html.lmd-dark .btn-dark,html.lmd-dark .btn-transparent,html.lmd-dark .btn-primary-border,html.lmd-dark .btn-green,html.lmd-dark .btn-red{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark .btn-primary-border{border:1px solid #3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .btn-primary-border:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .btn-transparent:hover,html.lmd-dark .btn-transparent.selected{border:1px solid #3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .quality_mp{border-color:#313d41 !important}
+html.lmd-dark .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
+html.lmd-dark .container-details-item .title span,html.lmd-dark .container-price-mkp-item .title span{color:#d8e4e8 !important}
+html.lmd-dark .container-price-mkp .price-mkp .max::before{background-color:#27353a !important}
+html.lmd-dark .container-price-mkp-item.prices-mobile .container-all-prices .container-prices .max{border-color:#344146 !important}
+html.lmd-dark .filter-header .clean-filter{color:#d8e4e8 !important}
+html.lmd-dark .filter-fotter{color:#d8e4e8 !important}
+html.lmd-dark .container-stores .infos-store .store-name a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-stores .infos-store .store-ref a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-stores .left-content .quantity-and-price .price{color:#d8e4e8 !important}
+html.lmd-dark .marketplace-dropdown-actions .dropdown-actions-option:hover,html.lmd-dark .marketplace-dropdown-actions .dropdown-with-submenu .container-sub-menu .options>div:hover{color:#d8e4e8 !important;background-color:#232f33 !important}
+html.lmd-dark .marketplace-dropdown-actions .dropdown-actions-option:hover>a,html.lmd-dark .marketplace-dropdown-actions .dropdown-with-submenu .container-sub-menu .options div:hover a{color:#d8e4e8 !important}
+html.lmd-dark .marketplace-dropdown-actions .dropdown-with-submenu .container-sub-menu .options div a:hover{color:#d8e4e8 !important}
+html.lmd-dark .highlighted-products .container-product .name:hover,html.lmd-dark .highlighted-products .container-product .name a:hover{color:#d8e4e8 !important}
+html.lmd-dark .modal-observation .modal-content .body .stock-summary .prod-price{color:#d8e4e8 !important}
+html.lmd-dark .select2-container--default .dropdown-showcase-orderby .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
+html.lmd-dark .container-pagination .prev,html.lmd-dark .container-pagination .next{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-pagination .prev:hover,html.lmd-dark .container-pagination .next:hover{background-color:#0a0b10 !important}
+html.lmd-dark .container-pagination .prev.inactive:hover,html.lmd-dark .container-pagination .next.inactive:hover{color:#d8e4e8 !important}
+html.lmd-dark #modal-price-alert .support-price .prices .max-price{color:#d8e4e8 !important}
+html.lmd-dark #marketplace-filters-count::before{background-color:#1c2d33 !important}
+html.lmd-dark .container-card-auctions .title-auctions span a{color:#d8e4e8 !important}
+html.lmd-dark .container-card-auctions .title-auctions span a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-card-auctions .card-auctions .auction .auction-name a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-card-auctions .card-auctions .auction .auction-infos .auction-price .price{color:#d8e4e8 !important}
+html.lmd-dark .card-auctions .auction .infos-item .name-ed a:hover,html.lmd-dark .stores .store .infos-item .name-ed a:hover,html.lmd-dark .stores .store .infos-store .name-ed a:hover{color:#d8e4e8 !important}
+html.lmd-dark .card-auctions .auction .auction-infos .auction-ref .ref a:hover,html.lmd-dark .card-auctions .auction .auction-infos .auction-ref .ref-percentage a:hover{color:#d8e4e8 !important}
+html.lmd-dark .container-tooltip-store-information .container-bottom button.btn-primary-border{border-color:#3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .container-tooltip-store-information .container-bottom button.btn-showcase{background-color:#0a0b10 !important}
+html.lmd-dark #modal-help-lista-compra .body .help-list div:before,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div:before{background-color:#1c2d33 !important}
+html.lmd-dark #modal-help-lista-compra .body .help-list div span,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div span{color:#d8e4e8 !important}
+html.lmd-dark #storeInfo .loja-recesso{background-color:#1c2d33 !important}
+html.lmd-dark #container-latestsales-graph .ls-orders-more{color:#d8e4e8 !important}
+html.lmd-dark .avgprice-none font{color:#d8e4e8 !important}
+html.lmd-dark .container-lot-of-stock .see-all{color:#d8e4e8 !important}
+html.lmd-dark .mkp-options-menu-cards .option.select a,html.lmd-dark #full-average-price .tab-price>div.select{background-color:#0a0b10 !important}
+html.lmd-dark .stores .store .left-content .quantity-and-price .price{color:#d8e4e8 !important}
+html.lmd-dark .stores .store .user .nickname a:hover{color:#d8e4e8 !important}
+html.lmd-dark #full-average-price .price-max:before{background-color:#27353a !important}
+@media screen and (max-width:840px){
+html.lmd-dark .select2-container--default .dropdown-mkp-options .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
+}
+/* css__template-editions-v08-min.css */
+html.lmd-dark .title-page::after{background-color:#1c2d33 !important}
+html.lmd-dark .container-timeline .btn-see-more{background-color:#242424 !important;color:#d8e4e8 !important;border:1px solid #3f565e !important}
+html.lmd-dark .container-timeline .btn-see-more:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
+html.lmd-dark .container-timeline .edition-content .edition a.edc-grouped,html.lmd-dark .container-grouping-letter .container-sets .edition a.edc-grouped{color:#d8e4e8 !important}
+html.lmd-dark .container-timeline .edition-content .title{color:#d8e4e8 !important}
+html.lmd-dark .container-grouping-letter .container-alphabet .content-letter{background-color:#1c2d33 !important}
+html.lmd-dark .container-grouping-letter .container-alphabet .content-letter.active{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-grouping-letter .container-sets .summary-content:hover .header{color:#d8e4e8 !important;border-color:#3f565e !important}
+@media (min-width:1024px){
+html.lmd-dark .container-grouping-letter .container-alphabet .content-letter:hover{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .btn-see-more:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
+}
+/* css__template-product-minipackage-v13-min.css */
+html.lmd-dark .title::after{background-color:#1c2d33 !important}
+html.lmd-dark .callout{border-left:4px solid #3f565e !important}
+html.lmd-dark .color-primary{color:#d8e4e8 !important}
+html.lmd-dark .sidebar-item:hover{color:#d8e4e8 !important}
+html.lmd-dark .sidebar-item__title a:hover{color:#d8e4e8 !important}
+html.lmd-dark .search-input__btn{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .search-input__btn:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
+html.lmd-dark .categ-prod-8 .search-input__btn:hover{background-color:#1c2d33 !important}
+html.lmd-dark .search-input-container .search-input__btn:focus-within{outline:1px solid #3f565e !important}
+html.lmd-dark .search-input:focus-within{outline:1px solid #3f565e !important}
+html.lmd-dark .card-title a:hover{color:#d8e4e8 !important}
+html.lmd-dark .btn-see-more{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .categ-prod-8 .btn-see-more:hover{color:#d8e4e8 !important}
+html.lmd-dark button.btn-see-more-pok:hover{color:#d8e4e8 !important}
+html.lmd-dark .sidebar-item:hover .sidebar-item__title a{color:#d8e4e8 !important}
+html.lmd-dark input[type="checkbox"]:checked+.checkbox-custom .check{background:#1c2d33 !important}
+html.lmd-dark .price-input:focus{border:1px solid #3f565e !important}
+html.lmd-dark .price-arrow-container{background-color:#1c2d33 !important}
+html.lmd-dark .header-options-container .orderby-option-btn.active::before{background:#1c2d33 !important}
+html.lmd-dark .header-options-container .dropdown-menu li a.selected:before{background:#1c2d33 !important}
+html.lmd-dark .header-options-container .dropdown-menu li a.selected::before{background:#1c2d33 !important}
+html.lmd-dark .active-order-component{color:#d8e4e8 !important}
+html.lmd-dark .noUi-connect{background:#1c2d33 !important}
+html.lmd-dark .btn-left:focus,html.lmd-dark .btn-right:focus{border:1px solid #3f565e !important}
+@media screen and (max-width:767px){
+html.lmd-dark .callout-sm{border-left:4px solid #3f565e !important}
+}
+@media screen and (max-width:576px){
+html.lmd-dark .bootstrap-select .btn::before{background-color:#1c2d33 !important}
+}
+/* components__package__carrinho_mp_v4-min.css */
+html.lmd-dark #bzr-edit input[type="submit"],html.lmd-dark .bzr-botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #checar-lista:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+/* css__template-artigos-v12-min.css */
+html.lmd-dark #news .btn-transparent:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark #news .btn-dark{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark .modal-js .btn-dark{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark .modal-js .btn-transparent:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
+/* css__template-colecao-v09-min.css */
+html.lmd-dark .colecao-summary-list-btn-show-more{color:#d8e4e8 !important}
 /* css__tcg_19__template-rb-v02-min.css */
 html.lmd-dark{--color-bg-menu:#16242a !important;--color-light-bg-info:#1f2a2f !important;--color-superlight-bg:#1f2a2f !important}
-html.lmd-dark .l-header-search-submit:hover{background-color:#171e24 !important}
-html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#265688 !important;border:1px solid #2d5f95 !important}
-html.lmd-dark .card-orange .card-header{background-color:#3067a2 !important}
-html.lmd-dark .card-orange .card-panel-filter-select{color:#5d94d0 !important}
+html.lmd-dark .l-header-search-submit:hover{background-color:#1f2a2f !important}
+html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#0f181b !important;border:1px solid #415961 !important}
+html.lmd-dark .card-orange .card-header{background-color:#1c2d33 !important}
+html.lmd-dark .card-orange .card-panel-filter-select{color:#d8e4e8 !important}
 html.lmd-dark .botao-inverso{background-color:#1c1c1c !important;border:1px solid #333333 !important;color:#d7d7d7 !important}
 html.lmd-dark .col-ed-txt{color:#ededed !important}
 html.lmd-dark .search-input__btn,html.lmd-dark .search-input__btn:hover,html.lmd-dark .btn-see-more,html.lmd-dark .btn-see-more:hover{background-color:#141313 !important}
 html.lmd-dark .container-mkp-showcase .btn-see-more:hover{border:1px solid #444862 !important}
-html.lmd-dark .card-grid .card-actions button{border-color:#3872b1 !important}
-html.lmd-dark #spoilerModal .botao{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark #spoilerModal .botao:hover,html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover,html.lmd-dark #main-compras .payment-bank-show .botao-destaque:hover,html.lmd-dark .dirty .botao-dirty-bold{background-color:#e54d0b !important;border-color:#ef5c1b !important}
-html.lmd-dark .card-grid .layer-hover .pool-media button:hover,html.lmd-dark #half-stars button:hover,html.lmd-dark .mtg-picture .layer-hover .pool-media button:hover{background-color:#3067a2 !important}
-html.lmd-dark #card-principal .pool-media button:hover,html.lmd-dark .comment-rate .pool-media button:hover{background-color:#3067a2 !important}
-html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .l-header-cart .alert{color:#5d94d0 !important}
-html.lmd-dark .liga-nav li.active a{color:#5d94d0 !important}
+html.lmd-dark .card-grid .card-actions button{border-color:#3f565e !important}
+html.lmd-dark #spoilerModal .botao{background-color:#1c2d33 !important;border-color:#3f565e !important}
+html.lmd-dark #spoilerModal .botao:hover,html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover,html.lmd-dark #main-compras .payment-bank-show .botao-destaque:hover,html.lmd-dark .dirty .botao-dirty-bold{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .card-grid .layer-hover .pool-media button:hover,html.lmd-dark #half-stars button:hover,html.lmd-dark .mtg-picture .layer-hover .pool-media button:hover{background-color:#0f181b !important}
+html.lmd-dark #card-principal .pool-media button:hover,html.lmd-dark .comment-rate .pool-media button:hover{background-color:#0f181b !important}
+html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .l-header-cart .alert{color:#d8e4e8 !important}
+html.lmd-dark .liga-nav li.active a{color:#d8e4e8 !important}
 html.lmd-dark .autocomplete strong{color:#1fbcf9 !important}
-html.lmd-dark #ms-body .submit input{color:#5d94d0 !important}
-html.lmd-dark #ms-body .submit input:hover{background-color:#3067a2 !important}
-html.lmd-dark .btnLaranja:hover,html.lmd-dark .botao:hover,html.lmd-dark #popupAvaliacao .btnSalvar:hover,html.lmd-dark #popupAvaliacao .btnClose:hover,html.lmd-dark .btn-topo:hover{background-color:#e54d0b !important;border-color:#ef5c1b !important}
-html.lmd-dark #formapagamento-opcoes .ls-neg-botao:hover{background-color:#3067a2 !important}
-html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel,html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel:hover{background-color:#3067a2 !important}
-html.lmd-dark #card-filtros .filtro-limpar,html.lmd-dark #card-estoque .estoque-linha a:hover,html.lmd-dark #card-estoque .e-col4 font:hover,html.lmd-dark #card-estoque .l-preco,html.lmd-dark #card-estoque a.cinzaescuro:hover,html.lmd-dark #card-principal .prc-tab-lnk:hover{color:#5d94d0 !important}
-html.lmd-dark #main-compras .pedido-selected:hover{background-color:#287ad3 !important}
-html.lmd-dark #main-compras .pedido-selected{border-top:1px solid #4088d7 !important;border-left:1px solid #4088d7 !important;border-right:1px solid #4088d7 !important;background-color:#287ad3 !important}
-html.lmd-dark #main-compras .venda-selected{border-left:1px solid #4088d7 !important;border-right:1px solid #4088d7 !important;border-bottom:1px solid #4088d7 !important}
-html.lmd-dark #mtg-cards a:hover,html.lmd-dark #home-cards-tcg a:hover{color:#5d94d0 !important}
+html.lmd-dark #ms-body .submit input{color:#e9eff2 !important}
+html.lmd-dark #ms-body .submit input:hover{background-color:#0f181b !important}
+html.lmd-dark .btnLaranja:hover,html.lmd-dark .botao:hover,html.lmd-dark #popupAvaliacao .btnSalvar:hover,html.lmd-dark #popupAvaliacao .btnClose:hover,html.lmd-dark .btn-topo:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao:hover{background-color:#1c2d33 !important}
+html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel,html.lmd-dark #formapagamento-opcoes .ls-neg-botao-sel:hover{background-color:#1c2d33 !important}
+html.lmd-dark #card-filtros .filtro-limpar,html.lmd-dark #card-estoque .estoque-linha a:hover,html.lmd-dark #card-estoque .e-col4 font:hover,html.lmd-dark #card-estoque .l-preco,html.lmd-dark #card-estoque a.cinzaescuro:hover,html.lmd-dark #card-principal .prc-tab-lnk:hover{color:#d8e4e8 !important}
+html.lmd-dark #main-compras .pedido-selected:hover{background-color:#16242a !important}
+html.lmd-dark #main-compras .pedido-selected{border-top:1px solid #405760 !important;border-left:1px solid #405760 !important;border-right:1px solid #405760 !important;background-color:#16242a !important}
+html.lmd-dark #main-compras .venda-selected{border-left:1px solid #405760 !important;border-right:1px solid #405760 !important;border-bottom:1px solid #405760 !important}
+html.lmd-dark #mtg-cards a:hover,html.lmd-dark #home-cards-tcg a:hover{color:#d8e4e8 !important}
 @media (min-width:668px) and (max-width:1023px){
-html.lmd-dark #card-estoque .e-mob-preco{color:#5d94d0 !important}
+html.lmd-dark #card-estoque .e-mob-preco{color:#d8e4e8 !important}
 }
-html.lmd-dark .kart-multiple-mkt div:hover{background-color:#3067a2 !important}
-html.lmd-dark #popupAlert button.botao-laranja:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark #popupBuylistPayment .title-float-r:hover{color:#5d94d0 !important}
-html.lmd-dark #news #coments-block .coment-text a{color:#5d94d0 !important}
-html.lmd-dark #news #coments-block .exibir-mais{background-color:#3067a2 !important}
+html.lmd-dark .kart-multiple-mkt div:hover{background-color:#0f181b !important}
+html.lmd-dark #popupAlert button.botao-laranja:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark #popupBuylistPayment .title-float-r:hover{color:#e9eff2 !important}
+html.lmd-dark #news #coments-block .coment-text a{color:#d8e4e8 !important}
+html.lmd-dark #news #coments-block .exibir-mais{background-color:#1c2d33 !important}
 html.lmd-dark #news .news-text a{color:#cc7f7f !important}
-html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#5d94d0 !important}
-html.lmd-dark #bzr-edit .sel-ed{color:#5d94d0 !important}
-html.lmd-dark #bzr-edit .bzr-return{color:#5d94d0 !important}
-html.lmd-dark #bloco-card .card-lista a:hover{color:#5d94d0 !important}
-html.lmd-dark #bzr-cart .info-topo .topo-avatar div.edita-avatar a{color:#5d94d0 !important}
-html.lmd-dark .bzr-user a:hover{color:#5d94d0 !important}
-html.lmd-dark #bzr-edit input[type="submit"]:hover,html.lmd-dark .bzr-botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark .dk-opc div{background-color:#3067a2 !important}
-html.lmd-dark #dk-tab input[type="button"]{background:#3067a2 !important}
-html.lmd-dark .dk-success-title a{color:#5d94d0 !important}
-html.lmd-dark .dk-success-buttons .btn{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #app-deck .app-card{color:#5d94d0 !important}
-html.lmd-dark .decks .dk-formato font:hover,html.lmd-dark .decks .dk-nomeevento:hover,html.lmd-dark .decks .dk-nomejogador:hover,html.lmd-dark .decks .dk-data font:hover{color:#5d94d0 !important}
-html.lmd-dark #deck-tab .tab-selected,html.lmd-dark #deck-tab .tab-selected:hover{background-color:#3067a2 !important}
-html.lmd-dark #deck-view .deck-card,html.lmd-dark #deck-view .deck-card a{color:#5d94d0 !important}
-html.lmd-dark #deck-view-specific .deck-card,html.lmd-dark #deck-view-specific .deck-card a{color:#5d94d0 !important}
-html.lmd-dark .btnSimul{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#d8e4e8 !important}
+html.lmd-dark #bzr-edit .sel-ed{color:#d8e4e8 !important}
+html.lmd-dark #bzr-edit .bzr-return{color:#d8e4e8 !important}
+html.lmd-dark #bloco-card .card-lista a:hover{color:#d8e4e8 !important}
+html.lmd-dark #bzr-cart .info-topo .topo-avatar div.edita-avatar a{color:#d8e4e8 !important}
+html.lmd-dark .bzr-user a:hover{color:#d8e4e8 !important}
+html.lmd-dark #bzr-edit input[type="submit"]:hover,html.lmd-dark .bzr-botao:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .dk-opc div{background-color:#1c2d33 !important}
+html.lmd-dark #dk-tab input[type="button"]{background:#1c2d33 !important}
+html.lmd-dark .dk-success-title a{color:#d8e4e8 !important}
+html.lmd-dark .dk-success-buttons .btn{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #app-deck .app-card{color:#d8e4e8 !important}
+html.lmd-dark .decks .dk-formato font:hover,html.lmd-dark .decks .dk-nomeevento:hover,html.lmd-dark .decks .dk-nomejogador:hover,html.lmd-dark .decks .dk-data font:hover{color:#d8e4e8 !important}
+html.lmd-dark #deck-tab .tab-selected,html.lmd-dark #deck-tab .tab-selected:hover{background-color:#1c2d33 !important}
+html.lmd-dark #deck-view .deck-card,html.lmd-dark #deck-view .deck-card a{color:#d8e4e8 !important}
+html.lmd-dark #deck-view-specific .deck-card,html.lmd-dark #deck-view-specific .deck-card a{color:#d8e4e8 !important}
+html.lmd-dark .btnSimul{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
 html.lmd-dark .buy-cards .cards-item a{color:#ededed !important}
-html.lmd-dark .dck-main-coments #coments-block .exibir-mais{background-color:#3067a2 !important}
-html.lmd-dark .box-comparar a{color:#5d94d0 !important}
-html.lmd-dark .btnComparar{color:#5d94d0 !important}
-html.lmd-dark .dk-opc div:hover{background-color:#3067a2 !important}
-html.lmd-dark #dk-tab input[type="button"]:hover{background-color:#3067a2 !important}
-html.lmd-dark .dk-success-buttons .btn:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark .a01,html.lmd-dark .evdeck-html a,html.lmd-dark .bloco-cielo a{color:#5d94d0 !important}
-html.lmd-dark .a01:hover,html.lmd-dark .evdeck-html a:hover,html.lmd-dark .bloco-cielo a:hover{color:#5d94d0 !important}
-html.lmd-dark #ev-abas .ev-abas-mob div.aba-selected{background:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #popupDecklist .header button,html.lmd-dark #popupDecklist .row button{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #popupDecklist .dk-nome a{color:#5d94d0 !important}
-html.lmd-dark #evp-header .evp-boxheader-3 .evp-roundresults{background-color:#3067a2 !important}
+html.lmd-dark .dck-main-coments #coments-block .exibir-mais{background-color:#1c2d33 !important}
+html.lmd-dark .box-comparar a{color:#d8e4e8 !important}
+html.lmd-dark .btnComparar{color:#d8e4e8 !important}
+html.lmd-dark .dk-opc div:hover{background-color:#0f181b !important}
+html.lmd-dark #dk-tab input[type="button"]:hover{background-color:#0f181b !important}
+html.lmd-dark .dk-success-buttons .btn:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .a01,html.lmd-dark .evdeck-html a,html.lmd-dark .bloco-cielo a{color:#d8e4e8 !important}
+html.lmd-dark .a01:hover,html.lmd-dark .evdeck-html a:hover,html.lmd-dark .bloco-cielo a:hover{color:#d8e4e8 !important}
+html.lmd-dark #ev-abas .ev-abas-mob div.aba-selected{background:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #popupDecklist .header button,html.lmd-dark #popupDecklist .row button{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #popupDecklist .dk-nome a{color:#d8e4e8 !important}
+html.lmd-dark #evp-header .evp-boxheader-3 .evp-roundresults{background-color:#1c2d33 !important}
 @media (min-width:1024px){
-html.lmd-dark #ev-abas div.ev-aba:hover{background:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #ev-abas div.ev-aba:hover{background:#1c2d33 !important;border:1px solid #3f565e !important}
 }
-html.lmd-dark .botao,html.lmd-dark .mini-botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .headerMapFeat{color:#5d94d0 !important}
-html.lmd-dark .inp_pesquisaGoogle input{color:#5d94d0 !important}
-html.lmd-dark a h4.card-title:hover{color:#5d94d0 !important}
-html.lmd-dark .morepages .active{background-color:#3067a2 !important}
-html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#5d94d0 !important}
-html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#5d94d0 !important}
-html.lmd-dark li.spoiler.last a:hover{color:#5d94d0 !important}
-html.lmd-dark .btnLaranja{background-color:#3067a2 !important;border-color:#3872b1 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #dks .dks-more:hover{color:#5d94d0 !important}
-html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#5d94d0 !important}
-html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#5d94d0 !important}
-html.lmd-dark #artigos_warning a{color:#5d94d0 !important}
-html.lmd-dark .social-text .social-title:hover{color:#5d94d0 !important}
-html.lmd-dark .social-text a{color:#5d94d0 !important}
-html.lmd-dark #busca input,html.lmd-dark #busca input:focus{color:#5d94d0 !important}
-html.lmd-dark .box-header,html.lmd-dark .box-footer{background-color:#3067a2 !important}
-html.lmd-dark .box h2,html.lmd-dark .box h2 a{color:#5d94d0 !important}
-html.lmd-dark .lj{color:#5d94d0 !important}
-html.lmd-dark .busca input,html.lmd-dark .busca input:focus{color:#5d94d0 !important}
-html.lmd-dark .card-detalhes a{color:#5d94d0 !important}
-html.lmd-dark .mini-botao{background-color:#3067a2 !important}
-html.lmd-dark article.blog .tooltipcard{color:#5d94d0 !important}
-html.lmd-dark A.linkCkEditor,html.lmd-dark A.linkCkEditor:visited,html.lmd-dark A.linkCkEditor:active,html.lmd-dark A.linkCkEditor:link,html.lmd-dark A.linkCkEditor:hover{color:#5d94d0 !important}
-html.lmd-dark A.laranja,html.lmd-dark A.laranja:visited,html.lmd-dark A.laranja:active,html.lmd-dark A.laranja:link,html.lmd-dark A.laranja:hover{color:#5d94d0 !important}
-html.lmd-dark A.laranjaP,html.lmd-dark A.laranjaP:visited,html.lmd-dark A.laranjaP:active,html.lmd-dark A.laranjaP:link,html.lmd-dark A.laranjaP:hover{color:#5d94d0 !important}
-html.lmd-dark A.laranjaPP,html.lmd-dark A.laranjaPP:visited,html.lmd-dark A.laranjaPP:active,html.lmd-dark A.laranjaPP:link,html.lmd-dark A.laranjaPP:hover{color:#5d94d0 !important}
-html.lmd-dark .paginacao-quadro{background:#3067a2 !important}
-html.lmd-dark .paginacao-quadro-selecionada{color:#5d94d0 !important}
-html.lmd-dark .busca-mini input,html.lmd-dark .busca-mini input:focus{color:#5d94d0 !important}
-html.lmd-dark .botaoLeilao:hover{background-color:#3067a2 !important}
-html.lmd-dark .col-header a:hover,html.lmd-dark .col-subheader a:hover{color:#5d94d0 !important}
-html.lmd-dark .ls-neg-botao:hover{background-color:#3067a2 !important}
-html.lmd-dark .ls-neg-botao-sel,html.lmd-dark .ls-neg-botao-sel:hover{background-color:#3067a2 !important}
-html.lmd-dark .bt-laranja{background-color:#3067a2 !important}
-html.lmd-dark a.fecha-modal{background:#3067a2 !important}
-html.lmd-dark .exibir_mais #btn-exibe-mais{color:#5d94d0 !important}
-html.lmd-dark #busca-avancada a.mini-botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #coments-block .coment-text a,html.lmd-dark #coments-block .coment-quote:hover,html.lmd-dark #coments-block.news-coments a:hover{color:#5d94d0 !important}
-html.lmd-dark a.mini-botao:hover{background-color:#3067a2 !important}
-html.lmd-dark .cards-links a:hover{color:#5d94d0 !important}
-html.lmd-dark #busca-avancada a.mini-botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark input.buscaSimples{color:#5d94d0 !important}
-html.lmd-dark .vPreco{COLOR:#5d94d0 !important}
-html.lmd-dark .newBuscaAdv .botao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .filtro-leilao .filtro-limpar{color:#5d94d0 !important}
-html.lmd-dark .main-leiloes-home .view-grid li .nome-leilao a:hover{color:#5d94d0 !important}
-html.lmd-dark .main-leiloes-home .view-grid li .preco-leilao a{color:#5d94d0 !important}
-html.lmd-dark .main-leiloes-home .view-tb li .nome-leilao a:hover{color:#5d94d0 !important}
-html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao{color:#5d94d0 !important}
-html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao a{color:#5d94d0 !important}
-html.lmd-dark .newBuscaAdv .botao:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark .menu-follow li .qtd{color:#5d94d0 !important}
-html.lmd-dark .paginacao-quadro{border:1px solid #3872b1 !important}
-html.lmd-dark .lista-cc li .excluir-cc{color:#5d94d0 !important}
-html.lmd-dark .artigos li:after{background:#3067a2 !important}
-html.lmd-dark .leiloes li:after{background:#3067a2 !important}
-html.lmd-dark .preco-leilao{color:#5d94d0 !important}
-html.lmd-dark .preco-leilao a{color:#5d94d0 !important}
-html.lmd-dark .menu-principal li.selecionado{background:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .menu-principal li:hover{background:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .menu-dados-pessoais .btn,html.lmd-dark .bloco-dados-pessoais .btn{border:1px solid #3872b1 !important;color:#5d94d0 !important}
-html.lmd-dark .bloco-imagem i{color:#5d94d0 !important}
-html.lmd-dark .foto-ativa a{color:#5d94d0 !important}
-html.lmd-dark .menu-dados-pessoais .btn:hover,html.lmd-dark .bloco-dados-pessoais .btn:hover{background-color:#3067a2 !important;border-color:#3872b1 !important}
-html.lmd-dark .l-dropdown-content-account .login-actions .btn-primary:hover{background-color:#287ad3 !important}
-html.lmd-dark .l-dropdown-content-account .login-actions .btn-default:hover{color:#5799e0 !important}
-html.lmd-dark .l-header-cart .cart-list .btn-finish-cart:hover{background-color:#287ad3 !important}
-html.lmd-dark #header-filters{background-color:#287ad3 !important}
-html.lmd-dark .btnLaranja,html.lmd-dark .botao,html.lmd-dark .botao-reto,html.lmd-dark #popupAvaliacao .btnSalvar,html.lmd-dark #popupAvaliacao .btnClose{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #popupAvaliacao .survey-selected{background-color:#3067a2 !important}
-html.lmd-dark #spoilers-edicoes .icon_label a{color:#5d94d0 !important}
+html.lmd-dark .botao,html.lmd-dark .mini-botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .headerMapFeat{color:#d8e4e8 !important}
+html.lmd-dark .inp_pesquisaGoogle input{color:#d8e4e8 !important}
+html.lmd-dark a h4.card-title:hover{color:#d8e4e8 !important}
+html.lmd-dark .morepages .active{background-color:#1c2d33 !important}
+html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#d8e4e8 !important}
+html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#d8e4e8 !important}
+html.lmd-dark li.spoiler.last a:hover{color:#d8e4e8 !important}
+html.lmd-dark .btnLaranja{background-color:#1c2d33 !important;border-color:#3f565e !important;border:1px solid #3f565e !important}
+html.lmd-dark #dks .dks-more:hover{color:#d8e4e8 !important}
+html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#d8e4e8 !important}
+html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#d8e4e8 !important}
+html.lmd-dark #artigos_warning a{color:#d8e4e8 !important}
+html.lmd-dark .social-text .social-title:hover{color:#d8e4e8 !important}
+html.lmd-dark .social-text a{color:#d8e4e8 !important}
+html.lmd-dark #busca input,html.lmd-dark #busca input:focus{color:#d8e4e8 !important}
+html.lmd-dark .box-header,html.lmd-dark .box-footer{background-color:#1c2d33 !important}
+html.lmd-dark .box h2,html.lmd-dark .box h2 a{color:#d8e4e8 !important}
+html.lmd-dark .lj{color:#d8e4e8 !important}
+html.lmd-dark .busca input,html.lmd-dark .busca input:focus{color:#d8e4e8 !important}
+html.lmd-dark .card-detalhes a{color:#d8e4e8 !important}
+html.lmd-dark .mini-botao{background-color:#1c2d33 !important}
+html.lmd-dark article.blog .tooltipcard{color:#d8e4e8 !important}
+html.lmd-dark A.linkCkEditor,html.lmd-dark A.linkCkEditor:visited,html.lmd-dark A.linkCkEditor:active,html.lmd-dark A.linkCkEditor:link,html.lmd-dark A.linkCkEditor:hover{color:#d8e4e8 !important}
+html.lmd-dark A.laranja,html.lmd-dark A.laranja:visited,html.lmd-dark A.laranja:active,html.lmd-dark A.laranja:link,html.lmd-dark A.laranja:hover{color:#d8e4e8 !important}
+html.lmd-dark A.laranjaP,html.lmd-dark A.laranjaP:visited,html.lmd-dark A.laranjaP:active,html.lmd-dark A.laranjaP:link,html.lmd-dark A.laranjaP:hover{color:#d8e4e8 !important}
+html.lmd-dark A.laranjaPP,html.lmd-dark A.laranjaPP:visited,html.lmd-dark A.laranjaPP:active,html.lmd-dark A.laranjaPP:link,html.lmd-dark A.laranjaPP:hover{color:#d8e4e8 !important}
+html.lmd-dark .paginacao-quadro{background:#1c2d33 !important}
+html.lmd-dark .paginacao-quadro-selecionada{color:#d8e4e8 !important}
+html.lmd-dark .busca-mini input,html.lmd-dark .busca-mini input:focus{color:#d8e4e8 !important}
+html.lmd-dark .botaoLeilao:hover{background-color:#1c2d33 !important}
+html.lmd-dark .col-header a:hover,html.lmd-dark .col-subheader a:hover{color:#d8e4e8 !important}
+html.lmd-dark .ls-neg-botao:hover{background-color:#1c2d33 !important}
+html.lmd-dark .ls-neg-botao-sel,html.lmd-dark .ls-neg-botao-sel:hover{background-color:#1c2d33 !important}
+html.lmd-dark .bt-laranja{background-color:#1c2d33 !important}
+html.lmd-dark a.fecha-modal{background:#1c2d33 !important}
+html.lmd-dark .exibir_mais #btn-exibe-mais{color:#d8e4e8 !important}
+html.lmd-dark #busca-avancada a.mini-botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #coments-block .coment-text a,html.lmd-dark #coments-block .coment-quote:hover,html.lmd-dark #coments-block.news-coments a:hover{color:#d8e4e8 !important}
+html.lmd-dark a.mini-botao:hover{background-color:#0f181b !important}
+html.lmd-dark .cards-links a:hover{color:#e9eff2 !important}
+html.lmd-dark #busca-avancada a.mini-botao:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark input.buscaSimples{color:#d8e4e8 !important}
+html.lmd-dark .vPreco{COLOR:#d8e4e8 !important}
+html.lmd-dark .newBuscaAdv .botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .filtro-leilao .filtro-limpar{color:#d8e4e8 !important}
+html.lmd-dark .main-leiloes-home .view-grid li .nome-leilao a:hover{color:#d8e4e8 !important}
+html.lmd-dark .main-leiloes-home .view-grid li .preco-leilao a{color:#d8e4e8 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .nome-leilao a:hover{color:#d8e4e8 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao{color:#d8e4e8 !important}
+html.lmd-dark .main-leiloes-home .view-tb li .preco-leilao a{color:#d8e4e8 !important}
+html.lmd-dark .newBuscaAdv .botao:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .menu-follow li .qtd{color:#d8e4e8 !important}
+html.lmd-dark .paginacao-quadro{border:1px solid #3f565e !important}
+html.lmd-dark .btn-topo{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .decks-perfil .dk-linha a:hover{color:#d8e4e8 !important}
+html.lmd-dark .lista-cc li .excluir-cc{color:#e9eff2 !important}
+html.lmd-dark .artigos li:after{background:#0f181b !important}
+html.lmd-dark .leiloes li:after{background:#0f181b !important}
+html.lmd-dark .preco-leilao{color:#e9eff2 !important}
+html.lmd-dark .preco-leilao a{color:#e9eff2 !important}
+html.lmd-dark .menu-principal li.selecionado{background:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .menu-principal li:hover{background:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark .menu-dados-pessoais .btn,html.lmd-dark .bloco-dados-pessoais .btn{border:1px solid #3f565e !important;color:#d8e4e8 !important}
+html.lmd-dark .bloco-imagem i{color:#d8e4e8 !important}
+html.lmd-dark .foto-ativa a{color:#d8e4e8 !important}
+html.lmd-dark .menu-dados-pessoais .btn:hover,html.lmd-dark .bloco-dados-pessoais .btn:hover{background-color:#0f181b !important;border-color:#415961 !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-primary:hover{background-color:#16242a !important}
+html.lmd-dark .l-dropdown-content-account .login-actions .btn-default:hover{color:#e0e9ec !important}
+html.lmd-dark .l-header-cart .cart-list .btn-finish-cart:hover{background-color:#16242a !important}
+html.lmd-dark #header-filters{background-color:#16242a !important}
+html.lmd-dark .btnLaranja,html.lmd-dark .botao,html.lmd-dark .botao-reto,html.lmd-dark #popupAvaliacao .btnSalvar,html.lmd-dark #popupAvaliacao .btnClose{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #popupAvaliacao .survey-selected{background-color:#1c2d33 !important}
+html.lmd-dark #spoilers-edicoes .icon_label a{color:#d8e4e8 !important}
 @media only screen and (min-width:992px){
-html.lmd-dark .cd-dropdown-content-right>.has-children-right>a.is-active{background-color:#3067a2 !important}
+html.lmd-dark .cd-dropdown-content-right>.has-children-right>a.is-active{background-color:#0f181b !important}
 }
-html.lmd-dark .radio-card-input:checked+.radio-card,html.lmd-dark .btn-cadastrar-endereco{background-color:#3067a2 !important}
-html.lmd-dark .passo-lista-cards .change-input-type-btn-simple{color:#5d94d0 !important}
-html.lmd-dark .radio-card:hover{background-color:#231a16 !important}
-html.lmd-dark #content-step-wizard .mention.compramassa:focus,html.lmd-dark #content-step-wizard select:focus,html.lmd-dark #content-step-wizard input:focus,html.lmd-dark #content-step-wizard button.ui-multiselect:focus{border:1px solid #3872b1 !important}
-html.lmd-dark #mp-frete div.select{border:1px solid #3d2f28 !important}
-html.lmd-dark #popupAlertMsg .titulo,html.lmd-dark .modal-popup .titulo{color:#5d94d0 !important}
-html.lmd-dark #neg-main a,html.lmd-dark #neg-type a,html.lmd-dark #neg-users a,html.lmd-dark #neg-acoes .titulo a,html.lmd-dark .titulo-direita{color:#5d94d0 !important}
-html.lmd-dark #neg-main a:hover,html.lmd-dark #neg-type a:hover,html.lmd-dark #neg-users a:hover,html.lmd-dark #neg-acoes .titulo a:hover,html.lmd-dark .titulo-direita:hover{color:#5d94d0 !important}
-html.lmd-dark #busca-avancada .mini-botao,html.lmd-dark #neg-acoes .mini-botao,html.lmd-dark .neg-botao,html.lmd-dark .botao-acao,html.lmd-dark .btn-imprimir,html.lmd-dark #neg-abertura .neg-aberta-bt,html.lmd-dark #neg-acoes .neg-minibotao{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark #busca-avancada .mini-botao:hover,html.lmd-dark #neg-acoes .mini-botao:hover,html.lmd-dark .neg-botao:hover,html.lmd-dark .botao-acao:hover,html.lmd-dark .btn-imprimir:hover,html.lmd-dark #neg-abertura .neg-aberta-bt:hover,html.lmd-dark #neg-acoes .neg-minibotao:hover{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
-html.lmd-dark .enderecos>li:first-child a{color:#5d94d0 !important}
+html.lmd-dark .radio-card-input:checked+.radio-card,html.lmd-dark .btn-cadastrar-endereco{background-color:#1c2d33 !important}
+html.lmd-dark .passo-lista-cards .change-input-type-btn-simple{color:#d8e4e8 !important}
+html.lmd-dark .radio-card:hover{background-color:#1f2a2f !important}
+html.lmd-dark #content-step-wizard .mention.compramassa:focus,html.lmd-dark #content-step-wizard select:focus,html.lmd-dark #content-step-wizard input:focus,html.lmd-dark #content-step-wizard button.ui-multiselect:focus{border:1px solid #3f565e !important}
+html.lmd-dark #mp-frete div.select{border:1px solid #2e3a3e !important}
+html.lmd-dark #popupAlertMsg .titulo,html.lmd-dark .modal-popup .titulo{color:#d8e4e8 !important}
+html.lmd-dark #neg-main a,html.lmd-dark #neg-type a,html.lmd-dark #neg-users a,html.lmd-dark #neg-acoes .titulo a,html.lmd-dark .titulo-direita{color:#d8e4e8 !important}
+html.lmd-dark #neg-main a:hover,html.lmd-dark #neg-type a:hover,html.lmd-dark #neg-users a:hover,html.lmd-dark #neg-acoes .titulo a:hover,html.lmd-dark .titulo-direita:hover{color:#e9eff2 !important}
+html.lmd-dark #busca-avancada .mini-botao,html.lmd-dark #neg-acoes .mini-botao,html.lmd-dark .neg-botao,html.lmd-dark .botao-acao,html.lmd-dark .btn-imprimir,html.lmd-dark #neg-abertura .neg-aberta-bt,html.lmd-dark #neg-acoes .neg-minibotao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
+html.lmd-dark #busca-avancada .mini-botao:hover,html.lmd-dark #neg-acoes .mini-botao:hover,html.lmd-dark .neg-botao:hover,html.lmd-dark .botao-acao:hover,html.lmd-dark .btn-imprimir:hover,html.lmd-dark #neg-abertura .neg-aberta-bt:hover,html.lmd-dark #neg-acoes .neg-minibotao:hover{background-color:#0f181b !important;border:1px solid #415961 !important}
+html.lmd-dark .enderecos>li:first-child a{color:#d8e4e8 !important}
 html.lmd-dark #deck-view .fab-pitch-1{color:#e57171 !important}
 html.lmd-dark #deck-view .fab-pitch-2{color:#f6bd29 !important}
 html.lmd-dark #deck-view .fab-pitch-3{color:#64a5f6 !important}
 html.lmd-dark #card-principal .ed-sel{background-color:#b2ab0a !important}
-html.lmd-dark font.mp-sigla-key,html.lmd-dark font.mp-snumber-key{background-color:#287ad3 !important}
-html.lmd-dark font.mp-snumber-key{background-color:#3067a2 !important}
-html.lmd-dark .ed-sel font.mp-snumber-key{background-color:#287ad3 !important}
+html.lmd-dark font.mp-sigla-key,html.lmd-dark font.mp-snumber-key{background-color:#16242a !important}
+html.lmd-dark font.mp-snumber-key{background-color:#1c2d33 !important}
+html.lmd-dark .ed-sel font.mp-snumber-key{background-color:#16242a !important}

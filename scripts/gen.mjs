@@ -209,8 +209,11 @@ function mapColor(str, role) {
  *
  * Uma variavel nunca cai nos dois caminhos: o que e redefinido nao e expandido.
  */
-const VARS = new Map();
-const VAR_AMBIGUAS = new Set();
+// Estas duas sao RECOMPOSTAS antes de gerar cada bucket, a partir so dos
+// arquivos visiveis naquele bucket. Ver "visibilidade de variavel e direcional"
+// mais abaixo. Sao `let` justamente para isso.
+let VARS = new Map();
+let VAR_AMBIGUAS = new Set();
 
 // So variaveis definidas na raiz sao seguras de expandir. Uma redefinida dentro
 // de um componente (`.destaque{--x:...}`) vale outra coisa naquele escopo, e
@@ -238,16 +241,23 @@ function papelPeloNome(nome) {
 // aceita como declaracao valida.
 const naoEhCor = (v) => !parseColor(v.trim()) && !/^\s*\d+\s*,\s*\d+\s*,\s*\d+\s*$/.test(v);
 
-function coletarVars(root) {
+/**
+ * Variaveis declaradas por UM arquivo. Guardar por arquivo (em vez de somar
+ * tudo numa tabela unica) e o que permite recompor a tabela por bucket depois.
+ */
+function varsDoArquivo(root) {
+  const raizVars = new Map();
+  const ambiguas = new Set();
   root.walkRules(rule => {
     const raiz = rule.selector.split(',').every(s => ROOT_SEL.test(s.trim()));
     rule.each(d => {
       if (d.type !== 'decl' || !d.prop.startsWith('--')) return;
-      if (!raiz) { VAR_AMBIGUAS.add(d.prop); return; }
+      if (!raiz) { ambiguas.add(d.prop); return; }
       // Ordem de carga = ordem do cascade: a ultima definicao vence.
-      VARS.set(d.prop, d.value.trim());
+      raizVars.set(d.prop, d.value.trim());
     });
   });
+  return { raizVars, ambiguas };
 }
 
 /** Resolve var(--x) / var(--x, fallback) ate chegar num literal de cor. */
@@ -601,31 +611,73 @@ function processRoot(root, file, base, bucket) {
 
 // Passo 1: tabela de variaveis. Precisa varrer TODOS os bundles antes de gerar,
 // porque uma variavel definida no template-package e usada no marketplace.
-// Este passo tem que continuar GLOBAL, sobre todos os bundles de todos os
-// buckets. Uma variavel definida no nucleo (--color-white) e usada dentro dos
-// bundles tcg_N; coletar por bucket deixaria essas var() sem literal conhecido
-// e o bundle do site geraria cor errada -- ou nenhuma.
+// Parse uma vez so; as arvores sao percorridas varias vezes depois, uma por
+// bucket, e processRoot nao as modifica.
 const parsed = [];
 for (const { nome, base, bucket } of files) {
   const css = fs.readFileSync(path.join(SRC, nome), 'utf8');
   try {
     const root = postcss.parse(css, { from: nome });
-    parsed.push({ nome, base, bucket, root });
-    coletarVars(root);
+    parsed.push({ nome, base, bucket, root, ...varsDoArquivo(root) });
   } catch (e) {
     skippedFiles++;
     console.error(`skip ${nome}: ${e.message}`);
   }
 }
 
-// Passo 2: geracao, na ordem nucleo -> homes -> sites (ver o comentario do
-// `seen`). Dentro do mesmo bucket, a ordem de descoberta e preservada, que e a
-// ordem de carga das folhas na pagina e portanto a ordem do cascade.
-const ordenados = parsed
-  .map((p, i) => ({ p, i }))
-  .sort((a, b) => BUCKET_ORDER(a.p.bucket) - BUCKET_ORDER(b.p.bucket) || a.i - b.i)
-  .map(x => x.p);
-for (const { nome, base, root, bucket } of ordenados) processRoot(root, nome, base, bucket);
+/* ---------- visibilidade de variavel e direcional ----------
+ *
+ * Os 15 sites declaram as MESMAS custom properties com valores diferentes:
+ * `--color-bg-menu` e #f05626 no nucleo (laranja do LigaMagic), #670080 no
+ * Yu-Gi-Oh, #3888df no Mundo Funko. Cada um define a sua no proprio bundle
+ * tcg_N, e o navegador resolve var() no ponto de uso, com o cascade daquele
+ * host -- por isso o site real fica certo.
+ *
+ * Somar tudo numa tabela unica quebra isso de um jeito que passa despercebido:
+ * a ultima definicao lida vence, e vai parar no arquivo do NUCLEO, que e
+ * injetado nos 15 hosts. A barra de menu do LigaMagic saiu azul do Mundo Funko.
+ *
+ * A visibilidade correta e a mesma da injecao, e ela e DIRECIONAL: o nucleo e
+ * visivel para os bundles de site, nunca o contrario.
+ *
+ *   theme      ve  theme
+ *   home-G     ve  theme, home-G
+ *   site-S     ve  theme, home-<grupo de S>, site-S
+ *
+ * Escopar a tabela, porem, nao basta sozinho. `.container-main-menu` mora no
+ * bundle do NUCLEO e so a variavel muda por site: com a tabela escopada, o
+ * arquivo do nucleo sairia laranja e ficaria laranja tambem no Yu-Gi-Oh. Por
+ * isso cada bucket percorre TODOS os arquivos visiveis a ele, com a tabela
+ * dele. As regras que resolvem igual sao descartadas pelo dedupe hierarquico e
+ * ficam so no nucleo; as que resolvem diferente sao reemitidas no arquivo do
+ * site, que carrega depois e vence no cascade.
+ */
+const VISIVEIS = (bucket) => {
+  if (bucket === 'theme') return new Set(['theme']);
+  if (bucket.startsWith('home-')) return new Set(['theme', bucket]);
+  const grupo = GRUPO_DO_SITE[bucket.slice('site-'.length)];
+  return new Set(['theme', `home-${grupo}`, bucket]);
+};
+
+// Passo 2: geracao, na ordem nucleo -> homes -> sites, que e o que o dedupe
+// hierarquico exige. Dentro de um bucket, a ordem dos arquivos e a de
+// descoberta -- a ordem de carga na pagina, e portanto a do cascade.
+const bucketsOrdenados = [...new Set(files.map(f => f.bucket))]
+  .sort((a, b) => BUCKET_ORDER(a) - BUCKET_ORDER(b) || a.localeCompare(b));
+
+for (const bucket of bucketsOrdenados) {
+  const visiveis = VISIVEIS(bucket);
+  const arquivos = parsed.filter(p => visiveis.has(p.bucket));
+
+  VARS = new Map();
+  VAR_AMBIGUAS = new Set();
+  for (const a of arquivos) {
+    for (const [k, v] of a.raizVars) VARS.set(k, v);   // ultima definicao vence
+    for (const k of a.ambiguas) VAR_AMBIGUAS.add(k);
+  }
+
+  for (const { nome, base, root } of arquivos) processRoot(root, nome, base, bucket);
+}
 
 /* ---------- escrita ---------- */
 

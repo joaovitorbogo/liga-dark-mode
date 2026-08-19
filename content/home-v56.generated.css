@@ -7,7 +7,7 @@
 /* css__template-home-v56-min.css */
 html.lmd-dark #hm .slider-botoes .carousel-control-prev:hover,html.lmd-dark #hm .slider-botoes .carousel-control-next:hover{background-color:#0d0d0d !important;color:#ededed !important}
 html.lmd-dark #hm .hm-news-title,html.lmd-dark #hm .hm-news-subtitle{text-shadow:2px 2px 3px rgba(0,0,0,0.75) !important}
-html.lmd-dark a h4.card-title:hover{color:#5d94d0 !important}
+html.lmd-dark a h4.card-title:hover{color:#fa6330 !important}
 html.lmd-dark #forum .forum-title a{color:#d7d7d7 !important}
 html.lmd-dark #forum .forum-coment a{color:#bdbdbd !important}
 html.lmd-dark #forum .forum-info-coment a,html.lmd-dark #forum .forum-error a{color:#fb9d6a !important}
@@ -16,10 +16,10 @@ html.lmd-dark #forum .forum-right{color:#afafaf !important}
 html.lmd-dark #forum .forum-lines .forum-left{border-top:1px solid #333333 !important}
 html.lmd-dark #forum .forum-lines .forum-left:hover{background-color:#202020 !important}
 html.lmd-dark .morepages li{background-color:#292929 !important}
-html.lmd-dark .morepages .active{background-color:#3067a2 !important}
+html.lmd-dark .morepages .active{background-color:#f7470c !important}
 html.lmd-dark #torneios .trn-main{border:1px solid #333333 !important}
 html.lmd-dark #torneios .trn-main-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
-html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#5d94d0 !important}
+html.lmd-dark #torneios .trn-main-more:hover,html.lmd-dark #torneios .trn-main-more:hover a{color:#fa6330 !important}
 html.lmd-dark #torneios .trn-main:hover{background-color:#202020 !important}
 html.lmd-dark #torneios .trn-avatar{background-color:#1c1c1c !important;color:#d7d7d7 !important}
 html.lmd-dark #torneios .trn-date-only{color:#d7d7d7 !important}
@@ -68,9 +68,9 @@ html.lmd-dark .card-dark-gray .card-footer .btn{color:#d0d1d2 !important;border-
 html.lmd-dark .card-dark-gray .card-footer .btn:hover{background-color:#2d2d2f !important}
 html.lmd-dark .card-dark-gray .card-panel-filter{background-color:#202020 !important}
 html.lmd-dark .card-dark-gray .card-panel-filter-select{color:#d0d1d2 !important}
-html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#5d94d0 !important}
+html.lmd-dark .cards-analysis .cards-error a,html.lmd-dark #prod .prod-error a{color:#fa6330 !important}
 html.lmd-dark li.spoiler.last a{color:#ededed !important}
-html.lmd-dark li.spoiler.last a:hover{color:#5d94d0 !important}
+html.lmd-dark li.spoiler.last a:hover{color:#fa6330 !important}
 html.lmd-dark #sliderSpoiler{background:#242424 !important}
 html.lmd-dark #sliderSpoiler .btn-green{background:#136319 !important}
 html.lmd-dark #sliderSpoiler .btn-green:hover{color:#3ddb49 !important;background:#141711 !important}
@@ -88,7 +88,7 @@ html.lmd-dark #dks .deck-autor{color:#bdbdbd !important}
 html.lmd-dark #dks .deck-autor a{color:#bdbdbd !important}
 html.lmd-dark #dks .dk-line:hover{background-color:#202020 !important}
 html.lmd-dark #dks .dks-more,html.lmd-dark .hm-decks-sem-spoiler #dks .dks-more{background-color:#1c1c1c !important;color:#d7d7d7 !important}
-html.lmd-dark #dks .dks-more:hover{background-color:#202020 !important;color:#5d94d0 !important}
+html.lmd-dark #dks .dks-more:hover{background-color:#202020 !important;color:#fa6330 !important}
 html.lmd-dark #evn .item .item-info span{color:#9e9e9e !important}
 html.lmd-dark #evn .item .item-info div{color:#cacaca !important}
 html.lmd-dark #evn .progress{background-color:#27292b !important}
@@ -96,40 +96,40 @@ html.lmd-dark #evn .progress>span{background-color:#242424 !important}
 html.lmd-dark #evn .progress>span strong{color:#e4e4e4 !important}
 html.lmd-dark #evn .progress>span span{color:#9e9e9e !important}
 html.lmd-dark #evn .item:hover{background-color:#202020 !important}
-html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#5d94d0 !important}
+html.lmd-dark #evn .item:hover .item-info div,html.lmd-dark #evn .item-borderlink:hover{color:#fa6330 !important}
 html.lmd-dark #evn .item:hover .progress>span strong{color:#ededed !important}
 html.lmd-dark #evn .item-borderlink{border:1px solid #373737 !important}
 html.lmd-dark #evn .progress[dprog="0"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(90deg,#161616 50%,#33c914 50%,#33c914) !important}
 html.lmd-dark #evn .progress[dprog="5"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(108deg,#161616 50%,#33c914 50%,#33c914) !important}
 html.lmd-dark #evn .progress[dprog="10"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(126deg,#161616 50%,#33c914 50%,#33c914) !important}
 html.lmd-dark #evn .progress[dprog="15"]{background-image:linear-gradient(90deg,#33c914 50%,transparent 50%,transparent),linear-gradient(144deg,#161616 50%,#33c914 50%,#33c914) !important}
-html.lmd-dark #evn .progress[dprog="20"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(162deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="25"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(180deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="30"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(198deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="35"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(216deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="40"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(234deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="45"]{background-image:linear-gradient(90deg,#3067a2 50%,transparent 50%,transparent),linear-gradient(252deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="50"]{background-image:linear-gradient(-90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="55"]{background-image:linear-gradient(-72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="60"]{background-image:linear-gradient(-54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="65"]{background-image:linear-gradient(-36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="70"]{background-image:linear-gradient(-18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="75"]{background-image:linear-gradient(0deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="80"]{background-image:linear-gradient(18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="85"]{background-image:linear-gradient(36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="90"]{background-image:linear-gradient(54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="95"]{background-image:linear-gradient(72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #evn .progress[dprog="100"]{background-image:linear-gradient(90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#3067a2 50%,#3067a2) !important}
-html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#5d94d0 !important}
+html.lmd-dark #evn .progress[dprog="20"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(162deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="25"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(180deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="30"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(198deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="35"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(216deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="40"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(234deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="45"]{background-image:linear-gradient(90deg,#f7470c 50%,transparent 50%,transparent),linear-gradient(252deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="50"]{background-image:linear-gradient(-90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="55"]{background-image:linear-gradient(-72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="60"]{background-image:linear-gradient(-54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="65"]{background-image:linear-gradient(-36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="70"]{background-image:linear-gradient(-18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="75"]{background-image:linear-gradient(0deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="80"]{background-image:linear-gradient(18deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="85"]{background-image:linear-gradient(36deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="90"]{background-image:linear-gradient(54deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="95"]{background-image:linear-gradient(72deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #evn .progress[dprog="100"]{background-image:linear-gradient(90deg,#161616 50%,transparent 50%,transparent),linear-gradient(270deg,#161616 50%,#f7470c 50%,#f7470c) !important}
+html.lmd-dark #forum .forum-title a:hover,html.lmd-dark #forum .forum-coment a:hover,html.lmd-dark #forum .forum-info-coment a:hover,html.lmd-dark #forum .forum-error a:hover,html.lmd-dark #torneios a:hover,html.lmd-dark #dks a:hover,html.lmd-dark .table-cards a:hover{color:#fa6330 !important}
 html.lmd-dark #sliderSpoiler .layer-pool{border:1px solid #303030 !important}
-html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#3067a2 !important;border:1px solid #3872b1 !important}
+html.lmd-dark #sliderSpoiler .layer-pool:hover{background-color:#f7470c !important;border:1px solid #f45f2c !important}
 html.lmd-dark #sliderSpoiler .layer-pool-vote{border:1px solid #303030 !important}
 html.lmd-dark #ratePopup{background-color:#242424 !important}
 html.lmd-dark #ratePopup hr{border-top:1px solid #333333 !important}
 @media screen and (max-width:766px){
-html.lmd-dark #spoiler .card-actions button{border:1px solid #3872b1 !important}
-html.lmd-dark #spoiler .card-actions button:first-child{color:#5d94d0 !important}
-html.lmd-dark #spoiler .card-actions .bt-rate{color:#5d94d0 !important}
+html.lmd-dark #spoiler .card-actions button{border:1px solid #f45f2c !important}
+html.lmd-dark #spoiler .card-actions button:first-child{color:#fa6330 !important}
+html.lmd-dark #spoiler .card-actions .bt-rate{color:#fa6330 !important}
 html.lmd-dark #spoiler .card-actions div{border:1px solid #303030 !important}
 }
 html.lmd-dark .modal-content{background-color:#242424 !important}
@@ -145,8 +145,8 @@ html.lmd-dark .form-control:-ms-input-placeholder{color:#a0a4a8 !important}
 html.lmd-dark .form-control::-ms-input-placeholder{color:#a0a4a8 !important}
 html.lmd-dark .form-control::placeholder{color:#a0a4a8 !important}
 html.lmd-dark #articles .main{background-color:#242424 !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
-html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#5d94d0 !important}
-html.lmd-dark #artigos_warning a{color:#5d94d0 !important}
+html.lmd-dark #articles a:hover,html.lmd-dark #articles a .title:hover,html.lmd-dark #articles .date-author a:hover,html.lmd-dark #articles .tags a:hover,html.lmd-dark #news a:hover{color:#fa6330 !important}
+html.lmd-dark #artigos_warning a{color:#fa6330 !important}
 html.lmd-dark #articles .boxblock{background-color:#242424 !important;-webkit-box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important;box-shadow:2px 2px 6px 0 rgba(0,0,0,0.75) !important}
 html.lmd-dark .l-product-best-price-home,html.lmd-dark .l-product-medium-price-home,html.lmd-dark .l-product-worst-price-home{color:#88b48d !important;background-color:#1b221c !important}
 html.lmd-dark .l-product-medium-price-home{color:#f06c29 !important;background-color:#231b16 !important}
@@ -154,14 +154,14 @@ html.lmd-dark .l-product-worst-price-home{color:#e8677e !important;background-co
 html.lmd-dark .social-text p,html.lmd-dark .social-text a,html.lmd-dark .social-text div,html.lmd-dark .social-text font{color:#d7d7d7 !important}
 html.lmd-dark .social-text .social-right{border-left:1px solid #333333 !important}
 html.lmd-dark .social-text .social-title{color:#d7d7d7 !important}
-html.lmd-dark .social-text .social-title:hover{color:#5d94d0 !important}
+html.lmd-dark .social-text .social-title:hover{color:#fa6330 !important}
 html.lmd-dark .social-text .social-left div:hover,html.lmd-dark .social-text .social-right div:hover{background-color:#202020 !important}
 html.lmd-dark .social-text hr{border-top:1px solid #313131 !important}
-html.lmd-dark .social-text a{color:#5d94d0 !important}
+html.lmd-dark .social-text a{color:#fa6330 !important}
 html.lmd-dark .social-text a:hover{color:#d7d7d7 !important}
 html.lmd-dark .social-text .social-views{color:#afafaf !important}
 html.lmd-dark .deckhome{border:1px solid #373737 !important}
-html.lmd-dark .deckhome .deckdados a{color:#5d94d0 !important}
+html.lmd-dark .deckhome .deckdados a{color:#fa6330 !important}
 html.lmd-dark #dks a.deckjog:hover{color:#d7d7d7 !important}
 html.lmd-dark .deckhome .deckhomeprice{background-color:#0d0d0d !important}
 html.lmd-dark .deckhome .deck-views{color:#afafaf !important}

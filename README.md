@@ -51,6 +51,36 @@ tudo morasse num arquivo só. Com arquivos separados, **o CSS de um site nem
 chega a ser injetado no outro**: a garantia é do navegador, não de convenção de
 seletor.
 
+### Visibilidade de variável é direcional
+
+Os 15 sites declaram as **mesmas** custom properties com valores diferentes:
+`--color-bg-menu` é `#f05626` no núcleo (laranja do LigaMagic), `#670080` no
+Yu-Gi-Oh, `#3888df` no Mundo Funko. Cada um define a sua no próprio bundle
+`tcg_N`, e o navegador resolve `var()` no ponto de uso com o cascade daquele
+host.
+
+Somar tudo numa tabela única quebra isso em silêncio: a última definição lida
+vence e vai parar no arquivo do núcleo, injetado nos 15 hosts. A barra de menu
+do LigaMagic saiu azul do Mundo Funko. O núcleo é visível para os bundles de
+site, **nunca o contrário**:
+
+| Gerando | Enxerga |
+|---|---|
+| `theme` | `theme` |
+| `home-G` | `theme`, `home-G` |
+| `site-S` | `theme`, `home-<grupo de S>`, `site-S` |
+
+Escopar a tabela não basta sozinho: `.container-main-menu` mora no bundle do
+**núcleo** e só a variável muda por site, então o arquivo do núcleo ficaria
+laranja também no Yu-Gi-Oh. Por isso cada bucket percorre todos os arquivos
+visíveis a ele com a tabela dele — as regras que resolvem igual são descartadas
+pelo dedupe hierárquico e ficam só no núcleo; as que resolvem diferente são
+reemitidas no arquivo do site, que carrega depois e vence no cascade. É o que
+faz os arquivos por site terem ~40 KB em vez de ~15 KB.
+
+`scripts/test-marca.mjs` compara, para os 15 hosts, a matiz que o site declara
+com a que a extensão efetivamente aplica.
+
 `scripts/sites.mjs` é a fonte da verdade dessa tabela. Fetch, geração, manifest
 e audit leem dela — antes cada script tinha a sua lista, e listas que divergem
 em silêncio produzem um site sem tema sem nenhum erro aparecer. O
@@ -82,10 +112,10 @@ Cada etapa isolada:
 |---|---|
 | `npm run fetch` | descobre os bundles pelos `<link>` de 64 páginas de referência (22 no LigaMagic, 3 em cada um dos outros 14) e baixa os 37 arquivos. Os nomes têm versão (`template-package-v95-min.css`) e mudam a cada deploy, por isso não podem ser fixos |
 | `npm run measure` | decodifica cada imagem de fundo num canvas e mede a luminância média |
-| `npm run build` | gera os 18 arquivos de bucket (~380 KB somados, 4.514 regras) |
+| `npm run build` | gera os 18 arquivos de bucket (~800 KB somados, 7.563 regras) |
 | `npm run manifest` | gera `manifest.json` a partir de `scripts/sites.mjs` |
 | `npm run check` | verificações estáticas em todos os arquivos gerados: parse, escopo dos seletores, URLs, símbolos preservados, cobertura dos 15 hosts, e se a tabela repetida em `apply.js` bate com `sites.mjs` |
-| `npm test` | roda o `apply.js` num Chrome real e confere `data-liga` por host, o não-carimbo em host desconhecido e a recuperação pelo `MutationObserver` |
+| `npm test` | roda o `apply.js` num Chrome real (`data-liga` por host, não-carimbo em host desconhecido, recuperação pelo `MutationObserver`) e confere a cor de marca de cada site |
 | `npm run audit` | mede o tema nas páginas reais dos 15 hosts, com a pilha de CSS certa em cada um, e lista o que sobrou claro. Aceita `--shot` e `--site=ygo,pkm` |
 | `npm run icons` | regenera os PNGs do ícone |
 | `npm run store` | gera as capturas e blocos promocionais da Chrome Web Store em `store/` |
