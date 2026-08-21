@@ -420,6 +420,29 @@ html.lmd-dark .autocomplete-suggestions {
   color: var(--lmd-text) !important;
 }
 
+/* Icones de acao da colecao ("Cadastrar Cards em Massa", "Exportar", "Ver"...):
+ * PNGs de 16px, pretos com alfa, servidos pela LMCorp. Sobre o branco do tema
+ * claro eles se leem; sobre a superficie escura ficam a 1,2:1 do fundo -- a
+ * fileira inteira some.
+ *
+ * Bitmap nao se recolore por CSS, so por `filter`, e o par que a extensao ja
+ * usa nos precos do marketplace serve aqui pelo mesmo motivo:
+ *
+ *   invert(1)          preto -> branco
+ *   hue-rotate(180deg) devolve a matiz de quem TEM matiz
+ *
+ * O invert sozinho resolveria os pretos, mas a mesma pasta serve
+ * `adicionar.png`, que e laranja da marca (255,90,0) e ja aparece bem no
+ * escuro -- invertido, ele viraria ciano. Como o par inverte so a luminancia,
+ * o preto sai branco e o laranja volta praticamente igual (matiz 21 graus,
+ * antes e depois), sem precisarmos saber qual arquivo cada botao usa.
+ *
+ * O alfa passa intacto pelo filtro, entao a borda suavizada continua suave, e
+ * o opacity .75 (com hover para 1) que o site aplica continua valendo. */
+html.lmd-dark .colecao-acoes {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
 /* Rodape: ja era escuro no tema claro. Mantido, mas separado do corpo. */
 html.lmd-dark .l-footer,
 html.lmd-dark footer {

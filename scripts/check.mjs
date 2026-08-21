@@ -130,6 +130,7 @@ const expected = [
   [core, 'color-scheme: dark', 'color-scheme dark na raiz (scrollbar e controles nativos)'],
   [core, '.highcharts-background', 'graficos do deck (SVG, fora do alcance do gerador)'],
   [core, '.ui-widget-content', 'datepicker do jQuery UI (fundo em PNG branco)'],
+  [core, '.colecao-acoes', 'icones de acao da colecao (PNG preto, so o filter os salva)'],
   [core, "[class^='card-color-']", 'cores de carta preservadas'],
   [core, 'lmd-dim img:not([src*=\'logo\' i])', 'suavizacao de banners sem atropelar o logo'],
   [gen, 'html.lmd-dark body', 'fundo do body na camada gerada'],
