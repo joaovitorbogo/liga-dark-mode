@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Liga Dark Mode",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Modo escuro para os sites da Liga.",
   "icons": {
     "16": "icons/icon16.png",
