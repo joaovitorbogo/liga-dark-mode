@@ -4,7 +4,7 @@
  * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
  * (excecoes por site), que carregam depois desta camada.
  */
-/* css__template-package-v95-min.css */
+/* css__template-package-v99-min.css */
 html.lmd-dark .container-main-menu{background-color:#16242a !important}
 html.lmd-dark .container-main-menu .main-menu .menu-option:hover{background-color:#242424 !important;color:#d8e4e8 !important}
 html.lmd-dark .container-main-menu .main-menu .menu-option a:hover,html.lmd-dark .container-main-menu .main-menu .menu-option:hover a{color:#d8e4e8 !important}
@@ -43,7 +43,7 @@ html.lmd-dark .btnBranco:hover{background-color:#1c2d33 !important;border:1px so
 @media screen and (max-width:768px){
 html.lmd-dark #zoom-marketplace .btnBranco{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
 }
-/* css__template-package-home-v08-min.css */
+/* css__template-package-home-v09-min.css */
 html.lmd-dark .title-home::before{background-color:#1c2d33 !important}
 html.lmd-dark .title-home .btn-see-more a{color:#d8e4e8 !important}
 html.lmd-dark .container-releases .content .highlight:hover .title a{color:#d8e4e8 !important}
@@ -58,9 +58,11 @@ html.lmd-dark .container-cards .container-prices .container-cards-and-prices .ca
 html.lmd-dark .tournament-decks .deck:hover .container-name .name-deck a{color:#d8e4e8 !important}
 html.lmd-dark .container-products .content .container-product .name a:hover,html.lmd-dark .container-products .content .container-product:hover .name a{color:#d8e4e8 !important}
 html.lmd-dark .container-articles .articles .article .container-title .title:hover,html.lmd-dark .container-articles .articles .article:hover .container-title .title{color:#d8e4e8 !important}
+html.lmd-dark body.tcg_11 .container-horizontal-slider .item-slider:hover .title,html.lmd-dark body.tcg_11 .container-releases .content .highlight:hover .title a,html.lmd-dark body.tcg_11 .container-releases .content .release .thumb:hover .title a,html.lmd-dark body.tcg_11 .container-editions-highlight .edition-highlight:hover .container-name .name-edition,html.lmd-dark body.tcg_11 .container-accessories-highlight .accessories-highlight:hover .container-name .name-accessories,html.lmd-dark body.tcg_11 .tournament-decks .deck:hover .container-name .name-deck a{color:#e9eff2 !important}
+html.lmd-dark body.tcg_10 .container-horizontal-slider .item-slider:hover .title,html.lmd-dark body.tcg_10 .container-releases .content .highlight:hover .title a,html.lmd-dark body.tcg_10 .container-releases .content .release .thumb:hover .title a,html.lmd-dark body.tcg_10 .container-editions-highlight .edition-highlight:hover .container-name .name-edition,html.lmd-dark body.tcg_10 .container-accessories-highlight .accessories-highlight:hover .container-name .name-accessories,html.lmd-dark body.tcg_10 .tournament-decks .deck:hover .container-name .name-deck a{color:#e0e9ec !important}
 html.lmd-dark .container-horizontal-slider .item-slider:hover .title{color:#d8e4e8 !important}
 html.lmd-dark .l-header-cart .cart-list .btn-view-cart.btn-primary{border:1px solid #3f565e !important}
-/* css__template-marketplace-v140-min.css */
+/* css__template-marketplace-v142-min.css */
 html.lmd-dark #depositobancario .title-divisor,html.lmd-dark #boleto-utils .title-divisor,html.lmd-dark #pix-utils .title-divisor{color:#d8e4e8 !important}
 html.lmd-dark .card-grid .layer-hover .layer-pool:hover,html.lmd-dark .mtg-picture .layer-hover .layer-pool:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
 html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
@@ -134,28 +136,26 @@ html.lmd-dark #card-principal .pool-media button:hover,html.lmd-dark .comment-ra
 html.lmd-dark #carrinho-lista-compra .show-more a.botao:hover{background-color:#0f181b !important}
 html.lmd-dark .mp-btn-comprar-btn-alerta:hover{background-color:#1c2d33 !important}
 html.lmd-dark .alerta-cards-sem-estoque .ver-mais-btn{color:#d8e4e8 !important;background-image:linear-gradient(to bottom,transparent,#36361d) !important}
-/* css__marketplace__package-cards-v30-min.css */
+/* css__marketplace__package-cards-v36-min.css */
 html.lmd-dark .container-marketplace [type="radio"]:checked+label:after,html.lmd-dark .container-marketplace [type="radio"]:not(:checked)+label:after,html.lmd-dark .radio-custom [type="radio"]:checked+label:after,html.lmd-dark .radio-custom [type="radio"]:not(:checked)+label:after{background:#1c2d33 !important;border:2px solid #303030 !important}
 html.lmd-dark .container-marketplace [type="radio"]:checked+label::before,html.lmd-dark .radio-custom [type="radio"]:checked+label::before{background-color:#1c2d33 !important;border-color:#3f565e !important}
 html.lmd-dark .slider-thumbnail.active,html.lmd-dark .slider-card.active{border-color:#313d41 !important}
 @media screen and (max-width:840px){
 html.lmd-dark .container-markers .markers div.active{background-color:#1c2d33 !important}
 }
-html.lmd-dark .container-qty-list .list-numbers .number:not(.disabled):hover,html.lmd-dark .container-qty-list .list-numbers .number.selected{background-color:#0a0b10 !important;border-color:#444862 !important}
+html.lmd-dark .container-qty-list .list-numbers .number:not(.disabled):hover,html.lmd-dark .container-qty-list .list-numbers .number.selected{background-color:#0a0b10 !important;color:#8ca6b0 !important;border-color:#444862 !important}
 @media screen and (max-width:1024px){
 html.lmd-dark #bottom-sheet-filters.show .clean-filter{color:#d8e4e8 !important}
 }
 html.lmd-dark .warning{background-color:#1c2d33 !important}
 html.lmd-dark a.color-primary{color:#d8e4e8 !important}
-html.lmd-dark .btn-primary,html.lmd-dark .btn-dark,html.lmd-dark .btn-transparent,html.lmd-dark .btn-primary-border,html.lmd-dark .btn-green,html.lmd-dark .btn-red{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark .btn-primary,html.lmd-dark .btn-dark,html.lmd-dark .btn-transparent,html.lmd-dark .btn-primary-border,html.lmd-dark .btn-green,html.lmd-dark .btn-red{background:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark .btn-primary-border{border:1px solid #3f565e !important;color:#d8e4e8 !important}
 html.lmd-dark .btn-primary-border:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
 html.lmd-dark .btn-transparent:hover,html.lmd-dark .btn-transparent.selected{border:1px solid #3f565e !important;color:#d8e4e8 !important}
 html.lmd-dark .quality_mp{border-color:#313d41 !important}
 html.lmd-dark .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
 html.lmd-dark .container-details-item .title span,html.lmd-dark .container-price-mkp-item .title span{color:#d8e4e8 !important}
-html.lmd-dark .container-price-mkp .price-mkp .max::before{background-color:#27353a !important}
-html.lmd-dark .container-price-mkp-item.prices-mobile .container-all-prices .container-prices .max{border-color:#344146 !important}
 html.lmd-dark .filter-header .clean-filter{color:#d8e4e8 !important}
 html.lmd-dark .filter-fotter{color:#d8e4e8 !important}
 html.lmd-dark .container-stores .infos-store .store-name a:hover{color:#d8e4e8 !important}
@@ -167,8 +167,7 @@ html.lmd-dark .marketplace-dropdown-actions .dropdown-with-submenu .container-su
 html.lmd-dark .highlighted-products .container-product .name:hover,html.lmd-dark .highlighted-products .container-product .name a:hover{color:#d8e4e8 !important}
 html.lmd-dark .modal-observation .modal-content .body .stock-summary .prod-price{color:#d8e4e8 !important}
 html.lmd-dark .select2-container--default .dropdown-showcase-orderby .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
-html.lmd-dark .container-pagination .prev,html.lmd-dark .container-pagination .next{background-color:#0a0b10 !important;color:#d8e4e8 !important}
-html.lmd-dark .container-pagination .prev:hover,html.lmd-dark .container-pagination .next:hover{background-color:#0a0b10 !important}
+html.lmd-dark .container-pagination .prev,html.lmd-dark .container-pagination .next{background-color:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark .container-pagination .prev.inactive:hover,html.lmd-dark .container-pagination .next.inactive:hover{color:#d8e4e8 !important}
 html.lmd-dark #modal-price-alert .support-price .prices .max-price{color:#d8e4e8 !important}
 html.lmd-dark #marketplace-filters-count::before{background-color:#1c2d33 !important}
@@ -179,47 +178,43 @@ html.lmd-dark .container-card-auctions .card-auctions .auction .auction-infos .a
 html.lmd-dark .card-auctions .auction .infos-item .name-ed a:hover,html.lmd-dark .stores .store .infos-item .name-ed a:hover,html.lmd-dark .stores .store .infos-store .name-ed a:hover{color:#d8e4e8 !important}
 html.lmd-dark .card-auctions .auction .auction-infos .auction-ref .ref a:hover,html.lmd-dark .card-auctions .auction .auction-infos .auction-ref .ref-percentage a:hover{color:#d8e4e8 !important}
 html.lmd-dark .container-tooltip-store-information .container-bottom button.btn-primary-border{border-color:#3f565e !important;color:#d8e4e8 !important}
-html.lmd-dark .container-tooltip-store-information .container-bottom button.btn-showcase{background-color:#0a0b10 !important}
 html.lmd-dark #modal-help-lista-compra .body .help-list div:before,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div:before{background-color:#1c2d33 !important}
 html.lmd-dark #modal-help-lista-compra .body .help-list div span,html.lmd-dark #modal-help-ultimas-vendas .body .help-list div span{color:#d8e4e8 !important}
 html.lmd-dark #storeInfo .loja-recesso{background-color:#1c2d33 !important}
 html.lmd-dark #container-latestsales-graph .ls-orders-more{color:#d8e4e8 !important}
 html.lmd-dark .avgprice-none font{color:#d8e4e8 !important}
 html.lmd-dark .container-lot-of-stock .see-all{color:#d8e4e8 !important}
-html.lmd-dark .mkp-options-menu-cards .option.select a,html.lmd-dark #full-average-price .tab-price>div.select{background-color:#0a0b10 !important}
 html.lmd-dark .stores .store .left-content .quantity-and-price .price{color:#d8e4e8 !important}
 html.lmd-dark .stores .store .user .nickname a:hover{color:#d8e4e8 !important}
-html.lmd-dark #full-average-price .price-max:before{background-color:#27353a !important}
 @media screen and (max-width:840px){
 html.lmd-dark .select2-container--default .dropdown-mkp-options .select2-results__option--highlighted.select2-results__option--selectable{background-color:#1c2d33 !important}
 }
-/* css__template-editions-v08-min.css */
+/* css__template-editions-v09-min.css */
 html.lmd-dark .title-page::after{background-color:#1c2d33 !important}
 html.lmd-dark .container-timeline .btn-see-more{background-color:#242424 !important;color:#d8e4e8 !important;border:1px solid #3f565e !important}
-html.lmd-dark .container-timeline .btn-see-more:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
+html.lmd-dark .container-timeline .btn-see-more:hover{background-color:#0a0b10 !important;color:#8ca6b0 !important;border-color:#444862 !important}
 html.lmd-dark .container-timeline .edition-content .edition a.edc-grouped,html.lmd-dark .container-grouping-letter .container-sets .edition a.edc-grouped{color:#d8e4e8 !important}
 html.lmd-dark .container-timeline .edition-content .title{color:#d8e4e8 !important}
 html.lmd-dark .container-grouping-letter .container-alphabet .content-letter{background-color:#1c2d33 !important}
-html.lmd-dark .container-grouping-letter .container-alphabet .content-letter.active{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-grouping-letter .container-alphabet .content-letter.active{background-color:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark .container-grouping-letter .container-sets .summary-content:hover .header{color:#d8e4e8 !important;border-color:#3f565e !important}
 @media (min-width:1024px){
-html.lmd-dark .container-grouping-letter .container-alphabet .content-letter:hover{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-grouping-letter .container-alphabet .content-letter:hover{background-color:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark .btn-see-more:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
 }
-/* css__template-product-minipackage-v13-min.css */
+/* css__template-product-minipackage-v14-min.css */
 html.lmd-dark .title::after{background-color:#1c2d33 !important}
 html.lmd-dark .callout{border-left:4px solid #3f565e !important}
 html.lmd-dark .color-primary{color:#d8e4e8 !important}
 html.lmd-dark .sidebar-item:hover{color:#d8e4e8 !important}
 html.lmd-dark .sidebar-item__title a:hover{color:#d8e4e8 !important}
-html.lmd-dark .search-input__btn{background-color:#0a0b10 !important;color:#d8e4e8 !important}
-html.lmd-dark .search-input__btn:hover{background-color:#1c2d33 !important;color:#e9eaf2 !important}
+html.lmd-dark .search-input__btn{background-color:#0a0b10 !important;color:#8ca6b0 !important}
+html.lmd-dark .search-input__btn:hover{background-color:#1c2d33 !important}
 html.lmd-dark .categ-prod-8 .search-input__btn:hover{background-color:#1c2d33 !important}
 html.lmd-dark .search-input-container .search-input__btn:focus-within{outline:1px solid #3f565e !important}
 html.lmd-dark .search-input:focus-within{outline:1px solid #3f565e !important}
 html.lmd-dark .card-title a:hover{color:#d8e4e8 !important}
-html.lmd-dark .btn-see-more{background-color:#0a0b10 !important;color:#d8e4e8 !important}
-html.lmd-dark .categ-prod-8 .btn-see-more:hover{color:#d8e4e8 !important}
+html.lmd-dark .btn-see-more{background-color:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark button.btn-see-more-pok:hover{color:#d8e4e8 !important}
 html.lmd-dark .sidebar-item:hover .sidebar-item__title a{color:#d8e4e8 !important}
 html.lmd-dark input[type="checkbox"]:checked+.checkbox-custom .check{background:#1c2d33 !important}
@@ -237,17 +232,34 @@ html.lmd-dark .callout-sm{border-left:4px solid #3f565e !important}
 @media screen and (max-width:576px){
 html.lmd-dark .bootstrap-select .btn::before{background-color:#1c2d33 !important}
 }
-/* components__package__carrinho_mp_v4-min.css */
+/* components__package__carrinho_mp_v5-min.css */
 html.lmd-dark #bzr-edit input[type="submit"],html.lmd-dark .bzr-botao{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
 html.lmd-dark #checar-lista:hover{background-color:#1c2d33 !important;border:1px solid #3f565e !important}
-/* css__template-artigos-v12-min.css */
+/* css__marketplace__package-showcase-v26-min.css */
+html.lmd-dark .btn-primary,html.lmd-dark .btn-dark,html.lmd-dark .btn-transparent,html.lmd-dark .btn-primary-border,html.lmd-dark .btn-green,html.lmd-dark .btn-red{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark .container-pagination .prev,html.lmd-dark .container-pagination .next{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-store-actions .btn-primary{background-color:#1c2d33 !important;color:#e9eaf2 !important;border:1px solid #3f565e !important}
+html.lmd-dark .container-stores .left-content .quantity-and-price .price .new-price,html.lmd-dark .container-single-card .left-content .quantity-and-price .price .new-price{color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase .filter-fotter{color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase-1 .filter-fotter{color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase-7 .filter-fotter,html.lmd-dark .container-mkp-showcase-11 .filter-fotter{color:#e0e9ec !important}
+html.lmd-dark .container-mkp-showcase .container-qty-list .list-numbers .number:not(.disabled):hover,html.lmd-dark .container-mkp-showcase .container-qty-list .list-numbers .number.selected{color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase .btn-see-more{color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase .btn-see-more:hover{background-color:#0a0b10 !important;color:#d8e4e8 !important}
+html.lmd-dark .container-mkp-showcase .container-stock .stock .left-content .quantity-and-price .price{color:#d8e4e8 !important}
+html.lmd-dark .container-pagination .prev:hover,html.lmd-dark .container-pagination .next:hover{color:#e0e9ec !important}
+@media screen and (max-width:650px){
+html.lmd-dark .container-store-actions #btn-fav-store{color:#d8e4e8 !important}
+html.lmd-dark .container-store-actions #btn-fav-store:hover,html.lmd-dark .container-store-actions #btn-fav-store-border:hover,html.lmd-dark .container-store-actions #btn-fav-store:focus,html.lmd-dark .container-store-actions #btn-fav-store:focus .container-store-actions #btn-fav-store:active,html.lmd-dark .container-store-actions #btn-fav-store:active{color:#d8e4e8 !important}
+}
+/* css__template-artigos-v13-min.css */
 html.lmd-dark #news .btn-transparent:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
-html.lmd-dark #news .btn-dark{background:#0a0b10 !important;color:#e0e9ec !important}
+html.lmd-dark #news .btn-dark{background:#0a0b10 !important;color:#8ca6b0 !important}
 html.lmd-dark .modal-js .btn-dark{background:#0a0b10 !important;color:#e0e9ec !important}
 html.lmd-dark .modal-js .btn-transparent:hover{border-color:#3f565e !important;color:#d8e4e8 !important}
-/* css__template-colecao-v09-min.css */
+/* css__template-colecao-v10-min.css */
 html.lmd-dark .colecao-summary-list-btn-show-more{color:#d8e4e8 !important}
-/* css__tcg_19__template-rb-v02-min.css */
+/* css__tcg_19__template-rb-v03-min.css */
 html.lmd-dark{--color-bg-menu:#16242a !important;--color-light-bg-info:#1f2a2f !important;--color-superlight-bg:#1f2a2f !important}
 html.lmd-dark .l-header-search-submit:hover{background-color:#1f2a2f !important}
 html.lmd-dark .card-grid .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover button:hover,html.lmd-dark .mtg-picture .layer-hover .button:hover{background-color:#0f181b !important;border:1px solid #415961 !important}
@@ -255,7 +267,6 @@ html.lmd-dark .card-orange .card-header{background-color:#1c2d33 !important}
 html.lmd-dark .card-orange .card-panel-filter-select{color:#d8e4e8 !important}
 html.lmd-dark .botao-inverso{background-color:#1c1c1c !important;border:1px solid #333333 !important;color:#d7d7d7 !important}
 html.lmd-dark .col-ed-txt{color:#ededed !important}
-html.lmd-dark .search-input__btn,html.lmd-dark .search-input__btn:hover,html.lmd-dark .btn-see-more,html.lmd-dark .btn-see-more:hover{background-color:#141313 !important}
 html.lmd-dark .container-mkp-showcase .btn-see-more:hover{border:1px solid #444862 !important}
 html.lmd-dark .card-grid .card-actions button{border-color:#3f565e !important}
 html.lmd-dark #spoilerModal .botao{background-color:#1c2d33 !important;border-color:#3f565e !important}

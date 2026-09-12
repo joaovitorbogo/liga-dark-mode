@@ -166,9 +166,9 @@ const semBundle = SITES.filter(s => s.bundles.length && !manifest.some(m => m.bu
 // silencio e passa a ser injetado nos 15 hosts.
 //
 // A deteccao nao pode ser automatica. A varredura e assimetrica de proposito
-// (22 paginas no ligamagic, 3 nos demais), entao template-forum-v2 tambem
+// (21 paginas no ligamagic, 3 nos demais), entao template-colecao tambem
 // aparece carregado "so pelo magic" -- e ele e do motor compartilhado, os
-// outros sites tambem tem forum. Por isso isto avisa em vez de rotear: so o
+// outros sites tambem tem colecao. Por isso isto avisa em vez de rotear: so o
 // caso de um site NAO-magic sozinho e suspeito de verdade.
 const suspeitos = manifest.filter(m =>
   m.bucket === 'theme' && m.sites.length === 1 && m.sites[0] !== 'magic');

@@ -116,8 +116,8 @@ export const TODOS_OS_PATTERNS = SITES.flatMap(s => matchPatterns(s.host));
 
 /* ---------- paginas de referencia ---------- */
 
-// O ligamagic e o host com mais superficie do grupo: e o unico com forum,
-// leiloes, bazar e colecao. Continua sendo ele quem descobre o nucleo inteiro.
+// O ligamagic e o host com mais superficie do grupo: e o unico com leiloes,
+// bazar e colecao. Continua sendo ele quem descobre o nucleo inteiro.
 export const PAGINAS_LIGAMAGIC = {
   home: '/',
   decks: '/?view=dks/decks&myown=1',
@@ -128,11 +128,21 @@ export const PAGINAS_LIGAMAGIC = {
   edicoes: '/?view=cards/edicoes',
   loja: '/?view=prod/home',
   carrinho: '/?view=mp/carrinho',
+  // A vitrine da loja serve um bundle proprio (marketplace/package-showcase-),
+  // que nenhuma outra pagina carrega. Sem esta entrada ele nunca era baixado e
+  // a pagina inteira ficava fora do tema: caixa de contato, abas e as linhas de
+  // estoque continuavam brancas.
+  //
+  // O `id` e obrigatorio: sem ele a rota responde uma pagina de erro de 25 KB,
+  // sem nenhum <link>, e a folha some da varredura em silencio.
+  vitrine: '/?view=mp/showcase/home&id=7500',
   artigos: '/?view=artigos/home',
   artigo: '/?view=artigos/view&edicao=8600',
-  forum: '/?view=forum/forum',
-  forum_topico: '/?view=forum/topico&secao=15',
-  forum_mensagem: '/?view=forum/mensagem&id=183161',
+  // O forum saiu do ar: as tres rotas (forum, topico, mensagem) respondem 410
+  // Gone e template-forum-v2-min.css nao e mais servido. Deixa-las aqui so
+  // fazia o fetch terminar com 3 falhas e sair 1, travando `npm run theme`.
+  // As regras do §4b do theme-core.css continuam: o HTML de apresentacao que
+  // elas neutralizam tambem aparece na colecao por lista.
   bazar: '/?view=bzr/bazar',
   leiloes: '/?view=leilao/listar',
   colecao: '/?view=colecao/colecao',

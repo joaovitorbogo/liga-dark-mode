@@ -137,6 +137,11 @@ const expected = [
   [core, 'lmd-dim img:not([src*=\'logo\' i])', 'suavizacao de banners sem atropelar o logo'],
   [gen, 'html.lmd-dark body', 'fundo do body na camada gerada'],
   [gen, '--bs-body-color', 'variaveis do Bootstrap remapeadas'],
+  // A vitrine da loja so entra no tema se PAGINAS_LIGAMAGIC ainda tiver a
+  // entrada `vitrine`: o bundle dela nao e carregado por nenhuma outra pagina.
+  // Sem isso o fetch nao o descobre e a pagina volta a ficar branca inteira,
+  // sem nenhum erro aparecer -- foi exatamente assim que o bug surgiu.
+  [gen, '.showcase-options-menu', 'vitrine da loja (bundle proprio, so a pagina dela carrega)'],
 ];
 for (const [hay, needle, label] of expected) {
   hay.includes(needle) ? pass(label) : fail(`${label} — nao encontrei "${needle}"`);

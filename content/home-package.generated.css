@@ -4,7 +4,7 @@
  * Ajustes finos ficam em theme-core.css (todos os sites) e em sites.css
  * (excecoes por site), que carregam depois desta camada.
  */
-/* css__template-package-home-v08-min.css */
+/* css__template-package-home-v09-min.css */
 html.lmd-dark{--color-background:#1b1b1a !important}
 html.lmd-dark .bg-white{background-color:#242424 !important}
 html.lmd-dark .title-home{color:#e9eaf2 !important}
@@ -66,6 +66,7 @@ html.lmd-dark .container-articles .articles .article .container-title .container
 html.lmd-dark .container-tags .title a{color:#e2e2e2 !important}
 html.lmd-dark .container-tags .tags .tag a{background-color:#333333 !important;color:#a7a7a6 !important}
 html.lmd-dark .stickytooltip{background-color:#333333 !important;box-shadow:0 4px 8px 0 rgba(0,0,0,0.135) !important}
+html.lmd-dark body.tcg_10 .container-horizontal-slider .item-slider:hover .title,html.lmd-dark body.tcg_10 .container-releases .content .highlight:hover .title a,html.lmd-dark body.tcg_10 .container-releases .content .release .thumb:hover .title a,html.lmd-dark body.tcg_10 .container-editions-highlight .edition-highlight:hover .container-name .name-edition,html.lmd-dark body.tcg_10 .container-accessories-highlight .accessories-highlight:hover .container-name .name-accessories,html.lmd-dark body.tcg_10 .tournament-decks .deck:hover .container-name .name-deck a{color:#f96c1f !important}
 @media screen and (max-width:460px){
 html.lmd-dark .container-articles .articles .article .container-title{background:#242424 !important}
 }
