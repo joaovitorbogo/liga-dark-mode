@@ -131,6 +131,8 @@ const expected = [
   [core, '.highcharts-background', 'graficos do deck (SVG, fora do alcance do gerador)'],
   [core, '.ui-widget-content', 'datepicker do jQuery UI (fundo em PNG branco)'],
   [core, '.colecao-acoes', 'icones de acao da colecao (PNG preto, so o filter os salva)'],
+  [core, '[bgcolor="#f2f2f2"', 'zebrado por atributo da colecao (fora de stylesheet)'],
+  [core, '.ui-state-default .ui-icon', 'sprite do jQuery UI sem fundo antes do invert'],
   [core, "[class^='card-color-']", 'cores de carta preservadas'],
   [core, 'lmd-dim img:not([src*=\'logo\' i])', 'suavizacao de banners sem atropelar o logo'],
   [gen, 'html.lmd-dark body', 'fundo do body na camada gerada'],
